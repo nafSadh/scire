@@ -78,8 +78,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="fun\AllPrimes.cpp" />
     <ClCompile Include="IntMul.cpp" />
+    <ClCompile Include="Matrix.cpp" />
     <ClCompile Include="Test.cpp" />
+    <ClCompile Include="trivia\Anagram.cpp" />
+    <ClCompile Include="trivia\Shift.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Typedefs.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

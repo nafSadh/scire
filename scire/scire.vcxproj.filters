@@ -13,19 +13,42 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\Algo">
-      <UniqueIdentifier>{4d64be32-f8ce-4679-9306-7382690eb0c2}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\cg">
       <UniqueIdentifier>{a4a0a574-cae8-47c9-93e8-31e71e3162f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\fun">
+      <UniqueIdentifier>{7501257c-9cc8-4bb4-b0f8-1bf61215c6d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\trivia">
+      <UniqueIdentifier>{b205c2bd-24c3-4e25-9673-f7fa8837231e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\algo">
+      <UniqueIdentifier>{4d64be32-f8ce-4679-9306-7382690eb0c2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="IntMul.cpp">
-      <Filter>Source Files\Algo</Filter>
+      <Filter>Source Files\algo</Filter>
     </ClCompile>
     <ClCompile Include="Test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Matrix.cpp">
+      <Filter>Source Files\algo</Filter>
+    </ClCompile>
+    <ClCompile Include="fun\AllPrimes.cpp">
+      <Filter>Source Files\fun</Filter>
+    </ClCompile>
+    <ClCompile Include="trivia\Anagram.cpp">
+      <Filter>Source Files\trivia</Filter>
+    </ClCompile>
+    <ClCompile Include="trivia\Shift.cpp">
+      <Filter>Source Files\trivia</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Typedefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
