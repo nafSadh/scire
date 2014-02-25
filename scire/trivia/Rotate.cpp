@@ -33,20 +33,20 @@ type RoL(type num, int bits, int len){
 
 
 //test codes
-#include <iostream>
-#include <bitset>
-using namespace std;
-#define LEN 16
-int main(){
-	try {
-		_Uint32t a = 1024;
-		_Uint32t b = RotateLeft<_Uint32t>(a, 10, LEN);
-		bitset<LEN> bitsa(a);
-		bitset<LEN> bitsb(b);
-		cout << bitsa << endl << bitsb << endl;
-	}
-	catch (exception e){
-		cout << e.what();
-	}
-	return 0;
-}
+//#include <iostream>
+//#include <bitset>
+//using namespace std;
+//#define LEN 16
+//int main(){
+//	try {
+//		_Uint32t a = 1024;
+//		_Uint32t b = RotateLeft<_Uint32t>(a, 10, LEN);
+//		bitset<LEN> bitsa(a);
+//		bitset<LEN> bitsb(b);
+//		cout << bitsa << endl << bitsb << endl;
+//	}
+//	catch (exception e){
+//		cout << e.what();
+//	}
+//	return 0;
+//}
