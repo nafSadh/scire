@@ -1,12 +1,17 @@
-//typedef __int128 INT128;
-typedef __int64		Int64;
-typedef __int32		Int32;
-typedef __int16		Int16;
-typedef __int8		Int8;
-typedef Int8		Byte;
-typedef char		Char;
+#ifndef _SCIRE_TYPEDEFS_H__
+#define _SCIRE_TYPEDEFS_
 
-typedef unsigned __int64	uInt64;
-typedef unsigned __int32	uInt32;
-typedef unsigned __int16	uInt16;
-typedef unsigned __int8		uInt8;
+typedef __int64		int64;
+typedef __int32		int32;
+typedef __int16		int16;
+typedef __int8		int8;
+
+typedef unsigned __int64	uint64;
+typedef unsigned __int32	uint32;
+typedef unsigned __int16	uint16;
+typedef unsigned __int8		uint8;
+
+typedef unsigned __int8		byte;
+typedef unsigned int		word;
+
+#endif
