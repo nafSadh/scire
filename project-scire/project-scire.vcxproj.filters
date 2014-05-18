@@ -13,5 +13,8 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="scire">
+      <UniqueIdentifier>{7c2ce7c0-7ea3-494a-b381-32af989f69c8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
