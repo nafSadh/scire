@@ -16,5 +16,27 @@
     <Filter Include="scire">
       <UniqueIdentifier>{7c2ce7c0-7ea3-494a-b381-32af989f69c8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="scire\util">
+      <UniqueIdentifier>{9fb6645d-2cde-4a72-8949-0f4a80a49538}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scire\struct">
+      <UniqueIdentifier>{013566f8-c263-4be2-9fe6-5d1d59cd5a91}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\scire\util\filetype.hpp">
+      <Filter>scire\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scire\Typedefs.h">
+      <Filter>scire</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scire\struct\linkedlist.hpp">
+      <Filter>scire\struct</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

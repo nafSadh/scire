@@ -78,6 +78,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\scire\struct\linkedlist.hpp" />
+    <ClInclude Include="..\scire\Typedefs.h" />
+    <ClInclude Include="..\scire\util\filetype.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
