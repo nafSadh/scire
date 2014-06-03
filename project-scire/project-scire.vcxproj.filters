@@ -22,6 +22,12 @@
     <Filter Include="scire\struct">
       <UniqueIdentifier>{013566f8-c263-4be2-9fe6-5d1d59cd5a91}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\test-scire">
+      <UniqueIdentifier>{b532ddf4-8bb8-4ffd-adfb-9c30eea054a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\test-scire\struct">
+      <UniqueIdentifier>{eb5f32c0-bcf0-4a71-af35-0a4ff9fb7f17}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\scire\util\filetype.hpp">
@@ -37,6 +43,9 @@
   <ItemGroup>
     <ClCompile Include="Source.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test\struct\linkedlist.cpp">
+      <Filter>Source Files\test-scire\struct</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -60,6 +60,13 @@ namespace scire {
     template<typename Type>
     SinglyList<Type>::~SinglyList()
     {
+        SinglyNode *node = head;
+
+        while (node != NULL) {
+            SinglyNode *next = node->next;
+            delete node;
+            node = next;
+        }
         cout << "~SinglyList()\n";
     }
 
