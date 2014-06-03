@@ -1,20 +1,22 @@
+// scire/struct/linkedlist
+
+// class
+
+// Copyright (c) 2014, nafSadh khan (http://nafSadh.com/Khan)
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying text at http://www.boost.org/LICENSE_1_0.txt)
+
 /*
  scire/struct/linkedlist.hpp
 
  SCIRE Linked List implementations
  - Singly Linked List
  - Doubly Linked List
- - Circulat List
+ - Circular List
 
  with operations
  - Traverse/Iterate
  - Reverse
-
- Copyright (c) 2014, nafSadh Khan
-
- Distributed under the SCIRE Open License, Version 1.0. (adopted BSD-style
- license, see text: http://nafsadh.com/scire/license.v1.txt)
-
  */
 #ifndef _SCIRE_linkedlist_HPP__
 #define _SCIRE_linkedlist_HPP__
@@ -26,118 +28,113 @@ using namespace std;
 #define _SCIRE_struct_singlylist_CLASS
 namespace scire {
 
-    template<typename Type>
-    class SinglyList {
+   template<typename Type>
+   class SinglyList {
     public:
-        SinglyList();
-        ~SinglyList();
-        void Traverse(void(*travfunc)(Type));
-        template<typename SzType = int>
-        SzType Insert(Type data, SzType location = 0);
-        void Push(Type data);
-        Type Pop();
+      SinglyList();
+      ~SinglyList();
+      void Traverse(void(*travfunc)(Type));
+      template<typename SzType = int>
+      SzType Insert(Type data, SzType location = 0);
+      void Push(Type data);
+      Type Pop();
 
     protected:
-        class SinglyNode {
-        public:
-            Type data;
-            SinglyNode* next;
-        };
+      class SinglyNode {
+       public:
+         Type data;
+         SinglyNode* next;
+      };
 
-        SinglyNode *head;
+      SinglyNode *head;
 
     private:
 
-    };
+   };
 
-    template<typename Type>
-    SinglyList<Type>::SinglyList()
-    {
-        head = NULL;
-        cout << "new SinglyList()\n";
-    }
+   template<typename Type>
+   SinglyList<Type>::SinglyList() {
+      head = NULL;
+      //cout << "new SinglyList()\n";
+   }
 
-    template<typename Type>
-    SinglyList<Type>::~SinglyList()
-    {
-        SinglyNode *node = head;
+   template<typename Type>
+   SinglyList<Type>::~SinglyList() {
+      SinglyNode *node = head;
 
-        while (node != NULL) {
-            SinglyNode *next = node->next;
-            delete node;
-            node = next;
-        }
-        cout << "~SinglyList()\n";
-    }
+      // remove all node pointers, or else memory will leak
+      while (node != NULL) {
+         SinglyNode *next = node->next;
+         delete node;
+         node = next;
+      }
+      //cout << "~SinglyList()\n";
+   }
 
-    template<typename Type>
-    template<typename SzType=int>
-    SzType SinglyList<Type>::Insert(Type data, SzType location=0)
-    {
-        SinglyNode *node = new SinglyNode();
+   template<typename Type>
+   template<typename SzType=int>
+   SzType SinglyList<Type>::Insert(Type data, SzType location=0) {
+      SinglyNode *node = new SinglyNode();
 
-        node->data = data;
+      node->data = data;
 
-        //if list is empty or if insert to 0th location (at begining)
-        //point node->next to head and make head point to this new node
-        if (location <= 0 || head == NULL) {
-            node->next = head;
-            head = node;
-            return 0;
-        }
+      // if list is empty or if insert to 0th location (at begining)
+      // point node->next to head and make head point to this new node
+      if (location <= 0 || head == NULL) {
+         node->next = head;
+         head = node;
+         return 0;
+      }
 
-        //if list is not empty and location is not at beginning
-        SzType i = 0;
-        SinglyNode *prev = head;
-        SinglyNode *curr = head;
-        while (i++ < location && curr != NULL) {
-            prev = curr;
-            curr = curr->next;
-        }
-        node->next = prev->next;
-        prev->next = node;
+      //if list is not empty and location is not at beginning
+      SzType i = 0;
+      SinglyNode *prev = head;
+      SinglyNode *curr = head;
+      while (i++ < location && curr != NULL) {
+         prev = curr;
+         curr = curr->next;
+      }
+      node->next = prev->next;
+      prev->next = node;
 
-        return i;
-    }
+      return i;
+   }
 
-    template<typename Type>
-    void SinglyList<Type>::Push(Type data)
-    {
-        SinglyNode *node = new SinglyNode();
+   template<typename Type>
+   void SinglyList<Type>::Push(Type data) {
+      SinglyNode *node = new SinglyNode();
 
-        node->data = data;
-        node->next = head;
-        head = node;
-    }
+      node->data = data;
+      node->next = head;
+      head = node;
+   }
 
 
-    template<typename Type>
-    Type SinglyList<Type>::Pop()
-    {
-        Type data = head->data;
+   template<typename Type>
+   Type SinglyList<Type>::Pop() {
+      Type data = head->data;
 
-        SinglyNode *node = head;
+      SinglyNode *node = head;
 
-        head = head->next;
+      head = head->next;
 
-        delete node;
+      delete node;
 
-        return data;
-    }
+      return data;
+   }
 
-    template<typename Type>
-    void SinglyList<Type>::Traverse(void(*travfunc)(Type))
-    {
-        SinglyNode *node = head;
+   template<typename Type>
+   void SinglyList<Type>::Traverse(void(*travfunc)(Type)) {
+      SinglyNode *node = head;
 
-        while (node != NULL) {
-            travfunc(node->data);
-            node = node->next;
-        }
-    }
+      while (node != NULL) {
+         travfunc(node->data);
+         node = node->next;
+      }
+   }
 }
 
 
-#endif
+#endif _SCIRE_struct_singlylist_CLASS
 
-#endif
+#endif _SCIRE_linkedlist_HPP__
