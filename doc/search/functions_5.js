@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7esinglylist',['~SinglyList',['../classscire_1_1_singly_list.html#a694fb5a5ed576e4263f36f5fd47bfbb9',1,'scire::SinglyList']]]
+  ['traverse',['Traverse',['../d7/d94/classscire_1_1_singly_list.html#a6cd5df7be5b44f23873bbe06642d2308',1,'scire::SinglyList']]]
 ];

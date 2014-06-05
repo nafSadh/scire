@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['head',['head',['../classscire_1_1_singly_list.html#ad6c255a9418b92268b02f2e6dda18d49',1,'scire::SinglyList']]]
+  ['data',['data',['../d0/dda/structscire_1_1_singly_list_1_1_singly_node.html#ab614ebd5cf68583a305396d0c13f3a2a',1,'scire::SinglyList::SinglyNode']]]
 ];
