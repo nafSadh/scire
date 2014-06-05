@@ -1,0 +1,28 @@
+Code Formatting with AStyle: --style=kr --indent=spaces=3 --indent-modifiers --indent-namespaces --mode=c
+
+Naming Conventions:
+
+  1. ClassNames are in UpperCamelCase
+  2. ClassPublicFunction names are in UpperCamelCase
+  3. PropertyNames are in UpperCamelCase (properties are public)
+  4. private/protected class members are in lowerCamelCase
+  5. local variables are in lowerCamelCase, oftnAbbr.
+  6. DEFINE_THINGS in UPPER_CASE
+  7. functions arguments shall be descriptively_named
+  8. a Property is associated with
+      -  type Property(){} as public getter function
+      -  void Property(type){} as public setter function
+      -  type theProperty as associated (protected/private) field
+  9. ISomeInterface is names are prefixed with classic 'I'
+
+Other Conventions:
+
+  1. local variables shall be declared near place of use
+  2. function local variables that is used throughout can be at top
+  3. class members shall be accessed this-> to avoid confusion, unless it is a
+      field associated with some property (e.g. theProperty)
+  4. no class field shall ever be public, use getter and setters
+  5. use protected access modifiers, whenever possible instead of private to
+     allow class inheritance
+  6. classes shall not inherit more than one class directly
+  7. use interfaces
