@@ -33,21 +33,51 @@ namespace scire
    public:
     SinglyList();
     ~SinglyList();
-    ///<para>function to traverse with</para>
-    ///<return>vois</return>
+
+    /**
+    * Traverse each item of the list
+    *
+    * @param travfunc       function to traverse each item of list with
+    * @return void
+    */
     void Traverse(void(*travfunc)(Type));
+
+    /**
+    * insert a new item in the list with passed <data> after <location> nodes
+    *
+    * @param data           data to insert as new item in the list
+    * @param [location]     location in the list where the new element to insert
+    * @return SzType        location where item inserted
+    */
     template<typename SzType = int>
     SzType Insert(Type data, SzType location = 0);
+
+    /**
+    * push a new item in the list with passed <data> at head
+    *
+    * @param data           data to push
+    * @return void
+    */
     void Push(Type data);
+
+    /**
+    * Pop the top element
+    */
     Type Pop();
 
    protected:
+    /**
+    * represent a node in Singly Linked List
+    */
     struct SinglyNode {
      public:
+      /** data */
       Type data;
+      /** pointer to next element in list */
       SinglyNode* next;
     };
 
+    /** points to first element of the list */
     SinglyNode *head;
 
    private:
@@ -70,6 +100,17 @@ namespace scire
       SinglyNode *next = node->next;
       delete node;
       node = next;
+    }
+  }
+
+  template<typename Type>
+  void SinglyList<Type>::Traverse(void(*travfunc)(Type))
+  {
+    SinglyNode *node = this->head;
+
+    while (node != NULL) {
+      travfunc(node->data);
+      node = node->next;
     }
   }
 
@@ -125,17 +166,6 @@ namespace scire
     delete node;
 
     return data;
-  }
-
-  template<typename Type>
-  void SinglyList<Type>::Traverse(void(*travfunc)(Type))
-  {
-    SinglyNode *node = this->head;
-
-    while (node != NULL) {
-      travfunc(node->data);
-      node = node->next;
-    }
   }
 }
 #endif SCIRE_struct_SinglyList_CLASS
