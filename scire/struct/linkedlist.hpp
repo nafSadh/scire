@@ -13,23 +13,28 @@
  - CircularList	: Circular List
 
  */
-#ifndef _SCIRE_linkedlist_HPP__
-#define _SCIRE_linkedlist_HPP__
+#ifndef SCIRE_linkedlist_HPP__
+#define SCIRE_linkedlist_HPP__
 
 #include <iostream>
 using namespace std;
 
-#ifndef _SCIRE_struct_SinglyList_CLASS
-#define _SCIRE_struct_SinglyList_CLASS
+#ifndef SCIRE_struct_SinglyList_CLASS
+#define SCIRE_struct_SinglyList_CLASS
 
 namespace scire
 {
+  /**
+  * A Singly Linked List class
+  */
   template<typename Type>
   class SinglyList
   {
    public:
     SinglyList();
     ~SinglyList();
+    ///<para>function to traverse with</para>
+    ///<return>vois</return>
     void Traverse(void(*travfunc)(Type));
     template<typename SzType = int>
     SzType Insert(Type data, SzType location = 0);
@@ -69,7 +74,7 @@ namespace scire
   }
 
   template<typename Type>
-  template<typename SzType=int>
+  template<typename SzType>
   SzType SinglyList<Type>::Insert(Type data, SzType location=0)
   {
     SinglyNode *node = new SinglyNode();
@@ -133,6 +138,6 @@ namespace scire
     }
   }
 }
-#endif _SCIRE_struct_SinglyList_CLASS
+#endif SCIRE_struct_SinglyList_CLASS
 
-#endif _SCIRE_linkedlist_HPP__
+#endif SCIRE_linkedlist_HPP__
