@@ -16,14 +16,14 @@
  author:
  ~nafSadh
  */
-#ifndef SCIRE_struct_stack_HPP__
-#define SCIRE_struct_stack_HPP__
+#ifndef SCIRE_struct_stack_HPP
+#define SCIRE_struct_stack_HPP
 
 namespace scire
 {
 
-#ifndef SCIRE_Stack_CLASS__
-#define SCIRE_Stack_CLASS__
+#ifndef SCIRE_Stack_CLASS
+#define SCIRE_Stack_CLASS
 
 
   /**
@@ -149,6 +149,6 @@ namespace scire
     return this->top->data;
   }
 
-#endif SCIRE_SinglyList_CLASS__
+#endif SCIRE_Stack_CLASS
 }
-#endif SCIRE_struct_stack_HPP__
+#endif SCIRE_struct_stack_HPP
