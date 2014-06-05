@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -86,23 +86,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">scire::SinglyList&lt; Type &gt; Member List</div>  </div>
+<div class="title">scire::SinglyList&lt; Type, SzType &gt; Member List</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="classscire_1_1_singly_list.html">scire::SinglyList&lt; Type &gt;</a>, including all inherited members.</p>
+<p>This is the complete list of members for <a class="el" href="classscire_1_1_singly_list.html">scire::SinglyList&lt; Type, SzType &gt;</a>, including all inherited members.</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>head</b> (defined in <a class="el" href="classscire_1_1_singly_list.html">scire::SinglyList&lt; Type &gt;</a>)</td><td class="entry"><a class="el" href="classscire_1_1_singly_list.html">scire::SinglyList&lt; Type &gt;</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>Insert</b>(Type data, SzType location=0) (defined in <a class="el" href="classscire_1_1_singly_list.html">scire::SinglyList&lt; Type &gt;</a>)</td><td class="entry"><a class="el" href="classscire_1_1_singly_list.html">scire::SinglyList&lt; Type &gt;</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Pop</b>() (defined in <a class="el" href="classscire_1_1_singly_list.html">scire::SinglyList&lt; Type &gt;</a>)</td><td class="entry"><a class="el" href="classscire_1_1_singly_list.html">scire::SinglyList&lt; Type &gt;</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>Push</b>(Type data) (defined in <a class="el" href="classscire_1_1_singly_list.html">scire::SinglyList&lt; Type &gt;</a>)</td><td class="entry"><a class="el" href="classscire_1_1_singly_list.html">scire::SinglyList&lt; Type &gt;</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>SinglyList</b>() (defined in <a class="el" href="classscire_1_1_singly_list.html">scire::SinglyList&lt; Type &gt;</a>)</td><td class="entry"><a class="el" href="classscire_1_1_singly_list.html">scire::SinglyList&lt; Type &gt;</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>Traverse</b>(void(*travfunc)(Type)) (defined in <a class="el" href="classscire_1_1_singly_list.html">scire::SinglyList&lt; Type &gt;</a>)</td><td class="entry"><a class="el" href="classscire_1_1_singly_list.html">scire::SinglyList&lt; Type &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classscire_1_1_singly_list.html#ad7183de9f34502c70a1721ac919f9531">~SinglyList</a>()</td><td class="entry"><a class="el" href="classscire_1_1_singly_list.html">scire::SinglyList&lt; Type &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classscire_1_1_singly_list.html#adfc88d6dd8051e5e2aa00955eed2caf8">count</a></td><td class="entry"><a class="el" href="classscire_1_1_singly_list.html">scire::SinglyList&lt; Type, SzType &gt;</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classscire_1_1_singly_list.html#a7d8987884e470d0ca7c9ebcf0e961448">Count</a>()</td><td class="entry"><a class="el" href="classscire_1_1_singly_list.html">scire::SinglyList&lt; Type, SzType &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classscire_1_1_singly_list.html#ad6c255a9418b92268b02f2e6dda18d49">head</a></td><td class="entry"><a class="el" href="classscire_1_1_singly_list.html">scire::SinglyList&lt; Type, SzType &gt;</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classscire_1_1_singly_list.html#aa98320b576262aaf42b1ab997c24ca64">Insert</a>(Type data, SzType location=0)</td><td class="entry"><a class="el" href="classscire_1_1_singly_list.html">scire::SinglyList&lt; Type, SzType &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classscire_1_1_singly_list.html#a60fdba5b5eb044d710c90ba4d7328a1d">Pop</a>()</td><td class="entry"><a class="el" href="classscire_1_1_singly_list.html">scire::SinglyList&lt; Type, SzType &gt;</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classscire_1_1_singly_list.html#a7f25715bc285aea2b61a725c458138b3">Push</a>(Type data)</td><td class="entry"><a class="el" href="classscire_1_1_singly_list.html">scire::SinglyList&lt; Type, SzType &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classscire_1_1_singly_list.html#a948f00780cdfc1dd766cd8b62fc8027b">SinglyList</a>()</td><td class="entry"><a class="el" href="classscire_1_1_singly_list.html">scire::SinglyList&lt; Type, SzType &gt;</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classscire_1_1_singly_list.html#a6cd5df7be5b44f23873bbe06642d2308">Traverse</a>(void(*travfunc)(Type))</td><td class="entry"><a class="el" href="classscire_1_1_singly_list.html">scire::SinglyList&lt; Type, SzType &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classscire_1_1_singly_list.html#a694fb5a5ed576e4263f36f5fd47bfbb9">~SinglyList</a>()</td><td class="entry"><a class="el" href="classscire_1_1_singly_list.html">scire::SinglyList&lt; Type, SzType &gt;</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 4 2014 23:44:24 for scire by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 5 2014 01:18:44 for scire by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

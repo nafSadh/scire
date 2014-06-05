@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.7"/>
-<title>scire: scire::SinglyList&lt; Type &gt; Class Template Reference</title>
+<title>scire: scire::SinglyList&lt; Type, SzType &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -91,63 +91,175 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classscire_1_1_singly_list-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">scire::SinglyList&lt; Type &gt; Class Template Reference</div>  </div>
+<div class="title">scire::SinglyList&lt; Type, SzType &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>A Singly Linked List class.  
+ <a href="classscire_1_1_singly_list.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="linkedlist_8hpp_source.html">linkedlist.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structscire_1_1_singly_list_1_1_singly_node.html">SinglyNode</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">represent a node in Singly Linked List  <a href="structscire_1_1_singly_list_1_1_singly_node.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad7183de9f34502c70a1721ac919f9531"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscire_1_1_singly_list.html#ad7183de9f34502c70a1721ac919f9531">~SinglyList</a> ()</td></tr>
-<tr class="separator:ad7183de9f34502c70a1721ac919f9531"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa0b168d9270f8ec99515fd4eaa761d7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa0b168d9270f8ec99515fd4eaa761d7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Traverse</b> (void(*travfunc)(Type))</td></tr>
-<tr class="separator:aaa0b168d9270f8ec99515fd4eaa761d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2e262a3818d2b825ec273d7b08dcbaa"><td class="memTemplParams" colspan="2"><a class="anchor" id="ad2e262a3818d2b825ec273d7b08dcbaa"></a>
-template&lt;typename SzType  = int&gt; </td></tr>
-<tr class="memitem:ad2e262a3818d2b825ec273d7b08dcbaa"><td class="memTemplItemLeft" align="right" valign="top">SzType&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Insert</b> (Type data, SzType location=0)</td></tr>
-<tr class="separator:ad2e262a3818d2b825ec273d7b08dcbaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e47e9fcd88008a2a224209dfccd2e99"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7e47e9fcd88008a2a224209dfccd2e99"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Push</b> (Type data)</td></tr>
-<tr class="separator:a7e47e9fcd88008a2a224209dfccd2e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9a60abe66d561fa0d6abdf7d1879181"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae9a60abe66d561fa0d6abdf7d1879181"></a>
-Type&#160;</td><td class="memItemRight" valign="bottom"><b>Pop</b> ()</td></tr>
-<tr class="separator:ae9a60abe66d561fa0d6abdf7d1879181"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a948f00780cdfc1dd766cd8b62fc8027b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a948f00780cdfc1dd766cd8b62fc8027b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscire_1_1_singly_list.html#a948f00780cdfc1dd766cd8b62fc8027b">SinglyList</a> ()</td></tr>
+<tr class="memdesc:a948f00780cdfc1dd766cd8b62fc8027b"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize a <a class="el" href="classscire_1_1_singly_list.html" title="A Singly Linked List class. ">SinglyList</a> object, with head pointing to nullptr <br /></td></tr>
+<tr class="separator:a948f00780cdfc1dd766cd8b62fc8027b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a694fb5a5ed576e4263f36f5fd47bfbb9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a694fb5a5ed576e4263f36f5fd47bfbb9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscire_1_1_singly_list.html#a694fb5a5ed576e4263f36f5fd47bfbb9">~SinglyList</a> ()</td></tr>
+<tr class="memdesc:a694fb5a5ed576e4263f36f5fd47bfbb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">finalize a <a class="el" href="classscire_1_1_singly_list.html" title="A Singly Linked List class. ">SinglyList</a> object by deleting all items from the list <br /></td></tr>
+<tr class="separator:a694fb5a5ed576e4263f36f5fd47bfbb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cd5df7be5b44f23873bbe06642d2308"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscire_1_1_singly_list.html#a6cd5df7be5b44f23873bbe06642d2308">Traverse</a> (void(*travfunc)(Type))</td></tr>
+<tr class="memdesc:a6cd5df7be5b44f23873bbe06642d2308"><td class="mdescLeft">&#160;</td><td class="mdescRight">Traverse each item of the list.  <a href="#a6cd5df7be5b44f23873bbe06642d2308">More...</a><br /></td></tr>
+<tr class="separator:a6cd5df7be5b44f23873bbe06642d2308"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa98320b576262aaf42b1ab997c24ca64"><td class="memItemLeft" align="right" valign="top">SzType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscire_1_1_singly_list.html#aa98320b576262aaf42b1ab997c24ca64">Insert</a> (Type data, SzType location=0)</td></tr>
+<tr class="memdesc:aa98320b576262aaf42b1ab997c24ca64"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert a new item in the list with passed &lt;data&gt; after &lt;location&gt; nodes  <a href="#aa98320b576262aaf42b1ab997c24ca64">More...</a><br /></td></tr>
+<tr class="separator:aa98320b576262aaf42b1ab997c24ca64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d8987884e470d0ca7c9ebcf0e961448"><td class="memItemLeft" align="right" valign="top">SzType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscire_1_1_singly_list.html#a7d8987884e470d0ca7c9ebcf0e961448">Count</a> ()</td></tr>
+<tr class="memdesc:a7d8987884e470d0ca7c9ebcf0e961448"><td class="mdescLeft">&#160;</td><td class="mdescRight">get count of items in the list  <a href="#a7d8987884e470d0ca7c9ebcf0e961448">More...</a><br /></td></tr>
+<tr class="separator:a7d8987884e470d0ca7c9ebcf0e961448"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f25715bc285aea2b61a725c458138b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscire_1_1_singly_list.html#a7f25715bc285aea2b61a725c458138b3">Push</a> (Type data)</td></tr>
+<tr class="memdesc:a7f25715bc285aea2b61a725c458138b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">push a new item in the list with passed &lt;data&gt; at head  <a href="#a7f25715bc285aea2b61a725c458138b3">More...</a><br /></td></tr>
+<tr class="separator:a7f25715bc285aea2b61a725c458138b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60fdba5b5eb044d710c90ba4d7328a1d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60fdba5b5eb044d710c90ba4d7328a1d"></a>
+Type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscire_1_1_singly_list.html#a60fdba5b5eb044d710c90ba4d7328a1d">Pop</a> ()</td></tr>
+<tr class="memdesc:a60fdba5b5eb044d710c90ba4d7328a1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pop the top element. <br /></td></tr>
+<tr class="separator:a60fdba5b5eb044d710c90ba4d7328a1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:ad55d156fbd2777ec9c709c35c18cc1c4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad55d156fbd2777ec9c709c35c18cc1c4"></a>
-<a class="el" href="structscire_1_1_singly_list_1_1_singly_node.html">SinglyNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>head</b></td></tr>
-<tr class="separator:ad55d156fbd2777ec9c709c35c18cc1c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6c255a9418b92268b02f2e6dda18d49"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6c255a9418b92268b02f2e6dda18d49"></a>
+<a class="el" href="structscire_1_1_singly_list_1_1_singly_node.html">SinglyNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscire_1_1_singly_list.html#ad6c255a9418b92268b02f2e6dda18d49">head</a></td></tr>
+<tr class="memdesc:ad6c255a9418b92268b02f2e6dda18d49"><td class="mdescLeft">&#160;</td><td class="mdescRight">points to first item of the list <br /></td></tr>
+<tr class="separator:ad6c255a9418b92268b02f2e6dda18d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfc88d6dd8051e5e2aa00955eed2caf8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adfc88d6dd8051e5e2aa00955eed2caf8"></a>
+SzType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscire_1_1_singly_list.html#adfc88d6dd8051e5e2aa00955eed2caf8">count</a></td></tr>
+<tr class="memdesc:adfc88d6dd8051e5e2aa00955eed2caf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">track count of items in the list <br /></td></tr>
+<tr class="separator:adfc88d6dd8051e5e2aa00955eed2caf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename Type&gt;<br />
-class scire::SinglyList&lt; Type &gt;</h3>
+<div class="textblock"><h3>template&lt;typename Type, typename SzType = int&gt;<br />
+class scire::SinglyList&lt; Type, SzType &gt;</h3>
 
-<p>A Singly Linked List class </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ad7183de9f34502c70a1721ac919f9531"></a>
+<p>A Singly Linked List class. </p>
+<p>Singly linked list contains a linear list of items. Each item points to it's next; the last item of the list points to nullptr. A head pointer points to the first element of the list. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a7d8987884e470d0ca7c9ebcf0e961448"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Type &gt; </div>
+template&lt;typename Type , typename SzType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classscire_1_1_singly_list.html">scire::SinglyList</a>&lt; Type &gt;::~<a class="el" href="classscire_1_1_singly_list.html">SinglyList</a> </td>
+          <td class="memname">SzType <a class="el" href="classscire_1_1_singly_list.html">scire::SinglyList</a>&lt; Type, SzType &gt;::Count </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>para&gt;function to traverse with</p>
-<p>return&gt;vois&lt;/return&gt; </p>
+
+<p>get count of items in the list </p>
+<dl class="section return"><dt>Returns</dt><dd>SzType count </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa98320b576262aaf42b1ab997c24ca64"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type , typename SzType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">SzType <a class="el" href="classscire_1_1_singly_list.html">scire::SinglyList</a>&lt; Type, SzType &gt;::Insert </td>
+          <td>(</td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SzType&#160;</td>
+          <td class="paramname"><em>location</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>insert a new item in the list with passed &lt;data&gt; after &lt;location&gt; nodes </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>data to insert as new item in the list </td></tr>
+    <tr><td class="paramname">[location]</td><td>location in the list where the new element to insert </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>SzType location where item inserted </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7f25715bc285aea2b61a725c458138b3"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type , typename SzType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classscire_1_1_singly_list.html">scire::SinglyList</a>&lt; Type, SzType &gt;::Push </td>
+          <td>(</td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>push a new item in the list with passed &lt;data&gt; at head </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>data to push </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6cd5df7be5b44f23873bbe06642d2308"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type , typename SzType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classscire_1_1_singly_list.html">scire::SinglyList</a>&lt; Type, SzType &gt;::Traverse </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(Type)&#160;</td>
+          <td class="paramname"><em>travfunc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Traverse each item of the list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">travfunc</td><td>function to traverse each item of list with </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -157,7 +269,7 @@ template&lt;typename Type &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 4 2014 23:44:24 for scire by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 5 2014 01:18:44 for scire by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>
