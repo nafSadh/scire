@@ -12,7 +12,7 @@ Naming Conventions:
   8. a Property is associated with
       -  type Property(){} as public getter function
       -  void Property(type){} as public setter function
-      -  type theProperty as associated (protected/private) field
+      -  type theProperty or property as associated (protected/private) field
   9. ISomeInterface is names are prefixed with classic 'I'
 
 Other Conventions:
@@ -20,7 +20,7 @@ Other Conventions:
   1. local variables shall be declared near place of use
   2. function local variables that is used throughout can be at top
   3. class members shall be accessed this-> to avoid confusion, unless it is a
-      field associated with some property (e.g. theProperty)
+      field associated with some property and prefixed the.
   4. no class field shall ever be public, use getter and setters
   5. use protected access modifiers, whenever possible instead of private to
      allow class inheritance

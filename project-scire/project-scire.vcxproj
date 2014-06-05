@@ -88,6 +88,7 @@
     <ClCompile Include="test\struct\linkedlist.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\Doxyfile" />
     <None Include="..\StyleGuide" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -50,5 +50,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\StyleGuide" />
+    <None Include="..\Doxyfile" />
   </ItemGroup>
 </Project>

@@ -25,7 +25,7 @@ int kmain()
     //cout << endl;
   }
   int a;
-  cout << "all inserted";
+  cout << "all inserted:"<<slist.Count()<<endl;
   cin >> a;
   cout << "--\n";
   for (int i = 0; i < 10; i++) {
@@ -41,7 +41,7 @@ int kmain()
 int main()
 {
   kmain();
-  cout << "\xexit\n";
+  cout << "exit\n";
   int a;
   cin >> a;
 }

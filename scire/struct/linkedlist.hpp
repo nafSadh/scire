@@ -25,13 +25,19 @@ using namespace std;
 namespace scire
 {
   /**
-  * A Singly Linked List class
+  * A Singly Linked List class.
+  * Singly linked list contains a linear list of items. Each item points to it's
+  * next; the last item of the list points to nullptr. A head pointer points to
+  * the first element of the list.
   */
-  template<typename Type>
+  template<typename Type, typename SzType = int>
   class SinglyList
   {
    public:
+    /** initialize a SinglyList object, with head pointing to nullptr */
     SinglyList();
+
+    /** finalize a SinglyList object by deleting all items from the list */
     ~SinglyList();
 
     /**
@@ -49,8 +55,15 @@ namespace scire
     * @param [location]     location in the list where the new element to insert
     * @return SzType        location where item inserted
     */
-    template<typename SzType = int>
     SzType Insert(Type data, SzType location = 0);
+
+
+    /**
+    * get count of items in the list
+    *
+    * @return SzType        count
+    */
+    SzType Count();
 
     /**
     * push a new item in the list with passed <data> at head
@@ -73,25 +86,29 @@ namespace scire
      public:
       /** data */
       Type data;
-      /** pointer to next element in list */
+      /** pointer to next node in list */
       SinglyNode* next;
     };
 
-    /** points to first element of the list */
+    /** points to first item of the list */
     SinglyNode *head;
+
+    /** track count of items in the list */
+    SzType count;
 
    private:
 
   };
 
-  template<typename Type>
-  SinglyList<Type>::SinglyList()
+  template<typename Type, typename SzType>
+  SinglyList<Type,SzType>::SinglyList()
   {
     this->head = nullptr;
+    this->count = 0;
   }
 
-  template<typename Type>
-  SinglyList<Type>::~SinglyList()
+  template<typename Type, typename SzType>
+  SinglyList<Type, SzType>::~SinglyList()
   {
     SinglyNode *node = this->head;
 
@@ -103,8 +120,8 @@ namespace scire
     }
   }
 
-  template<typename Type>
-  void SinglyList<Type>::Traverse(void(*travfunc)(Type))
+  template<typename Type, typename SzType>
+  void SinglyList<Type, SzType>::Traverse(void(*travfunc)(Type))
   {
     SinglyNode *node = this->head;
 
@@ -114,12 +131,13 @@ namespace scire
     }
   }
 
-  template<typename Type>
-  template<typename SzType>
-  SzType SinglyList<Type>::Insert(Type data, SzType location=0)
+  template<typename Type, typename SzType>
+  SzType SinglyList<Type, SzType>::Insert(Type data, SzType location = 0)
   {
     SinglyNode *node = new SinglyNode();
+    //TODO: exception when new fails
 
+    this->count++;
     node->data = data;
 
     // if list is empty or if insert to 0th location (at begining)
@@ -144,24 +162,34 @@ namespace scire
     return i;
   }
 
-  template<typename Type>
-  void SinglyList<Type>::Push(Type data)
+  template<typename Type, typename SzType>
+  SzType SinglyList<Type, SzType>::Count()
+  {
+    return this->count;
+  }
+
+  template<typename Type, typename SzType>
+  void SinglyList<Type, SzType>::Push(Type data)
   {
     SinglyNode *node = new SinglyNode();
+
+    this->count++;
 
     node->data = data;
     node->next = head;
     this->head = node;
   }
 
-  template<typename Type>
-  Type SinglyList<Type>::Pop()
+  template<typename Type, typename SzType>
+  Type SinglyList<Type, SzType>::Pop()
   {
     Type data = this->head->data;
 
     SinglyNode *node = this->head;
 
     this->head = head->next;
+
+    this->count--;
 
     delete node;
 
