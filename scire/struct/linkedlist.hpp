@@ -4,26 +4,29 @@
 // Distributed under the Boost Software License, Version 1.0.
 // (See accompanying text at http://www.boost.org/LICENSE_1_0.txt)
 
-/*
+/**
  scire/struct/linkedlist.hpp
 
- SCIRE Linked List implementations
- - SinglyList	: Singly Linked List
- - DoublyList	: Doubly Linked List
- - CircularList	: Circular List
+ scire Linked List implementations:
+ - Stack	            : Singly Linked List
+ - DoublyList	        : Doubly Linked List
+ - CircularList	      : Circular List
 
+ other required scire files:
+  none
+
+ author:
+  ~nafSadh
  */
-#ifndef SCIRE_linkedlist_HPP__
-#define SCIRE_linkedlist_HPP__
-
-#include <iostream>
-using namespace std;
-
-#ifndef SCIRE_struct_SinglyList_CLASS
-#define SCIRE_struct_SinglyList_CLASS
+#ifndef SCIRE_struct_linkedlist_HPP
+#define SCIRE_struct_linkedlist_HPP
 
 namespace scire
 {
+
+#ifndef SCIRE_SinglyList_CLASS
+#define SCIRE_SinglyList_CLASS
+
   /**
   * A Singly Linked List class.
   * Singly linked list contains a linear list of items. Each item points to it's
@@ -195,7 +198,6 @@ namespace scire
 
     return data;
   }
+#endif SCIRE_SinglyList_CLASS
 }
-#endif SCIRE_struct_SinglyList_CLASS
-
-#endif SCIRE_linkedlist_HPP__
+#endif SCIRE_struct_linkedlist_HPP

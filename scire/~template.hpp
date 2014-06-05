@@ -1,15 +1,33 @@
-/*
- scire/<box>/<filename.hpp>
+// scire/<dir>/<filename>
 
- SCIRE <file short description>
+// Copyright (c) 2014, Khan 'Sadh' Mostafa (http://nafSadh.com/Khan)
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying text at http://www.boost.org/LICENSE_1_0.txt)
 
- Copyright (c) 2014, nafSadh Khan
+/**
+ scire/<dir>/<filename>.hpp
 
- Distributed under the SCIRE Open License, Version 1.0. (adopted BSD-style 
- license, see text: http://nafsadh.com/scire/license.v1.txt)
+ scire <thing> implementation:
+ - ClassName	            : very brief description
 
+ other required scire files:
+  none
+
+ author:
+  ~nafSadh
+ */
+#ifndef SCIRE_dir_filename_HPP
+#define SCIRE_dir_filename_HPP
+
+namespace scire
+{
+
+#ifndef SCIRE_ClassName_CLASS
+#define SCIRE_ClassName_CLASS
+
+/**
 */
-#ifndef _SCIRE_filename_HPP__
-#define _SCIRE_filename_HPP__
 
-#endif
+#endif SCIRE_ClassName_CLASS
+}
+#endif SCIRE_dir_filename_HPP

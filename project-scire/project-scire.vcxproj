@@ -80,6 +80,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\scire\struct\linkedlist.hpp" />
+    <ClInclude Include="..\scire\struct\stack.hpp" />
     <ClInclude Include="..\scire\Typedefs.h" />
     <ClInclude Include="..\scire\util\filetype.hpp" />
   </ItemGroup>

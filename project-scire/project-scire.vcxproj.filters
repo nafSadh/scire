@@ -39,6 +39,9 @@
     <ClInclude Include="..\scire\struct\linkedlist.hpp">
       <Filter>scire\struct</Filter>
     </ClInclude>
+    <ClInclude Include="..\scire\struct\stack.hpp">
+      <Filter>scire\struct</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">

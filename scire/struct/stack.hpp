@@ -4,26 +4,28 @@
 // Distributed under the Boost Software License, Version 1.0.
 // (See accompanying text at http://www.boost.org/LICENSE_1_0.txt)
 
-/*
- scire/struct/linkedlist.hpp
+/**
+ scire/struct/stack.hpp
 
- SCIRE Linked List implementations
- - SinglyList	: Singly Linked List
- - DoublyList	: Doubly Linked List
- - CircularList	: Circular List
+ scire Stack implementation:
+ - Stack	            : standard simple stack
 
+ other required scire files:
+ none
+
+ author:
+ ~nafSadh
  */
 #ifndef SCIRE_struct_stack_HPP__
 #define SCIRE_struct_stack_HPP__
 
-#include <iostream>
-using namespace std;
-
-#ifndef SCIRE_Stack_CLASS
-#define SCIRE_Stack_CLASS
-
 namespace scire
 {
+
+#ifndef SCIRE_Stack_CLASS__
+#define SCIRE_Stack_CLASS__
+
+
   /**
   * Stack class.
   *
@@ -36,7 +38,7 @@ namespace scire
   {
    public:
     /** initialize a Stack object, with top pointing to nullptr */
-	Stack();
+    Stack();
 
     /** finalize a Stack object by deleting all items from the it */
     ~Stack();
@@ -44,14 +46,14 @@ namespace scire
     /**
     * get count of items in the list
     *
-    * @return SzType        count
+    * @return SzType    count
     */
     SzType Size();
 
     /**
     * Push a new item at the top of stack with passed <data>
     *
-    * @param data           data to push
+    * @param data       data to push
     * @return bool			true on success
     */
     bool Push(Type data);
@@ -128,26 +130,25 @@ namespace scire
   template<typename Type, typename SzType>
   bool Stack<Type, SzType>::Pop()
   {
-	if(top==nullptr)
-		return false; //nothing to pop
+    if(top==nullptr)
+      return false; //nothing to pop
 
-	//pop existing top item
-	Node *temp = this->top;
+    //pop existing top item
+    Node *temp = this->top;
     this->top = this->top->next;
     this->size--;
     delete temp;
     return true;
   }
 
-
   template<typename Type, typename SzType>
   Type Stack<Type, SzType>::Top()
   {
-	if(this->top == nullptr) return NULL;
+    if(this->top == nullptr) return NULL;
 
-	return this->top->data;
+    return this->top->data;
   }
-}
-#endif SCIRE_SinglyList_CLASS
 
+#endif SCIRE_SinglyList_CLASS__
+}
 #endif SCIRE_struct_stack_HPP__
