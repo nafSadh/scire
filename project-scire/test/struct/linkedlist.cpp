@@ -25,11 +25,12 @@ int kmain()
     //cout << endl;
   }
   int a;
-  cout << "all inserted:"<<slist.Count()<<endl;
+  cout << "all inserted:" << slist.Size() << endl;
   cin >> a;
   cout << "--\n";
   for (int i = 0; i < 10; i++) {
-    cout << slist.Pop() << endl;
+    cout << slist.Peek() << endl;
+    slist.Deduce();
     //slist.Traverse(read);
     //cout << endl;
   }

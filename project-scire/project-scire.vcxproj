@@ -79,6 +79,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\scire\struct\container.hpp" />
     <ClInclude Include="..\scire\struct\linkedlist.hpp" />
     <ClInclude Include="..\scire\struct\stack.hpp" />
     <ClInclude Include="..\scire\Typedefs.h" />

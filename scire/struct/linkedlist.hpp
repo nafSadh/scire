@@ -13,13 +13,15 @@
  - CircularList	      : Circular List
 
  other required scire files:
-  none
+  scire/struct/container.hpp
 
  author:
   ~nafSadh
  */
 #ifndef SCIRE_struct_linkedlist_HPP
 #define SCIRE_struct_linkedlist_HPP
+
+#include "container.hpp";
 
 namespace scire
 {
@@ -34,7 +36,7 @@ namespace scire
   * the first element of the list.
   */
   template<typename Type, typename SzType = int>
-  class SinglyList
+  class SinglyList : public IContainer<Type, SzType>
   {
    public:
     /** initialize a SinglyList object, with head pointing to nullptr */
@@ -42,6 +44,7 @@ namespace scire
 
     /** finalize a SinglyList object by deleting all items from the list */
     ~SinglyList();
+
 
     /**
     * Traverse each item of the list
@@ -60,26 +63,20 @@ namespace scire
     */
     SzType Insert(Type data, SzType location = 0);
 
+    //@implement Container
+    virtual SzType Size();
 
-    /**
-    * get count of items in the list
-    *
-    * @return SzType        count
-    */
-    SzType Count();
+    //@implement Container
+    virtual bool Add(Type val)
+    {
+      return (this->Insert(val, 0) == 0);
+    }
 
-    /**
-    * push a new item in the list with passed <data> at head
-    *
-    * @param data           data to push
-    * @return void
-    */
-    void Push(Type data);
+    //@implement Container
+    virtual bool Deduce();
 
-    /**
-    * Pop the top element
-    */
-    Type Pop();
+    //@implement Container
+    virtual Type Peek();
 
    protected:
     /**
@@ -166,25 +163,13 @@ namespace scire
   }
 
   template<typename Type, typename SzType>
-  SzType SinglyList<Type, SzType>::Count()
+  SzType SinglyList<Type, SzType>::Size()
   {
     return this->count;
   }
 
   template<typename Type, typename SzType>
-  void SinglyList<Type, SzType>::Push(Type data)
-  {
-    SinglyNode *node = new SinglyNode();
-
-    this->count++;
-
-    node->data = data;
-    node->next = head;
-    this->head = node;
-  }
-
-  template<typename Type, typename SzType>
-  Type SinglyList<Type, SzType>::Pop()
+  bool SinglyList<Type, SzType>::Deduce()
   {
     Type data = this->head->data;
 
@@ -196,7 +181,16 @@ namespace scire
 
     delete node;
 
-    return data;
+    return true;
+  }
+
+  template<typename Type, typename SzType>
+  Type SinglyList<Type, SzType>::Peek()
+  {
+    if (this->head == nullptr)
+      return NULL;
+
+    return this->head->data;
   }
 #endif SCIRE_SinglyList_CLASS
 }

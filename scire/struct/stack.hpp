@@ -11,7 +11,7 @@
  - Stack	            : standard simple stack
 
  other required scire files:
- none
+  scire/struct/container.hpp
 
  author:
  ~nafSadh
@@ -34,7 +34,7 @@ namespace scire
   * nullptr. Items can be added (push) and removed (pop) at top of the stack.
   */
   template<typename Type, typename SzType = int>
-  class Stack
+  class Stack : public IContainer<Type, SzType>
   {
    public:
     /** initialize a Stack object, with top pointing to nullptr */
@@ -44,8 +44,8 @@ namespace scire
     ~Stack();
 
     /**
-    * get count of items in the list
-    *
+    * get count of items in the stack
+    * @implement Container
     * @return SzType    count
     */
     SzType Size();
@@ -61,15 +61,37 @@ namespace scire
     /**
     * Pop (remove) an item from the top.
     *
-    * @return bool			true on success
+    * @return true on success
     */
     bool Pop();
 
+    /**
+    * Access the top element of stack
+    * @return element at the top  of the stack
+    */
     Type Top();
 
+
+    //@implement Container
+    virtual bool Add(Type val)
+    {
+      return Push(val);
+    }
+
+    //@implement Container
+    virtual bool Deduce()
+    {
+      return Pop();
+    }
+
+    //@implement Container
+    virtual Type Peek()
+    {
+      return Top();
+    }
    protected:
     /**
-    * represent a node in Singly Linked List
+    * represent an item in the stack
     */
     struct Node {
      public:
