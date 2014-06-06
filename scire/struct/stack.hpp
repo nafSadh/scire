@@ -7,8 +7,11 @@
 /**
  scire/struct/stack.hpp
 
+ scire Stack abstraction:
+ - AStack             : standard stack abstraction (Push, Pop, Top)
  scire Stack implementation:
- - Stack	            : standard simple stack
+ - Stack	            : linked list implementation of stack
+ - StackCrate         : array implementation of stack
 
  other required scire files:
   scire/struct/container.hpp
@@ -19,84 +22,104 @@
 #ifndef SCIRE_struct_stack_HPP
 #define SCIRE_struct_stack_HPP
 
+#include "container.hpp"
+
 namespace scire
 {
-
-#ifndef SCIRE_Stack_CLASS
-#define SCIRE_Stack_CLASS
-
-
+#ifndef SCIRE_Stack_ABSTR
+#define SCIRE_Stack_ABSTR
   /**
-  * Stack class.
-  *
-  * Linked list implementation of stack. A top pointer points to first item in
-  * the stack. Each item points to next item of it and the last item points to
-  * nullptr. Items can be added (push) and removed (pop) at top of the stack.
+  * Standard stack abstraction (Push, Pop, Top).
   */
   template<typename Type, typename SzType = int>
-  class Stack : public IContainer<Type, SzType>
+  class AStack : public IContainer < Type, SzType >
   {
    public:
-    /** initialize a Stack object, with top pointing to nullptr */
-    Stack();
-
-    /** finalize a Stack object by deleting all items from the it */
-    ~Stack();
-
     /**
-    * get count of items in the stack
-    * @implement Container
+    * Get item-count of the stack.
+    * @implement IContainer
     * @return SzType    count
     */
-    SzType Size();
+    virtual SzType Size() = 0;
 
     /**
-    * Push a new item at the top of stack with passed <data>
-    *
-    * @param data       data to push
+    * Push a new item at the top of stack with passed <element>.
+    * @param element       element to push
     * @return bool			true on success
     */
-    bool Push(Type data);
+    virtual bool Push(Type element) = 0;
 
     /**
     * Pop (remove) an item from the top.
-    *
     * @return true on success
     */
-    bool Pop();
+    virtual bool Pop() = 0;
 
     /**
-    * Access the top element of stack
+    * Access the top element of stack.
     * @return element at the top  of the stack
     */
-    Type Top();
+    virtual Type Top() = 0;
 
-
-    //@implement Container
-    virtual bool Add(Type val)
+    //@implement IContainer
+    virtual bool Add(Type element)
     {
-      return Push(val);
+      return Push(element);
     }
 
-    //@implement Container
+    //@implement IContainer
     virtual bool Deduce()
     {
       return Pop();
     }
 
-    //@implement Container
+    //@implement IContainer
     virtual Type Peek()
     {
       return Top();
     }
+  };
+#endif SCIRE_Stack_ABSTR
+
+#ifndef SCIRE_Stack_CLASS
+#define SCIRE_Stack_CLASS
+  /**
+  * Linked list implementation of stack.
+  *
+  * Stack implemented as linked items. A top pointer points to first item in
+  * the stack. Each item points to next item of it and the last item points to
+  * nullptr. Items can be added (push) and removed (pop) at top of the stack.
+  */
+  template<typename Type, typename SzType = int>
+  class Stack : public AStack<Type, SzType>
+  {
+   public:
+    /** initialize a Stack object, with top pointing to nullptr */
+    Stack();
+
+    /** finalize a Stack object by deleting all items from it */
+    ~Stack();
+
+    //@implement IContainer
+    SzType Size();
+
+    //@implement AStack
+    bool Push(Type element);
+
+    //@implement AStack
+    bool Pop();
+
+    //@implement AStack
+    Type Top();
+
    protected:
     /**
     * represent an item in the stack
     */
     struct Node {
      public:
-      /** data */
-      Type data;
+      /** element */
+      Type element;
       /** pointer to next item */
       Node* next;
     };
@@ -137,11 +160,11 @@ namespace scire
   }
 
   template<typename Type, typename SzType>
-  bool Stack<Type, SzType>::Push(Type data)
+  bool Stack<Type, SzType>::Push(Type element)
   {
     Node *node = new Node();
 
-    node->data = data;
+    node->element = element;
     node->next = this->top;
     this->top = node;
     this->size++;
@@ -168,9 +191,50 @@ namespace scire
   {
     if(this->top == nullptr) return NULL;
 
-    return this->top->data;
+    return this->top->element;
   }
 
 #endif SCIRE_Stack_CLASS
-}
+
+#ifndef SCIRE_StackCrate_CLASS
+#define SCIRE_StackCrate_CLASS
+  /**
+  * array implementation of stack
+  */
+  template<typename Type, typename SzType = int>
+  class StackCrate : public AStack<Type, SzType>
+  {
+   public:
+    /** initialize a StackCrate  object and allocate array crate */
+    StackCrate(SzType capacity);
+
+    /** finalize a StackCrate object by deleting array crate */
+    ~StackCrate();
+
+    //@implement Container
+    SzType Size();
+
+    //@implement AStack
+    bool Push(Type element);
+
+    //@implement AStack
+    bool Pop();
+
+    //@implement AStack
+    Type Top();
+
+   protected:
+
+   private:
+    /** array to create the stack */
+    Type *crate;
+
+    /** track count of items stack  */
+    SzType size;
+
+    /** capacity of the stack crate */
+    SzType capacity;
+  };
+#endif SCIRE_StackCrate_CLASS
+}//scire
 #endif SCIRE_struct_stack_HPP
