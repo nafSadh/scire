@@ -10,7 +10,7 @@ void read(int a)
   cout << a << " ";
 }
 
-int kmain()
+int llkmain()
 {
   //list<int> kst;
   SinglyList<int> slist;
@@ -39,9 +39,9 @@ int kmain()
   return 0;
 }
 
-int main()
+int linkedListMain()
 {
-  kmain();
+  llkmain();
   cout << "exit\n";
   int a;
   cin >> a;

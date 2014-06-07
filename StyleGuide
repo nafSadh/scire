@@ -1,4 +1,11 @@
-Code Formatting with AStyle: --style=kr --indent=spaces=3 --indent-modifiers --indent-namespaces --mode=c
+----------------------
+  scire style guide
+----------------------
+
+Code Formatting:
+ 
+ with AStyle: 
+ --style=kr --indent=spaces=2 --indent-modifiers --indent-namespaces --mode=c
 
 Naming Conventions:
 
@@ -13,7 +20,9 @@ Naming Conventions:
       -  type Property(){} as public getter function
       -  void Property(type){} as public setter function
       -  type theProperty or property as associated (protected/private) field
-  9. ISomeInterface is names are prefixed with classic 'I'
+  9. IAllInterface names are prefixed with 'I'
+ 10. AClassThatIsAbstract has 'A' prefixed to its name
+
 
 Other Conventions:
 
@@ -25,4 +34,21 @@ Other Conventions:
   5. use protected access modifiers, whenever possible instead of private to
      allow class inheritance
   6. classes shall not inherit more than one class directly
-  7. use interfaces
+  7. use interfaces and abstract classes
+  8. PureVirtualFunctions() = 0;
+  9. ctors are generally explicit
+ 10. dtors are generally virtual
+ 11. pure abstract classes has private ctors
+
+ifdef Conventions:
+  
+  1. for files: SCIRE_directory_filename_EXT
+  2. for class: SCIRE_ClassName_CLASS
+  3. for interface: SCIRE_NameOfInterface_INTFC , i.e. macro drops the prefix
+  4. for abstraction: SCIRE_AbsractClass_ABSTR , i.e. macro drops the prefix
+
+
+Shorthands:
+  
+  1. lhs, rhs = left (right) hand side (operands)
+  2. 

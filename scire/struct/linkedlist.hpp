@@ -8,7 +8,7 @@
  scire/struct/linkedlist.hpp
 
  scire Linked List implementations:
- - Stack	            : Singly Linked List
+ - SinglyList         : Singly Linked List
  - DoublyList	        : Doubly Linked List
  - CircularList	      : Circular List
 
@@ -28,12 +28,11 @@ namespace scire
 
 #ifndef SCIRE_SinglyList_CLASS
 #define SCIRE_SinglyList_CLASS
-
   /**
   * A Singly Linked List class.
   * Singly linked list contains a linear list of items. Each item points to it's
   * next; the last item of the list points to nullptr. A head pointer points to
-  * the first element of the list.
+  * the first item of the list.
   */
   template<typename Type, typename SzType = int>
   class SinglyList : public IContainer<Type, SzType>
@@ -45,31 +44,27 @@ namespace scire
     /** finalize a SinglyList object by deleting all items from the list */
     ~SinglyList();
 
-
     /**
-    * Traverse each item of the list
-    *
-    * @param travfunc       function to traverse each item of list with
-    * @return void
+    * Traverse each element of the list
+    * @param travfunc     function to traverse each element of list with
     */
     void Traverse(void(*travfunc)(Type));
 
     /**
-    * insert a new item in the list with passed <data> after <location> nodes
-    *
-    * @param data           data to insert as new item in the list
-    * @param [location]     location in the list where the new element to insert
+    * insert a new item in the list with passed element after location nodes
+    * @param element        element to insert as new item in the list
+    * @param location       location in the list where the new element to insert
     * @return SzType        location where item inserted
     */
-    SzType Insert(Type data, SzType location = 0);
+    SzType Insert(Type element, SzType location = 0);
 
     //@implement Container
     virtual SzType Size();
 
     //@implement Container
-    virtual bool Add(Type val)
+    virtual bool Add(Type element)
     {
-      return (this->Insert(val, 0) == 0);
+      return (this->Insert(element, 0) == 0);
     }
 
     //@implement Container
@@ -79,13 +74,12 @@ namespace scire
     virtual Type Peek();
 
    protected:
-    /**
-    * represent a node in Singly Linked List
-    */
-    struct SinglyNode {
+    /** represent an item node in Singly Linked List d*/
+    class SinglyNode
+    {
      public:
-      /** data */
-      Type data;
+      /** element */
+      Type element;
       /** pointer to next node in list */
       SinglyNode* next;
     };
@@ -95,9 +89,6 @@ namespace scire
 
     /** track count of items in the list */
     SzType count;
-
-   private:
-
   };
 
   template<typename Type, typename SzType>
@@ -126,19 +117,19 @@ namespace scire
     SinglyNode *node = this->head;
 
     while (node != NULL) {
-      travfunc(node->data);
+      travfunc(node->element);
       node = node->next;
     }
   }
 
   template<typename Type, typename SzType>
-  SzType SinglyList<Type, SzType>::Insert(Type data, SzType location = 0)
+  SzType SinglyList<Type, SzType>::Insert(Type element, SzType location = 0)
   {
     SinglyNode *node = new SinglyNode();
     //TODO: exception when new fails
 
     this->count++;
-    node->data = data;
+    node->element = element;
 
     // if list is empty or if insert to 0th location (at begining)
     // point node->next to head and make head point to this new node
@@ -171,14 +162,11 @@ namespace scire
   template<typename Type, typename SzType>
   bool SinglyList<Type, SzType>::Deduce()
   {
-    Type data = this->head->data;
+    if (this->IsEmpty()) return false;
 
     SinglyNode *node = this->head;
-
     this->head = head->next;
-
     this->count--;
-
     delete node;
 
     return true;
@@ -187,10 +175,7 @@ namespace scire
   template<typename Type, typename SzType>
   Type SinglyList<Type, SzType>::Peek()
   {
-    if (this->head == nullptr)
-      return NULL;
-
-    return this->head->data;
+    return (this->IsEmpty()) ? NULL : this->head->element;
   }
 #endif SCIRE_SinglyList_CLASS
 }

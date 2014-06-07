@@ -53,6 +53,9 @@
     <ClCompile Include="test\struct\linkedlist.cpp">
       <Filter>Source Files\test-scire\struct</Filter>
     </ClCompile>
+    <ClCompile Include="test\struct\stack.cpp">
+      <Filter>Source Files\test-scire\struct</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\StyleGuide" />

@@ -88,6 +88,7 @@
   <ItemGroup>
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="test\struct\linkedlist.cpp" />
+    <ClCompile Include="test\struct\stack.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Doxyfile" />

@@ -18,6 +18,9 @@
 
  author:
  ~nafSadh
+
+ acknowledgement:
+  http://www.cplusplus.com/forum/general/81166/
  */
 #ifndef SCIRE_struct_stack_HPP
 #define SCIRE_struct_stack_HPP
@@ -35,22 +38,18 @@ namespace scire
   class AStack : public IContainer < Type, SzType >
   {
    public:
-    /**
-    * Get item-count of the stack.
-    * @implement IContainer
-    * @return SzType    count
-    */
+    //@implement IContainer
     virtual SzType Size() = 0;
 
     /**
-    * Push a new item at the top of stack with passed <element>.
-    * @param element       element to push
-    * @return bool			true on success
+    * Push a new element at the top of stack.
+    * @param element    element to push
+    * @return true on success
     */
     virtual bool Push(Type element) = 0;
 
     /**
-    * Pop (remove) an item from the top.
+    * Pop (remove/deduce) an element from the top.
     * @return true on success
     */
     virtual bool Pop() = 0;
@@ -113,15 +112,14 @@ namespace scire
     Type Top();
 
    protected:
-    /**
-    * represent an item in the stack
-    */
+    /** represent an item in the stack */
     struct Node {
      public:
-      /** element */
-      Type element;
-      /** pointer to next item */
-      Node* next;
+      Type element; /** element at this node */
+      Node* next; /** pointer to next item */
+
+      Node(const Type& newElement, Node *nextNode)
+        : element(newElement), next(nextNode) {}
     };
 
    private:
@@ -134,9 +132,9 @@ namespace scire
   };
 
   template<typename Type, typename SzType>
-  Stack<Type,SzType>::Stack()
+  Stack<Type, SzType>::Stack()
+    : top(0)
   {
-    this->top = nullptr;
     this->size = 0;
   }
 
@@ -162,11 +160,7 @@ namespace scire
   template<typename Type, typename SzType>
   bool Stack<Type, SzType>::Push(Type element)
   {
-    Node *node = new Node();
-
-    node->element = element;
-    node->next = this->top;
-    this->top = node;
+    this->top = new Node(element, top);
     this->size++;
 
     return true;
@@ -175,7 +169,7 @@ namespace scire
   template<typename Type, typename SzType>
   bool Stack<Type, SzType>::Pop()
   {
-    if(top==nullptr)
+    if(this->top==nullptr)
       return false; //nothing to pop
 
     //pop existing top item
@@ -189,9 +183,7 @@ namespace scire
   template<typename Type, typename SzType>
   Type Stack<Type, SzType>::Top()
   {
-    if(this->top == nullptr) return NULL;
-
-    return this->top->element;
+    return (this->top == nullptr) ? NULL: this->top->element;
   }
 
 #endif SCIRE_Stack_CLASS

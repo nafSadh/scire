@@ -7,8 +7,9 @@
 /**
  scire/struct/container.hpp
 
- scire container interface :
+ scire container interfaces :
  - Container	      : contains many elements
+ - Crate            : elements contained in array
 
  other required scire files:
   none
@@ -24,13 +25,12 @@ namespace scire
 
 #ifndef SCIRE_Container_INTFC
 #define SCIRE_Container_INTFC
-
   /**
   * Container Inferface.
   * Size() function is necessary to all containers;
-  * this interface requires each container to implement Add(), Deduce() and
-  * Peek() function eventually allowing programs to switch between completely
-  * different conainers (e.g. List, Queue, Stack etc. even when Add/Deduce/Peek
+  * Each container shall also implement Add(), Deduce() and Peek() function
+  * eventually allowing programs to switch between completely different
+  * conainers (e.g. List, Queue, Stack etc. even when Add/Deduce/Peek
   * bear very different concepts; e.g. Add vs. Insert vs Enque vs Push).
   */
   template<typename Type, typename SzType = int>
@@ -38,31 +38,53 @@ namespace scire
   {
    public:
     /**
-    * number of items contained in
-    * @return SzType current size
+    * number of elements contained in
+    * @return current size
     */
     virtual SzType Size() = 0;
 
     /**
     * add an element
-    * @param val    value to be added as new element
-    * @return bool  true on success
+    * @param element   element to be added as new element
+    * @return true on success
     */
-    virtual bool Add(Type val) = 0;
+    virtual bool Add(Type element) = 0;
 
     /**
     * deduce one element
-    *return bool true on success
+    * @return true on success
     */
     virtual bool Deduce() = 0;
 
     /**
-    * a peek into next element to access
-    * @return Type  element
+    * peek into next element contained in
+    * @return element
     */
     virtual Type Peek() = 0;
+
+    /**
+    * check if empty
+    * @return true when empty
+    */
+    virtual bool IsEmpty()
+    {
+      return (this->Size() <= 0);
+    }
   };
 
 #endif SCIRE_Container_INTFC
+
+#ifndef SCIRE_Crate_INTFC
+#define SCIRE_Crate_INTFC
+  /**
+  * Crate contains elements in an arrays
+  */
+  template<typename Type, typename SzType = int>
+  class ICrate
+  {
+   public:
+    virtual SzType Capacity() = 0;
+  };
+#endif SCIRE_Crate_INTFC
 }
 #endif SCIRE_struct_container_HPP
