@@ -133,10 +133,8 @@ namespace scire
 
   template<typename Type, typename SzType>
   Stack<Type, SzType>::Stack()
-    : top(0)
-  {
-    this->size = 0;
-  }
+    : top(0), size(0)
+  {}
 
   template<typename Type, typename SzType>
   Stack<Type, SzType>::~Stack()
@@ -160,7 +158,7 @@ namespace scire
   template<typename Type, typename SzType>
   bool Stack<Type, SzType>::Push(Type element)
   {
-    this->top = new Node(element, top);
+    this->top = new Node(element, this->top);
     this->size++;
 
     return true;
@@ -218,14 +216,14 @@ namespace scire
    protected:
 
    private:
+    /** capacity of the stack crate */
+    SzType capacity;
+
     /** array to create the stack */
     Type *crate;
 
     /** track count of items stack  */
     SzType size;
-
-    /** capacity of the stack crate */
-    SzType capacity;
   };
 #endif SCIRE_StackCrate_CLASS
 }//scire
