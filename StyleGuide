@@ -15,7 +15,9 @@ Naming Conventions:
   4. private/protected class members are in lowerCamelCase
   5. local variables are in lowerCamelCase, oftnAbbr.
   6. DEFINE_THINGS in UPPER_CASE
-  7. functions arguments shall be descriptively_named
+  7. functions arguments shall be descriptivelyNamed
+      ctor args may have trailing underscores_ to disambiguate
+      when have one arg_ with trailing _, suffix all args of same func with it
   8. a Property is associated with
       -  type Property(){} as public getter function
       -  void Property(type){} as public setter function
@@ -39,6 +41,7 @@ Other Conventions:
   9. ctors are generally explicit
  10. dtors are generally virtual
  11. pure abstract classes has private ctors
+ 12. ctors will call : member(val) styled initializers
 
 ifdef Conventions:
   
