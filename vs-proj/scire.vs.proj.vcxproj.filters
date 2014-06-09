@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="scire">
+      <UniqueIdentifier>{f9f95342-8c58-4959-84da-9d6c233cd6d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scire-test">
+      <UniqueIdentifier>{904c7a70-7445-41df-a4c7-97ab2dc285d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scire-test\struct">
+      <UniqueIdentifier>{51192858-6acb-42d7-beb1-a66ea281f36e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scire-test\util">
+      <UniqueIdentifier>{575c46bc-4957-469d-b3f6-5b41f723f8bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scire\struct">
+      <UniqueIdentifier>{1adef048-7bb5-4eee-8b67-9be1faac3c03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scire\util">
+      <UniqueIdentifier>{df34a012-14cd-46b8-a5e2-e7defe8f1d69}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\test\struct\linkedlist.cpp">
+      <Filter>scire-test\struct</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\struct\stack.cpp">
+      <Filter>scire-test\struct</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\util\filetype.cpp">
+      <Filter>scire-test\util</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\scire\struct\container.hpp">
+      <Filter>scire\struct</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scire\struct\linkedlist.hpp">
+      <Filter>scire\struct</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scire\struct\stack.hpp">
+      <Filter>scire\struct</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scire\util\filetype.hpp">
+      <Filter>scire\util</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

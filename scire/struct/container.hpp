@@ -37,7 +37,7 @@ namespace scire
   class IContainer
   {
    public:
-	virtual ~IContainer();
+    virtual ~IContainer() {}
     /**
     * number of elements contained in
     * @return current size
@@ -84,7 +84,7 @@ namespace scire
   class ICrate
   {
    public:
-	virtual ~ICrate();
+    virtual ~ICrate();
     virtual SzType Capacity() = 0;
   };
 #endif//SCIRE_Crate_INTFC

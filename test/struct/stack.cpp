@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../../scire/struct/stack.hpp"
+#include "../../scire/struct/stack.hpp"
 #include <stack>
 
 using namespace std;

@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../../scire/struct/linkedlist.hpp"
+#include "../../scire/struct/linkedlist.hpp"
 #include <list>
 
 using namespace std;
