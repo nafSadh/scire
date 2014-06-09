@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['node',['Node',['../dd/d81/structscire_1_1_stack_1_1_node.html',1,'scire::Stack']]]
+  ['filetype',['FileType',['../d9/dbc/classscire_1_1_file_type.html',1,'scire']]]
 ];

@@ -1,14 +1,6 @@
 var searchData=
 [
-  ['scire',['scire',['../d6/d73/namespacescire.html',1,'']]],
-  ['scire_5fclassname_5fclass',['SCIRE_ClassName_CLASS',['../d3/df2/~template_8hpp.html#ab89e2e8e8f9eff92c5c533e2b03377e9',1,'~template.hpp']]],
-  ['scire_5fsinglylist_5fclass',['SCIRE_SinglyList_CLASS',['../db/ded/linkedlist_8hpp.html#a0efe8e67ac27503777783b7e9d011bdf',1,'linkedlist.hpp']]],
-  ['scire_5fstack_5fclass',['SCIRE_Stack_CLASS',['../df/d47/stack_8hpp.html#ae2157bf9a69978bf3dd2804bad811c81',1,'stack.hpp']]],
-  ['singlylist',['SinglyList',['../d7/d94/classscire_1_1_singly_list.html',1,'scire']]],
-  ['singlylist',['SinglyList',['../d7/d94/classscire_1_1_singly_list.html#a948f00780cdfc1dd766cd8b62fc8027b',1,'scire::SinglyList']]],
-  ['singlynode',['SinglyNode',['../d0/dda/structscire_1_1_singly_list_1_1_singly_node.html',1,'scire::SinglyList']]],
-  ['size',['Size',['../da/d7f/classscire_1_1_stack.html#a081621ccdd732ac1bd33844625f83da2',1,'scire::Stack']]],
-  ['stack',['Stack',['../da/d7f/classscire_1_1_stack.html#af4883ab880c75fc8345e9abe27a0ff4a',1,'scire::Stack']]],
-  ['stack',['Stack',['../da/d7f/classscire_1_1_stack.html',1,'scire']]],
-  ['stack_2ehpp',['stack.hpp',['../df/d47/stack_8hpp.html',1,'']]]
+  ['peek',['Peek',['../d0/db4/classscire_1_1_i_container.html#ab6636c297a19d0ecf2898e412da24731',1,'scire::IContainer::Peek()'],['../d7/d94/classscire_1_1_singly_list.html#ab98612c3351e773fde46c8116a0a04d3',1,'scire::SinglyList::Peek()'],['../d3/d3d/classscire_1_1_a_stack.html#ac6b3af7dcf0c2dc69d62022386dd2dd9',1,'scire::AStack::Peek()']]],
+  ['pop',['Pop',['../d3/d3d/classscire_1_1_a_stack.html#a28bdde16f335b50b9e6e9a1cde7b1699',1,'scire::AStack::Pop()'],['../da/d7f/classscire_1_1_stack.html#a9263ebe349d24dec9925b5f245eb8ff7',1,'scire::Stack::Pop()'],['../d7/d67/classscire_1_1_stack_crate.html#a582fb93f8abeb7ca4d7032df0e1d3b95',1,'scire::StackCrate::Pop()']]],
+  ['push',['Push',['../d3/d3d/classscire_1_1_a_stack.html#a0596284ab1ab98a3c2ae4edcb945f6f3',1,'scire::AStack::Push()'],['../da/d7f/classscire_1_1_stack.html#a90a8ed283e70def80bb1c6161ab8e648',1,'scire::Stack::Push()'],['../d7/d67/classscire_1_1_stack_crate.html#a7868bbf2fc4d30359ed10b1925c13b8a',1,'scire::StackCrate::Push()']]]
 ];

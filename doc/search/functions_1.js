@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['filetype',['FileType',['../d9/dbc/classscire_1_1_file_type.html#a8c009ea19a1d378298b153e3d995472a',1,'scire::FileType']]]
+  ['capacity',['Capacity',['../dd/dc6/classscire_1_1_i_crate.html#ac2f9ee7f1e226dc17106fe0d846f6a43',1,'scire::ICrate']]]
 ];

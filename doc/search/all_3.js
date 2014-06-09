@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['data',['data',['../d0/dda/structscire_1_1_singly_list_1_1_singly_node.html#ab614ebd5cf68583a305396d0c13f3a2a',1,'scire::SinglyList::SinglyNode::data()'],['../dd/d81/structscire_1_1_stack_1_1_node.html#a6ace8fbfa229c085d0b9eb505dde2828',1,'scire::Stack::Node::data()']]]
+  ['capacity',['Capacity',['../dd/dc6/classscire_1_1_i_crate.html#ac2f9ee7f1e226dc17106fe0d846f6a43',1,'scire::ICrate']]],
+  ['container_2ehpp',['container.hpp',['../dc/d6e/container_8hpp.html',1,'']]],
+  ['count',['count',['../d7/d94/classscire_1_1_singly_list.html#adfc88d6dd8051e5e2aa00955eed2caf8',1,'scire::SinglyList']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['data',['data',['../d0/dda/structscire_1_1_singly_list_1_1_singly_node.html#ab614ebd5cf68583a305396d0c13f3a2a',1,'scire::SinglyList::SinglyNode::data()'],['../dd/d81/structscire_1_1_stack_1_1_node.html#a6ace8fbfa229c085d0b9eb505dde2828',1,'scire::Stack::Node::data()']]]
+  ['element',['element',['../d3/d71/classscire_1_1_singly_list_1_1_singly_node.html#aff58c2e71b3c71a01d7ad8dff296a36b',1,'scire::SinglyList::SinglyNode::element()'],['../dd/d81/structscire_1_1_stack_1_1_node.html#a2f81cee6f94e45f8e92c23e99b4c847f',1,'scire::Stack::Node::element()']]]
 ];
