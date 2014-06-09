@@ -42,7 +42,7 @@ namespace scire
     SinglyList();
 
     /** finalize a SinglyList object by deleting all items from the list */
-    ~SinglyList();
+    virtual ~SinglyList();
 
     /**
     * Traverse each element of the list
@@ -123,7 +123,7 @@ namespace scire
   }
 
   template<typename Type, typename SzType>
-  SzType SinglyList<Type, SzType>::Insert(Type element, SzType location = 0)
+  SzType SinglyList<Type, SzType>::Insert(Type element, SzType location)
   {
     SinglyNode *node = new SinglyNode();
     //TODO: exception when new fails

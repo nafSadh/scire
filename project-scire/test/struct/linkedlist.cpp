@@ -1,5 +1,5 @@
 #include <iostream>
-#include "..\..\..\scire\struct\linkedlist.hpp"
+#include "../../../scire/struct/linkedlist.hpp"
 #include <list>
 
 using namespace std;
@@ -45,4 +45,6 @@ int linkedListMain()
   cout << "exit\n";
   int a;
   cin >> a;
+
+  return 0;
 }
