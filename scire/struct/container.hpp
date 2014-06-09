@@ -37,6 +37,8 @@ namespace scire
   class IContainer
   {
    public:
+    virtual IContainer();
+    virtual ~IContainer();
     /**
     * number of elements contained in
     * @return current size

@@ -74,7 +74,7 @@ namespace scire
     virtual Type Peek();
 
    protected:
-    /** represent an item node in Singly Linked List d*/
+    /** represent an item node in Singly Linked List */
     class SinglyNode
     {
      public:

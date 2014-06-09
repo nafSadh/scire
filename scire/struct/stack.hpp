@@ -9,7 +9,8 @@
 
  scire Stack abstraction:
  - AStack             : standard stack abstraction (Push, Pop, Top)
- scire Stack implementation:
+
+ scire Stack implementations:
  - Stack	            : linked list implementation of stack
  - StackCrate         : array implementation of stack
 
@@ -134,7 +135,9 @@ namespace scire
   template<typename Type, typename SzType>
   Stack<Type, SzType>::Stack()
     : top(0), size(0)
-  {}
+  {
+    //empty ctor body, all init on initlist
+  }
 
   template<typename Type, typename SzType>
   Stack<Type, SzType>::~Stack()
@@ -201,6 +204,9 @@ namespace scire
     /** finalize a StackCrate object by deleting array crate */
     ~StackCrate();
 
+    //@implement Crate
+    SzType Capacity();
+
     //@implement Container
     SzType Size();
 
@@ -235,18 +241,22 @@ namespace scire
     crate = new Type[capacity];
   }
 
-
   template<typename Type, typename SzType>
   StackCrate<Type, SzType>::~StackCrate()
   {
     delete[] crate;
   }
 
-
   template<typename Type, typename SzType>
   SzType StackCrate<Type, SzType>::Size()
   {
     return this->size;
+  }
+
+  template<typename Type, typename SzType>
+  SzType StackCrate<Type, SzType>::Capacity()
+  {
+    return this->capacity;
   }
 
   template<typename Type, typename SzType>
