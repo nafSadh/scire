@@ -7,7 +7,7 @@ using namespace scire;
 
 int main()
 {
-  StackCrate<char> stk(30);
+  StackCrate<char> stk(40);
 
   for (char c = 'a'; c <= 'z'; c++) {
     stk.Push(c);
