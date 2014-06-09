@@ -196,7 +196,7 @@ namespace scire
   {
    public:
     /** initialize a StackCrate  object and allocate array crate */
-    StackCrate(SzType capacity);
+    StackCrate(SzType stackCapacity);
 
     /** finalize a StackCrate object by deleting array crate */
     ~StackCrate();
@@ -225,6 +225,58 @@ namespace scire
     /** track count of items stack  */
     SzType size;
   };
+
+  template<typename Type, typename SzType>
+  StackCrate<Type, SzType>::StackCrate(SzType stackCapacity)
+    :capacity(stackCapacity),
+     crate(0),
+     size(0)
+  {
+    crate = new Type[capacity];
+  }
+
+
+  template<typename Type, typename SzType>
+  StackCrate<Type, SzType>::~StackCrate()
+  {
+    delete[] crate;
+  }
+
+
+  template<typename Type, typename SzType>
+  SzType StackCrate<Type, SzType>::Size()
+  {
+    return this->size;
+  }
+
+  template<typename Type, typename SzType>
+  bool StackCrate<Type, SzType>::Push(Type element)
+  {
+    //if size reached the capacity, cannot push
+    if (this->size >= this->capacity) return false;
+
+    this->crate[size] = element;
+    this->size++;
+
+    return true;
+  }
+
+
+  template<typename Type, typename SzType>
+  bool StackCrate<Type, SzType>::Pop()
+  {
+    //if nothing left in the stack, cannot pop
+    if (size <= 0) return false;
+
+    this->size--;
+    return true;
+  }
+
+  template<typename Type, typename SzType>
+  Type StackCrate<Type, SzType>::Top()
+  {
+    return this->crate[size - 1];
+  }
 #endif SCIRE_StackCrate_CLASS
 }//scire
 #endif SCIRE_struct_stack_HPP
