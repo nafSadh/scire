@@ -225,5 +225,45 @@ namespace scire
     return this->size;
   }
 #endif//SCIRE_Queue_CLASS
-}
+#ifndef SCIRE_QueueCrate_CLASS
+#define SCIRE_QueueCrate_CLASS
+  /**
+  * Array implementation of Queue.
+  */
+  template<typename Type, typename SzType>
+  class QueueCrate
+    : public AQueue<Type, SzType>,
+      public ICrate<Type, SzType>
+  {
+   public:
+    QueueCrate();
+    ~QueueCrate();
+
+    //@implement AQueue
+    bool Enqueue(const Type& element);
+
+    //@implement AQueue
+    bool Dequeue();
+
+    //@implement AQueue
+    Type Front();
+
+    //@implement AContainer
+    SzType Size();
+
+    //@implement ICrate
+    SzType Capacity();
+
+   private:
+    /** capacity of the stack crate */
+    SzType capacity;
+
+    /** array to create the stack */
+    Type *crate;
+
+    /** track count of items stack  */
+    SzType first, last;
+  };
+#endif//SCIRE_QueueCrate_CLASS
+}//scire namespace
 #endif//SCIRE_struct_queue_HPP
