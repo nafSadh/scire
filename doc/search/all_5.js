@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['element',['element',['../d3/d71/classscire_1_1_singly_list_1_1_singly_node.html#aff58c2e71b3c71a01d7ad8dff296a36b',1,'scire::SinglyList::SinglyNode::element()'],['../dd/d81/structscire_1_1_stack_1_1_node.html#a2f81cee6f94e45f8e92c23e99b4c847f',1,'scire::Stack::Node::element()']]]
+  ['element',['element',['../d3/d71/classscire_1_1_singly_list_1_1_singly_node.html#aff58c2e71b3c71a01d7ad8dff296a36b',1,'scire::SinglyList::SinglyNode']]],
+  ['enque',['Enque',['../de/d92/classscire_1_1_a_queue.html#a6f45e235af8e188e1828612fc7af71e3',1,'scire::AQueue']]],
+  ['enqueue',['Enqueue',['../de/d92/classscire_1_1_a_queue.html#ad5db027bd676bd46007b0900d22c2efa',1,'scire::AQueue::Enqueue()'],['../da/dca/classscire_1_1_queue.html#a9785ebf162ab8ec96fb4b4fef209206a',1,'scire::Queue::Enqueue()']]]
 ];

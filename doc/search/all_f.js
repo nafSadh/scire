@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['uint16',['uint16',['../d3/d63/_typedefs_8h.html#aa2af87dc3681cf517e4b9e14c6f0244e',1,'Typedefs.h']]],
-  ['uint32',['uint32',['../d3/d63/_typedefs_8h.html#ada4c95a4173a4bb540c8a7f80f3665d2',1,'Typedefs.h']]],
-  ['uint64',['uint64',['../d3/d63/_typedefs_8h.html#ac6afe794ed283c11fb63426a58188e5e',1,'Typedefs.h']]],
-  ['uint8',['uint8',['../d3/d63/_typedefs_8h.html#a1b09856a6463f2bcc4bd8ff0e4e3ee0f',1,'Typedefs.h']]]
+  ['top',['Top',['../d3/d3d/classscire_1_1_a_stack.html#a69c4c801910453aedfd2a258f1ecbc7a',1,'scire::AStack::Top()'],['../da/d7f/classscire_1_1_stack.html#a623def6c7a1b267ec9b9fe9c56d65eb3',1,'scire::Stack::Top()'],['../d7/d67/classscire_1_1_stack_crate.html#a1f10a02e26a1a40258727e52564c10ae',1,'scire::StackCrate::Top()']]],
+  ['traverse',['Traverse',['../d7/d94/classscire_1_1_singly_list.html#a6cd5df7be5b44f23873bbe06642d2308',1,'scire::SinglyList']]],
+  ['typedefs_2eh',['Typedefs.h',['../d3/d63/_typedefs_8h.html',1,'']]]
 ];

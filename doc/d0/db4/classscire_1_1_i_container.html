@@ -133,6 +133,8 @@ Inheritance diagram for scire::IContainer&lt; Type, SzType &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a34aa45b7911d86183e0ae4ca4e8cf959"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/db4/classscire_1_1_i_container.html#a34aa45b7911d86183e0ae4ca4e8cf959">~IContainer</a> ()</td></tr>
+<tr class="separator:a34aa45b7911d86183e0ae4ca4e8cf959"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a405007a3e3de1a517d03210be1d6b0ed"><td class="memItemLeft" align="right" valign="top">virtual SzType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/db4/classscire_1_1_i_container.html#a405007a3e3de1a517d03210be1d6b0ed">Size</a> ()=0</td></tr>
 <tr class="memdesc:a405007a3e3de1a517d03210be1d6b0ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of elements contained in  <a href="#a405007a3e3de1a517d03210be1d6b0ed">More...</a><br /></td></tr>
 <tr class="separator:a405007a3e3de1a517d03210be1d6b0ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,7 +159,35 @@ class scire::IContainer&lt; Type, SzType &gt;</h3>
 <p><a class="el" href="../../d0/db4/classscire_1_1_i_container.html#a405007a3e3de1a517d03210be1d6b0ed" title="number of elements contained in ">Size()</a> function is necessary to all containers; Each container shall also implement <a class="el" href="../../d0/db4/classscire_1_1_i_container.html#a7689f8777ead15a7b13ad6d317b28a93" title="add an element ">Add()</a>, <a class="el" href="../../d0/db4/classscire_1_1_i_container.html#abd2240006c5e2fc95b78fb6dd74678f2" title="deduce one element ">Deduce()</a> and <a class="el" href="../../d0/db4/classscire_1_1_i_container.html#ab6636c297a19d0ecf2898e412da24731" title="peek into next element contained in ">Peek()</a> function eventually allowing programs to switch between completely different conainers (e.g. List, Queue, <a class="el" href="../../da/d7f/classscire_1_1_stack.html" title="Linked list implementation of stack. ">Stack</a> etc. even when Add/Deduce/Peek bear very different concepts; e.g. Add vs. Insert vs Enque vs Push). </p>
 
 <p>Definition at line <a class="el" href="../../dc/d6e/container_8hpp_source.html#l00037">37</a> of file <a class="el" href="../../dc/d6e/container_8hpp_source.html">container.hpp</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a34aa45b7911d86183e0ae4ca4e8cf959"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type , typename SzType  = int&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../d0/db4/classscire_1_1_i_container.html">scire::IContainer</a>&lt; Type, SzType &gt;::~<a class="el" href="../../d0/db4/classscire_1_1_i_container.html">IContainer</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="../../dc/d6e/container_8hpp_source.html#l00040">40</a> of file <a class="el" href="../../dc/d6e/container_8hpp_source.html">container.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a7689f8777ead15a7b13ad6d317b28a93"></a>
 <div class="memitem">
 <div class="memproto">
@@ -251,7 +281,7 @@ template&lt;typename Type , typename SzType  = int&gt; </div>
 <p>check if empty </p>
 <dl class="section return"><dt>Returns</dt><dd>true when empty </dd></dl>
 
-<p>Definition at line <a class="el" href="../../dc/d6e/container_8hpp_source.html#l00069">69</a> of file <a class="el" href="../../dc/d6e/container_8hpp_source.html">container.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6e/container_8hpp_source.html#l00070">70</a> of file <a class="el" href="../../dc/d6e/container_8hpp_source.html">container.hpp</a>.</p>
 
 </div>
 </div>
@@ -324,7 +354,7 @@ template&lt;typename Type , typename SzType  = int&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d6/d73/namespacescire.html">scire</a></li><li class="navelem"><a class="el" href="../../d0/db4/classscire_1_1_i_container.html">IContainer</a></li>
-    <li class="footer">Generated on Sat Jun 7 2014 03:17:17 for scire by
+    <li class="footer">Generated on Mon Jun 9 2014 18:37:06 for scire by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['node',['Node',['../dd/d81/structscire_1_1_stack_1_1_node.html',1,'scire::Stack']]]
+  ['queue',['Queue',['../da/dca/classscire_1_1_queue.html',1,'scire']]]
 ];

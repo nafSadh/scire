@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['add',['Add',['../d0/db4/classscire_1_1_i_container.html#a7689f8777ead15a7b13ad6d317b28a93',1,'scire::IContainer::Add()'],['../d7/d94/classscire_1_1_singly_list.html#a23a5df5218b1952d1eac91891961baa6',1,'scire::SinglyList::Add()'],['../d3/d3d/classscire_1_1_a_stack.html#abf635c159a0c923945cfab45f91892da',1,'scire::AStack::Add()']]]
+  ['add',['Add',['../d3/de4/classscire_1_1_a_container.html#a36dd1fd197382b4d4833a499fe330f52',1,'scire::AContainer::Add()'],['../d7/d94/classscire_1_1_singly_list.html#acc9afc818fc11b32d906e950fffd14b0',1,'scire::SinglyList::Add()'],['../de/d92/classscire_1_1_a_queue.html#a2e9a33c086ff6b203ff280a26d9924a2',1,'scire::AQueue::Add()'],['../d3/d3d/classscire_1_1_a_stack.html#ab946dccbb3452d90907a3e042f642204',1,'scire::AStack::Add()']]]
 ];

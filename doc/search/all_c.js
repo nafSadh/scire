@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['readme',['README',['../d2/d04/md_scire__r_e_a_d_m_e.html',1,'']]],
-  ['readme_2emd',['README.md',['../d9/dd6/_r_e_a_d_m_e_8md.html',1,'']]]
+  ['queue',['Queue',['../da/dca/classscire_1_1_queue.html',1,'scire']]],
+  ['queue',['Queue',['../da/dca/classscire_1_1_queue.html#a04786149becef15f21a8648f78980062',1,'scire::Queue']]],
+  ['queue_2ehpp',['queue.hpp',['../d7/ded/queue_8hpp.html',1,'']]]
 ];
