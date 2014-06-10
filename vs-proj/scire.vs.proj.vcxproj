@@ -92,6 +92,9 @@
     <ClInclude Include="..\scire\struct\stack.hpp" />
     <ClInclude Include="..\scire\util\filetype.hpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="scire-classes.cd" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

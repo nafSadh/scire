@@ -82,7 +82,7 @@ namespace scire
 #ifndef SCIRE_Crate_INTFC
 #define SCIRE_Crate_INTFC
   /**
-  * Crate contains elements in an arrays
+  * Crate contains elements in an arrays.
   */
   template<typename Type, typename SzType = int>
   class ICrate

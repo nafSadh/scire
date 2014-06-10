@@ -35,7 +35,8 @@ namespace scire
   * A Queue should support Enque(), Deque() and Front() operations
   */
   template<typename Type, typename SzType>
-  class AQueue : public AContainer < Type, SzType >
+  class AQueue
+    : public AContainer < Type, SzType >
   {
    public:
     // -- please implement -- //
@@ -62,19 +63,19 @@ namespace scire
     virtual SzType Size() = 0;
 
     // -- functions aliases : do not override -- //
-    /** @copydoc AQueue::Enqueue */
+    /** !DoNot Override! @copydoc AQueue::Enqueue */
     bool Enque(const Type& element)
     {
       return Enqueue(element);
     }
 
-    /** @copydoc AQueue::Enqueue */
+    /** !DoNot Override! @copydoc AQueue::Dequeue */
     bool Deque()
     {
       return Dequeue();
     }
 
-    /** @copydoc AQueue::Enqueue */
+    /** !DoNot Override! @copydoc AQueue::Front */
     Type Fore()
     {
       return Front();
@@ -226,5 +227,47 @@ namespace scire
   }
 #endif//SCIRE_Queue_CLASS
 
+#ifndef SCIRE_QueueCrate_CLASS
+#define SCIRE_QueueCrate_CLASS
+  /**
+  * Array implementation of Queue.
+  */
+  template<typename Type, typename SzType>
+  class QueueCrate
+    : public AQueue<Type, SzType>,
+      public ICrate<Type, SzType>
+  {
+   public:
+    QueueCrate();
+    ~QueueCrate();
+
+    //@implement AQueue
+    bool Enqueue(const Type& element);
+
+    //@implement AQueue
+    bool Dequeue();
+
+    //@implement AQueue
+    Type Front();
+
+    //@implement AContainer
+    SzType Size();
+
+    //@implement ICrate
+    SzType Capacity();
+
+   private:
+    /** capacity of the stack crate */
+    SzType capacity;
+
+    /** array to create the stack */
+    Type *crate;
+
+    /** track count of items stack  */
+    SzType first, last;
+  };
+
+
+#endif//SCIRE_QueueCrate_CLASS
 }
 #endif//SCIRE_struct_queue_HPP

@@ -59,4 +59,7 @@
       <Filter>scire\struct</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="scire-classes.cd" />
+  </ItemGroup>
 </Project>
