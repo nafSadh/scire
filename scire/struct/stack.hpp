@@ -36,10 +36,10 @@ namespace scire
   * Standard stack abstraction (Push, Pop, Top).
   */
   template<typename Type, typename SzType = int>
-  class AStack : public IContainer < Type, SzType >
+  class AStack : public AContainer < Type, SzType >
   {
    public:
-    //@implement IContainer
+    //@implement AContainer
     virtual SzType Size() = 0;
 
     /**
@@ -61,20 +61,20 @@ namespace scire
     */
     virtual Type Top() = 0;
 
-    //@implement IContainer
-    virtual bool Add(Type element)
+    //@implement AContainer
+    bool Add(Type element)
     {
       return Push(element);
     }
 
-    //@implement IContainer
-    virtual bool Deduce()
+    //@implement AContainer
+    bool Deduce()
     {
       return Pop();
     }
 
-    //@implement IContainer
-    virtual Type Peek()
+    //@implement AContainer
+    Type Peek()
     {
       return Top();
     }
@@ -100,7 +100,7 @@ namespace scire
     /** finalize a Stack object by deleting all items from it */
     ~Stack();
 
-    //@implement IContainer
+    //@implement AContainer
     SzType Size();
 
     //@implement AStack
@@ -195,7 +195,8 @@ namespace scire
   * array implementation of stack
   */
   template<typename Type, typename SzType = int>
-  class StackCrate : public AStack<Type, SzType>
+  class StackCrate : public AStack<Type, SzType>,
+    public ICrate<Type, SzType>
   {
    public:
     /** initialize a StackCrate  object and allocate array crate */
@@ -287,6 +288,6 @@ namespace scire
   {
     return this->crate[size - 1];
   }
-#endif SCIRE_StackCrate_CLASS
+#endif//SCIRE_StackCrate_CLASS
 }//scire
-#endif SCIRE_struct_stack_HPP
+#endif//SCIRE_struct_stack_HPP
