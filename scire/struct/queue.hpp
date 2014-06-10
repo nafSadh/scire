@@ -135,7 +135,7 @@ namespace scire
     //@implement AContainer
     SzType Size();
 
-   private:
+   protected:
 
    private:
     /** represent an item in the queue */
@@ -148,10 +148,10 @@ namespace scire
         : element(newElement), next(nextNode) {}
     };
 
-    /** the entry point of the queue */
+    /** entry point of the queue */
     Node *head;
 
-    /** the exit point of the queue */
+    /** exit point of the queue */
     Node *tail;
 
     /** track count of items in the queue */
@@ -216,7 +216,7 @@ namespace scire
   template<typename Type, typename SzType>
   Type Queue<Type, SzType>::Front()
   {
-    return (this->head == nullptr) ? NULL : this->head->element;
+    return this->head->element;
   }
 
   template<typename Type, typename SzType>
@@ -225,6 +225,5 @@ namespace scire
     return this->size;
   }
 #endif//SCIRE_Queue_CLASS
-
 }
 #endif//SCIRE_struct_queue_HPP

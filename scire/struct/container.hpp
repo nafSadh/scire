@@ -32,7 +32,7 @@ namespace scire
   * Size() function is necessary to all containers;
   * Each container shall also implement Add(), Deduce() and Peek() function
   * eventually allowing programs to switch between completely different
-  * conainers (e.g. List, Queue, Stack etc. even when Add/Deduce/Peek
+  * containers (e.g. List, Queue, Stack etc. even when Add/Deduce/Peek
   * bear very different concepts; e.g. Add vs. Insert vs Enque vs Push).
   */
   template<typename Type, typename SzType = int>

@@ -21,7 +21,7 @@
 #ifndef SCIRE_struct_linkedlist_HPP
 #define SCIRE_struct_linkedlist_HPP
 
-#include "container.hpp";
+#include "container.hpp"
 
 namespace scire
 {
@@ -175,8 +175,8 @@ namespace scire
   template<typename Type, typename SzType>
   Type SinglyList<Type, SzType>::Peek()
   {
-    return (this->IsEmpty()) ? NULL : this->head->element;
+    return this->head->element;
   }
-#endif SCIRE_SinglyList_CLASS
+#endif//SCIRE_SinglyList_CLASS
 }
-#endif SCIRE_struct_linkedlist_HPP
+#endif//SCIRE_struct_linkedlist_HPP
