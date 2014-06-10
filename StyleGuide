@@ -42,6 +42,9 @@ Other Conventions:
  10. dtors are generally virtual
  11. pure abstract classes has private ctors
  12. ctors will call : member(val) styled initializers
+ 13. a class that is ABSTR has a virtual dtor and vice versa
+ 14. Interfaces are named with 'I' prefixed, have only pure virtual functions, 
+      no fields, and no explicit ctor nor dtor
 
 ifdef Conventions:
   
