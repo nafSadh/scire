@@ -9,6 +9,7 @@
 
  scire Queue abstraction:
  - AQueue               : queue abstraction (Enque, Deque, Front)
+
  scire Queue implementations:
  - Queue                : standard linked list implementation of queue
  - QueueCrate           : array implementation of queue
