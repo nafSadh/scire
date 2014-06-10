@@ -35,7 +35,7 @@ namespace scire
   * the first item of the list.
   */
   template<typename Type, typename SzType = int>
-  class SinglyList : public IContainer<Type, SzType>
+  class SinglyList : public AContainer<Type, SzType>
   {
    public:
     /** initialize a SinglyList object, with head pointing to nullptr */
@@ -62,7 +62,7 @@ namespace scire
     virtual SzType Size();
 
     //@implement Container
-    virtual bool Add(Type element)
+    virtual bool Add(const Type& element)
     {
       return (this->Insert(element, 0) == 0);
     }

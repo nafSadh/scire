@@ -36,18 +36,17 @@ namespace scire
   * Standard stack abstraction (Push, Pop, Top).
   */
   template<typename Type, typename SzType = int>
-  class AStack : public AContainer < Type, SzType >
+  class AStack
+    : public AContainer < Type, SzType >
   {
    public:
-    //@implement AContainer
-    virtual SzType Size() = 0;
-
+    // -- please implement -- //
     /**
     * Push a new element at the top of stack.
     * @param element    element to push
     * @return true on success
     */
-    virtual bool Push(Type element) = 0;
+    virtual bool Push(const Type& element) = 0;
 
     /**
     * Pop (remove/deduce) an element from the top.
@@ -62,7 +61,11 @@ namespace scire
     virtual Type Top() = 0;
 
     //@implement AContainer
-    bool Add(Type element)
+    virtual SzType Size() = 0;
+
+    // -- AQueue wrapped as AContainer -- //
+    //@implement AContainer
+    bool Add(const Type& element)
     {
       return Push(element);
     }
@@ -91,7 +94,8 @@ namespace scire
   * nullptr. Items can be added (push) and removed (pop) at top of the stack.
   */
   template<typename Type, typename SzType = int>
-  class Stack : public AStack<Type, SzType>
+  class Stack
+    : public AStack<Type, SzType>
   {
    public:
     /** initialize a Stack object, with top pointing to nullptr */
@@ -100,11 +104,8 @@ namespace scire
     /** finalize a Stack object by deleting all items from it */
     ~Stack();
 
-    //@implement AContainer
-    SzType Size();
-
     //@implement AStack
-    bool Push(Type element);
+    bool Push(const Type& element);
 
     //@implement AStack
     bool Pop();
@@ -112,7 +113,12 @@ namespace scire
     //@implement AStack
     Type Top();
 
+    //@implement AContainer
+    SzType Size();
+
    protected:
+
+   private:
     /** represent an item in the stack */
     struct Node {
      public:
@@ -123,11 +129,10 @@ namespace scire
         : element(newElement), next(nextNode) {}
     };
 
-   private:
     /** points to the top of the stack */
     Node *top;
 
-    /** track count of items stack  */
+    /** track count of items in the stack  */
     SzType size;
 
   };
@@ -159,7 +164,7 @@ namespace scire
   }
 
   template<typename Type, typename SzType>
-  bool Stack<Type, SzType>::Push(Type element)
+  bool Stack<Type, SzType>::Push(const Type& element)
   {
     this->top = new Node(element, this->top);
     this->size++;
@@ -195,8 +200,9 @@ namespace scire
   * array implementation of stack
   */
   template<typename Type, typename SzType = int>
-  class StackCrate : public AStack<Type, SzType>,
-    public ICrate<Type, SzType>
+  class StackCrate
+    : public AStack<Type, SzType>,
+      public ICrate<Type, SzType>
   {
    public:
     /** initialize a StackCrate  object and allocate array crate */
@@ -212,7 +218,7 @@ namespace scire
     SzType Size();
 
     //@implement AStack
-    bool Push(Type element);
+    bool Push(const Type& element);
 
     //@implement AStack
     bool Pop();
@@ -261,7 +267,7 @@ namespace scire
   }
 
   template<typename Type, typename SzType>
-  bool StackCrate<Type, SzType>::Push(Type element)
+  bool StackCrate<Type, SzType>::Push(const Type& element)
   {
     //if size reached the capacity, cannot push
     if (this->size >= this->capacity) return false;

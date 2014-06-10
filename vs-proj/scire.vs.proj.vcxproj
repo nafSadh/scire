@@ -81,12 +81,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\test\struct\linkedlist.cpp" />
+    <ClCompile Include="..\test\struct\queue.cpp" />
     <ClCompile Include="..\test\struct\stack.cpp" />
     <ClCompile Include="..\test\util\filetype.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\scire\struct\container.hpp" />
     <ClInclude Include="..\scire\struct\linkedlist.hpp" />
+    <ClInclude Include="..\scire\struct\queue.hpp" />
     <ClInclude Include="..\scire\struct\stack.hpp" />
     <ClInclude Include="..\scire\util\filetype.hpp" />
   </ItemGroup>

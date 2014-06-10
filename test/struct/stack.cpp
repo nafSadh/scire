@@ -26,7 +26,7 @@ namespace sciretest
   }
 }
 
-#ifndef SCIRE_TEST_STACK
+#ifdef SCIRE_TEST_STACK
 int main()
 {
   return sciretest::struc_stack_main();

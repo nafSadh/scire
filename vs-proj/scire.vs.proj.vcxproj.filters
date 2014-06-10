@@ -38,6 +38,9 @@
     <ClCompile Include="..\test\util\filetype.cpp">
       <Filter>scire-test\util</Filter>
     </ClCompile>
+    <ClCompile Include="..\test\struct\queue.cpp">
+      <Filter>scire-test\struct</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\scire\struct\container.hpp">
@@ -51,6 +54,9 @@
     </ClInclude>
     <ClInclude Include="..\scire\util\filetype.hpp">
       <Filter>scire\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scire\struct\queue.hpp">
+      <Filter>scire\struct</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

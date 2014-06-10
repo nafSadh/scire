@@ -7,8 +7,10 @@
 /**
  scire/struct/container.hpp
 
- scire container interfaces :
+ scire container abstraction :
  - Container	      : contains many elements
+
+ scire container interfaces :
  - Crate            : elements contained in array
 
  other required scire files:
@@ -23,8 +25,8 @@
 namespace scire
 {
 
-#ifndef SCIRE_Container_INTFC
-#define SCIRE_Container_INTFC
+#ifndef SCIRE_Container_ABSTR
+#define SCIRE_Container_ABSTR
   /**
   * Container Inferface.
   * Size() function is necessary to all containers;
@@ -34,10 +36,12 @@ namespace scire
   * bear very different concepts; e.g. Add vs. Insert vs Enque vs Push).
   */
   template<typename Type, typename SzType = int>
-  class IContainer
+  class AContainer
   {
    public:
-    virtual ~IContainer() {}
+    /** virtual dtor for containers */
+    virtual ~AContainer() {}
+
     /**
     * number of elements contained in
     * @return current size
@@ -49,7 +53,7 @@ namespace scire
     * @param element   element to be added as new element
     * @return true on success
     */
-    virtual bool Add(Type element) = 0;
+    virtual bool Add(const Type& element) = 0;
 
     /**
     * deduce one element
@@ -84,7 +88,6 @@ namespace scire
   class ICrate
   {
    public:
-    virtual ~ICrate();
     virtual SzType Capacity() = 0;
   };
 #endif//SCIRE_Crate_INTFC
