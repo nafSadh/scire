@@ -11,20 +11,22 @@ namespace sciretest
   {
     Queue<int> *que = new Queue<int>();
 
-    for (int c = 0; c <= 100000; c++) {
+    cout<<"enqueue items # ";
+    int n;
+    cin >> n;
+    for (int c = 0; c <= n; c++) {
       que->Enque(c);
     }
 
-    int a;
-    cin >> a;
-    delete que;
-    //while (que.Size() > 0) {
-    //  //cout << que.Size() << que.Front() << endl;
-    //  que.Deque();
-    //}
+    cout<<"dequeue until # ";
+    cin>>n;
+    //delete que;
+    while (que->Size() > n) {
+      cout << que->Size() <<" "<< que->Front() << endl;
+      que->Deque();
+    }
 
-    cin >> a;
-
+    cout<<"done";
     return 0;
   }
 }

@@ -82,7 +82,7 @@ namespace scire
       return Top();
     }
   };
-#endif SCIRE_Stack_ABSTR
+#endif//SCIRE_Stack_ABSTR
 
 #ifndef SCIRE_Stack_CLASS
 #define SCIRE_Stack_CLASS
@@ -139,7 +139,8 @@ namespace scire
 
   template<typename Type, typename SzType>
   Stack<Type, SzType>::Stack()
-    : top(0), size(0)
+    : top(0),
+      size(0)
   {
     //empty ctor body, all init on initlist
   }
@@ -189,10 +190,10 @@ namespace scire
   template<typename Type, typename SzType>
   Type Stack<Type, SzType>::Top()
   {
-    return (this->top == nullptr) ? NULL: this->top->element;
+    return this->top->element;
   }
 
-#endif SCIRE_Stack_CLASS
+#endif//SCIRE_Stack_CLASS
 
 #ifndef SCIRE_StackCrate_CLASS
 #define SCIRE_StackCrate_CLASS
