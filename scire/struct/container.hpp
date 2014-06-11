@@ -46,7 +46,7 @@ namespace scire
     * number of elements contained in
     * @return current size
     */
-    virtual SzType Size() = 0;
+    virtual SzType Size() const = 0;
 
     /**
     * add an element
@@ -65,13 +65,13 @@ namespace scire
     * peek into next element contained in
     * @return element
     */
-    virtual Type Peek() = 0;
+    virtual Type Peek() const = 0;
 
     /**
     * check if empty
     * @return true when empty
     */
-    virtual bool IsEmpty()
+    virtual bool IsEmpty() const
     {
       return (this->Size() <= 0);
     }
@@ -88,7 +88,7 @@ namespace scire
   class ICrate
   {
    public:
-    virtual SzType Capacity() = 0;
+    virtual SzType Capacity() const  = 0;
   };
 #endif//SCIRE_Crate_INTFC
 }

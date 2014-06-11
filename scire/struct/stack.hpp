@@ -58,10 +58,12 @@ namespace scire
     * Access the top element of stack.
     * @return element at the top  of the stack
     */
-    virtual Type Top() = 0;
+    virtual Type Top() const = 0;
+
+    // -- AQueue wrapped as AContainer -- //
 
     //@implement AContainer
-    virtual SzType Size() = 0;
+    virtual SzType Size() const = 0;
 
     // -- AQueue wrapped as AContainer -- //
     //@implement AContainer
@@ -77,7 +79,7 @@ namespace scire
     }
 
     //@implement AContainer
-    Type Peek()
+    Type Peek() const
     {
       return Top();
     }
@@ -111,10 +113,10 @@ namespace scire
     bool Pop();
 
     //@implement AStack
-    Type Top();
+    Type Top() const;
 
     //@implement AContainer
-    SzType Size();
+    SzType Size() const;
 
    protected:
 
@@ -159,7 +161,7 @@ namespace scire
   }
 
   template<typename Type, typename SzType>
-  SzType Stack<Type, SzType>::Size()
+  SzType Stack<Type, SzType>::Size() const
   {
     return this->size;
   }
@@ -188,7 +190,7 @@ namespace scire
   }
 
   template<typename Type, typename SzType>
-  Type Stack<Type, SzType>::Top()
+  Type Stack<Type, SzType>::Top() const
   {
     return this->top->element;
   }
@@ -213,10 +215,10 @@ namespace scire
     ~StackCrate();
 
     //@implement Crate
-    SzType Capacity();
+    SzType Capacity() const;
 
     //@implement Container
-    SzType Size();
+    SzType Size() const;
 
     //@implement AStack
     bool Push(const Type& element);
@@ -225,7 +227,7 @@ namespace scire
     bool Pop();
 
     //@implement AStack
-    Type Top();
+    Type Top() const;
 
    protected:
 
@@ -256,13 +258,13 @@ namespace scire
   }
 
   template<typename Type, typename SzType>
-  SzType StackCrate<Type, SzType>::Size()
+  SzType StackCrate<Type, SzType>::Size() const
   {
     return this->size;
   }
 
   template<typename Type, typename SzType>
-  SzType StackCrate<Type, SzType>::Capacity()
+  SzType StackCrate<Type, SzType>::Capacity() const
   {
     return this->capacity;
   }
@@ -291,7 +293,7 @@ namespace scire
   }
 
   template<typename Type, typename SzType>
-  Type StackCrate<Type, SzType>::Top()
+  Type StackCrate<Type, SzType>::Top() const
   {
     return this->crate[size - 1];
   }

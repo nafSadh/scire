@@ -35,7 +35,8 @@ namespace scire
   * the first item of the list.
   */
   template<typename Type, typename SzType = int>
-  class SinglyList : public AContainer<Type, SzType>
+  class SinglyList
+    : public AContainer<Type, SzType>
   {
    public:
     /** initialize a SinglyList object, with head pointing to nullptr */
@@ -59,7 +60,7 @@ namespace scire
     SzType Insert(Type element, SzType location = 0);
 
     //@implement Container
-    virtual SzType Size();
+    virtual SzType Size() const;
 
     //@implement Container
     virtual bool Add(const Type& element)
@@ -71,7 +72,7 @@ namespace scire
     virtual bool Deduce();
 
     //@implement Container
-    virtual Type Peek();
+    virtual Type Peek() const;
 
    protected:
     /** represent an item node in Singly Linked List */
@@ -154,7 +155,7 @@ namespace scire
   }
 
   template<typename Type, typename SzType>
-  SzType SinglyList<Type, SzType>::Size()
+  SzType SinglyList<Type, SzType>::Size() const
   {
     return this->count;
   }
@@ -173,7 +174,7 @@ namespace scire
   }
 
   template<typename Type, typename SzType>
-  Type SinglyList<Type, SzType>::Peek()
+  Type SinglyList<Type, SzType>::Peek() const
   {
     return this->head->element;
   }

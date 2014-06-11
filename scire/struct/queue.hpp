@@ -56,10 +56,10 @@ namespace scire
     * Access the front (next in line) element of queue
     * @return front element of the queue
     */
-    virtual Type Front() = 0;
+    virtual Type Front() const = 0;
 
     //@implement AContainer
-    virtual SzType Size() = 0;
+    virtual SzType Size() const = 0;
 
     // -- functions aliases : do not override -- //
     /** @copydoc AQueue::Enqueue */
@@ -75,7 +75,7 @@ namespace scire
     }
 
     /** @copydoc AQueue::Enqueue */
-    Type Fore()
+    Type Fore() const
     {
       return Front();
     }
@@ -94,7 +94,7 @@ namespace scire
     }
 
     //@implement AContainer
-    Type Peek()
+    Type Peek() const
     {
       return Front();
     }
@@ -130,10 +130,10 @@ namespace scire
     bool Dequeue();
 
     //@implement AQueue
-    Type Front();
+    Type Front() const;
 
     //@implement AContainer
-    SzType Size();
+    SzType Size() const;
 
    protected:
 
@@ -214,13 +214,13 @@ namespace scire
   }
 
   template<typename Type, typename SzType>
-  Type Queue<Type, SzType>::Front()
+  Type Queue<Type, SzType>::Front() const
   {
     return this->head->element;
   }
 
   template<typename Type, typename SzType>
-  SzType Queue<Type, SzType>::Size()
+  SzType Queue<Type, SzType>::Size() const
   {
     return this->size;
   }
@@ -246,13 +246,13 @@ namespace scire
     bool Dequeue();
 
     //@implement AQueue
-    Type Front();
+    Type Front() const;
 
     //@implement AContainer
-    SzType Size();
+    SzType Size() const;
 
     //@implement ICrate
-    SzType Capacity();
+    SzType Capacity() const;
 
    private:
     /** capacity of the stack crate */

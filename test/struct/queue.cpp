@@ -9,6 +9,7 @@ namespace sciretest
 {
   int struct_queue_main()
   {
+    queue<int> q;
     Queue<int> *que = new Queue<int>();
 
     cout<<"enqueue items # ";
