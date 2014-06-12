@@ -298,5 +298,5 @@ namespace scire
     return this->crate[size - 1];
   }
 #endif//SCIRE_StackCrate_CLASS
-}//scire
+}//scire namespace
 #endif//SCIRE_struct_stack_HPP
