@@ -91,5 +91,5 @@ namespace scire
     virtual SzType Capacity() const  = 0;
   };
 #endif//SCIRE_Crate_INTFC
-}
+}//scire namespace
 #endif//SCIRE_struct_container_HPP

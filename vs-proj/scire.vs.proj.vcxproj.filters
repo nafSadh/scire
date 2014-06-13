@@ -27,6 +27,9 @@
     <Filter Include="scire\util">
       <UniqueIdentifier>{df34a012-14cd-46b8-a5e2-e7defe8f1d69}</UniqueIdentifier>
     </Filter>
+    <Filter Include="scire-test\hash">
+      <UniqueIdentifier>{79ba33a1-237a-40f6-97cd-a601a68c417e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\test\struct\linkedlist.cpp">
@@ -57,6 +60,9 @@
     </ClInclude>
     <ClInclude Include="..\scire\struct\queue.hpp">
       <Filter>scire\struct</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scire\hash\md5.hpp">
+      <Filter>scire-test\hash</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

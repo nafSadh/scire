@@ -179,5 +179,5 @@ namespace scire
     return this->head->element;
   }
 #endif//SCIRE_SinglyList_CLASS
-}
+}//scire namespace
 #endif//SCIRE_struct_linkedlist_HPP
