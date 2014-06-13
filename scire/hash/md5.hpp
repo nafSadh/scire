@@ -40,7 +40,7 @@ namespace scire
     void Update(const SignedByteType *buf, SzType lenght);
 
     const WordType* DigestWords();
-    const ByteType* DigestBytes();
+    const ByteType* Digest();
     void Digest(ByteType *digest);
     void Digest(WordType *digest);
     void Digest(WordType &A, WordType &B, WordType &C, WordType &D);
@@ -48,6 +48,8 @@ namespace scire
     static SzType BitLen();
     static SzType ByteLen();
     static SzType DigestSize();
+    static SzType BlockSize();
+    static SzType Rounds();
   };
 
 #endif SCIRE_MD5_CLASS
