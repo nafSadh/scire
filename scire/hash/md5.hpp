@@ -21,7 +21,6 @@
 
 namespace scire
 {
-
 #ifndef SCIRE_MD5_CLASS
 #define SCIRE_MD5_CLASS
 
