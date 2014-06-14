@@ -44,7 +44,7 @@ namespace scire
     /** allocate MD5 context and init */
     MD5();
     /** release MD5 resources */
-    ~MD5();
+    //~MD5();
 
     // -- MD5 INTERFACE --//                        // adopted from Rivest's RFC
     /**
@@ -66,7 +66,7 @@ namespace scire
     * MD5 finalization. Ends an MD5 message-digest operation, writing the
     * the message digest and zeroizing the context.
     */
-    void Final(ByteT digest[]);
+    void Final();
 
     // -- MD5 Added Interface -- //             // alias and extra functionality
     /** Reset object, similar to doing Init() */
@@ -91,10 +91,23 @@ namespace scire
 
    private:
     // -- MD5 context --//
-    Ui32t state[DigsetSize_words]; /** state (ABCD) */
-    Ui32t count[2]; /** number of bits modulo 2^64 (lsb first) */
-    ByteT buffer[BlockSize_bytes]; /** bytes that didn't fit in last 64B chunk */
-    bool finalized; /** if Final called */
+    /** state (ABCD) */
+    Ui32t state[DigsetSize_words];
+    /** number of bits modulo 2^64 (lsb first) */
+    Ui32t count[2];
+    /** bytes that didn't fit in last 64B chunk */
+    ByteT buffer[BlockSize_bytes];
+    /** if Final called */
+    bool finalized;
+    ByteT digest[DigestSize_bytes];
+
+   public:
+    void printDigest()
+    {
+      for (int i = 0; i < 16; i++) {
+        printf("%02x", (int)digest[i]);
+      }
+    }
 
     // -- Basic MD5 Functions -- //
    protected:
@@ -142,7 +155,7 @@ namespace scire
 
    private:
     /** the phenomenal transform function */
-    void transform(ByteT block[BlockSize_bytes]);
+    void transform(const ByteT block[BlockSize_bytes]);
 
     /** Constants for transform routine */
     enum {
@@ -165,42 +178,42 @@ namespace scire
     */
     static void FF(Ui32t &a, Ui32t b, Ui32t c, Ui32t d, Ui32t x, Ui32t s, Ui32t ac)
     {
-      a = rotate_left(a + F(b, c, d) + x + ac, s) + b;
+      a = rotateleft(a + F(b, c, d) + x + ac, s) + b;
     }
 
     static void GG(Ui32t &a, Ui32t b, Ui32t c, Ui32t d, Ui32t x, Ui32t s, Ui32t ac)
     {
-      a = rotate_left(a + G(b, c, d) + x + ac, s) + b;
+      a = rotateleft(a + G(b, c, d) + x + ac, s) + b;
     }
 
     static void HH(Ui32t &a, Ui32t b, Ui32t c, Ui32t d, Ui32t x, Ui32t s, Ui32t ac)
     {
-      a = rotate_left(a + H(b, c, d) + x + ac, s) + b;
+      a = rotateleft(a + H(b, c, d) + x + ac, s) + b;
     }
 
     static void II(Ui32t &a, Ui32t b, Ui32t c, Ui32t d, Ui32t x, Ui32t s, Ui32t ac)
     {
-      a = rotate_left(a + I(b, c, d) + x + ac, s) + b;
+      a = rotateleft(a + I(b, c, d) + x + ac, s) + b;
     }
 
     /**
-    * decodes input (unsigned char) into output (uint4). Assumes len is a
+    * decodes input (unsigned char) into output (Ui32t). Assumes len is a
     * multiple of 4.
     */
     static void decode(Ui32t output[], const ByteT input[], SzType len)
     {
       for (unsigned int i = 0, j = 0; j < len; i++, j += 4)
-        output[i] = ((uint4)input[j]) | (((uint4)input[j + 1]) << 8) |
-                    (((uint4)input[j + 2]) << 16) | (((uint4)input[j + 3]) << 24);
+        output[i] = ((Ui32t)input[j]) | (((Ui32t)input[j + 1]) << 8) |
+                    (((Ui32t)input[j + 2]) << 16) | (((Ui32t)input[j + 3]) << 24);
     }
 
     /**
-    * encodes input (uint4) into output (unsigned char). Assumes len is
+    * encodes input (Ui32t) into output (unsigned char). Assumes len is
     * a multiple of 4.
     */
     static void encode(ByteT output[], const Ui32t input[], SzType len)
     {
-      for (size_type i = 0, j = 0; j < len; i++, j += 4) {
+      for (SzType i = 0, j = 0; j < len; i++, j += 4) {
         output[j] = input[i] & 0xff;
         output[j + 1] = (input[i] >> 8) & 0xff;
         output[j + 2] = (input[i] >> 16) & 0xff;
@@ -270,7 +283,7 @@ namespace scire
     }
 
     //buffer remaining input for padding shall occur
-    memcpy(&buffer[index], &input[i], length - i);
+    memcpy(&buffer[index], &input[i], inputLen - i);
   }//end MD5::Update
 
 
@@ -291,10 +304,10 @@ namespace scire
       // pad out to 56 mod 64.
       SzType index = (Ui32t)((this->count[0] >> 3) & 0x3f);
       SzType padLen = (index < 56) ? (56 - index) : (120 - index);
-      update(padding, padLen);
+      Update(padding, padLen);
 
       // Append length (before padding)
-      update(bits, 8);
+      Update(bits, 8);
 
       // Store state in digest
       encode(digest, state, 16);
@@ -309,10 +322,10 @@ namespace scire
 
 
   template<typename SzType, typename Ui32t, typename ByteT, typename SByteT>
-  void MD5<SzType, Ui32t, ByteT, SByteT>::transform(const ByteT block[blocksize])
+  void MD5<SzType, Ui32t, ByteT, SByteT>::transform(const ByteT block[BlockSize_bytes])
   {
-    uint4 a = state[0], b = state[1], c = state[2], d = state[3], x[16];
-    decode(x, block, blocksize);
+    Ui32t a = state[0], b = state[1], c = state[2], d = state[3], x[16];
+    decode(x, block, BlockSize_bytes);
 
     /* Round 1 */
     FF(a, b, c, d, x[ 0], S11, 0xd76aa478); /* 1 */

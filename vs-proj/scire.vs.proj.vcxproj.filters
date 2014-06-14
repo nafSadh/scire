@@ -30,6 +30,9 @@
     <Filter Include="scire-test\hash">
       <UniqueIdentifier>{79ba33a1-237a-40f6-97cd-a601a68c417e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="scire\hash">
+      <UniqueIdentifier>{5e9a5755-65f9-4855-9edc-cf5ee0653af5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\test\struct\linkedlist.cpp">
@@ -62,10 +65,18 @@
       <Filter>scire\struct</Filter>
     </ClInclude>
     <ClInclude Include="..\scire\hash\md5.hpp">
-      <Filter>scire-test\hash</Filter>
+      <Filter>scire\hash</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="scire-classes.cd" />
+    <None Include="..\Doxyfile" />
+    <None Include="..\README.md" />
+    <None Include="..\StyleGuide" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\logo.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

@@ -94,7 +94,13 @@
     <ClInclude Include="..\scire\util\filetype.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\Doxyfile" />
+    <None Include="..\README.md" />
+    <None Include="..\StyleGuide" />
     <None Include="scire-classes.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\logo.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
