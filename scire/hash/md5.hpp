@@ -135,7 +135,10 @@ namespace scire
    public:
     // -- MD5 Added Interface -- //             // alias and extra functionality
     /** Reset object, similar to doing Init() */
-    void Reset();
+    void Reset()
+    {
+      Init();
+    }
 
     /** return  */
     //void Digest(ByteT *digest) {}
@@ -272,6 +275,7 @@ namespace scire
     Init();
   }
 
+
   template<typename SzType, typename Ui32t,typename ByteT, typename SByteT>
   void MD5<SzType, Ui32t, ByteT, SByteT>::
   Init()
@@ -287,6 +291,7 @@ namespace scire
     this->finalized = false;
   }
 
+
   template<typename SzType, typename Ui32t, typename ByteT, typename SByteT>
   bool MD5<SzType, Ui32t, ByteT, SByteT>::
   Digest(ByteT digest_[DigestSize_bytes])
@@ -300,20 +305,23 @@ namespace scire
     return true;
   }
 
+
   template<typename SzType, typename Ui32t, typename ByteT, typename SByteT>
-  void MD5<SzType, Ui32t, ByteT, SByteT>::
+  bool MD5<SzType, Ui32t, ByteT, SByteT>::
   Update(const SByteT input[], SzType length)
   {
-    update((const unsigned char*)input, length);
+    Update((const unsigned char*)input, length);
   }
 
+
   template<typename SzType, typename Ui32t, typename ByteT, typename SByteT>
-  void MD5<SzType, Ui32t, ByteT, SByteT>::
+  bool MD5<SzType, Ui32t, ByteT, SByteT>::
   Update(const ByteT input[], SzType inputLen)
   {
+    if (!finalized) return false; // ignore all Update() after Final() is called
+
     // Compute number of bytes mod 64
     SzType index = (unsigned int)((this->count[0] >> 3) & 0x3F);
-
 
     // Update number of bits
     if ((this->count[0] += ((Ui32t)inputLen << 3)) < ((Ui32t)inputLen << 3)) {
