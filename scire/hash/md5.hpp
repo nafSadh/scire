@@ -5,31 +5,49 @@
 // (See accompanying text at http://www.boost.org/LICENSE_1_0.txt)
 
 /**
- scire/hash/md5.hpp
-
+ @file: scire/hash/md5.hpp
+ @author: nafSadh
+ @brief:  MD5
+ */
+/*
  scire MD5 implementation:
  - MD5	            : a class offering MD5 functionalities
 
  other required scire files:
   none
 
- author:
-  ~nafSadh
- */
+ acknowledgement:
+  RFC 1321, Rivest,  http://tools.ietf.org/html/rfc1321
+  quantq, https://github.com/quantq/md5
+
+
+  */
 #ifndef SCIRE_hash_md5_HPP
 #define SCIRE_hash_md5_HPP
 
+#include <iostream>
+#include <iomanip>
 #include <cstdint>
 #include <cstring>
+#include <string>
 
 namespace scire
 {
 #ifndef SCIRE_MD5_CLASS
 #define SCIRE_MD5_CLASS
 
+
+  template<typename SzType, typename Ui32t, typename ByteT, typename SByteT>
+  class MD5;  // pre-declare the template class itself
+  // pre-declare templae operator overload
+  template<typename SzType, typename Ui32t, typename ByteT, typename SByteT>
+  std::ostream&
+  operator<< (std::ostream& out, const MD5<SzType, Ui32t, ByteT, SByteT>& md5);
+
   /**
   * MD5 Message-Digest Algorithm.
   * scire adaptation of the MD5 algorithm, adopted from RFC 1321.
+  * http://tools.ietf.org/html/rfc1321
   *
   * This implemenation is templatic to facilitate machine portability. It takes
   * four <type> parameters:
@@ -56,6 +74,7 @@ namespace scire
   * ignored. \n
   * MD5 object can be reused by invoking Reset() and then using it in a similar
   * fashion.
+  *
   */
   template<typename SzType = size_t, /* size type, integer */
            typename Ui32t = uint32_t,/* std 32bit unsigned integer */
@@ -73,18 +92,29 @@ namespace scire
      */
    public:
     // -- Informative CONSTANTS --//
-    enum {
+    enum Info {
       DigestSize_bits  = 128, /**< MD5 digest size in bits */
       DigestSize_bytes =  16, /**< MD5 digest size in bytes */
-      DigsetSize_words =   4, /**< MD5 digest size in words (32bit) */
+      DigestSize_words =   4, /**< MD5 digest size in words (32bit) */
       BlockSize_bits   = 512, /**< MD5 process message in chunks each of 512bit*/
       BlockSize_bytes   = 64, /**< block size in bytes */
       BlockSize_words   = 16, /**< block size in words (32bit) */
       Rounds = 4 /**< MD5 has 4 rounds */
     };
+    enum Magic {
+      MagicWordA = 0x01234567,
+      MagicWordB = 0x89abcdef,
+      MagicWordC = 0xfedcba98,
+      MagicWordD = 0X76543210
+    };
 
     /** allocate MD5 context and init */
     MD5();
+    /** init MD5 object with a c-string message */
+    MD5(char message[]);
+    /** init MD5 object with a stl::string message */
+    MD5(std::string message);
+
     /** release MD5 resources */
     //~MD5();
 
@@ -102,9 +132,9 @@ namespace scire
     * @param input    an array of bytes
     * @param lenght   number of bytes in input chunk
     */
-    void Update(const ByteT *input, SzType lenght);
+    bool Update(const ByteT *input, SzType lenght);
     /** @copydoc MD5::Update */
-    void Update(const SByteT *input, SzType lenght);
+    bool Update(const SByteT *input, SzType lenght);
 
     /**
     * MD5 finalization. Ends an MD5 message-digest operation, writing the
@@ -119,11 +149,14 @@ namespace scire
     */
     bool Digest(ByteT digest[DigestSize_bytes]);
 
+    /** output digest to ostream */
+    friend std::ostream& operator<< <>(std::ostream& out, const MD5<SzType, Ui32t, ByteT, SByteT>& md5);
+
     // -- ADOPTED FROM RFC 1321 -- //
    private:
     // -- MD5 context --//
     /** state (ABCD) */
-    Ui32t state[DigsetSize_words];
+    Ui32t state[DigestSize_words];
     /** number of bits modulo 2^64 (lsb first) */
     Ui32t count[2];
     /** bytes that didn't fit in last 64B chunk */
@@ -144,7 +177,6 @@ namespace scire
     //void Digest(ByteT *digest) {}
     //void Digest(Ui32t *digest) {}
     //void Digest(Ui32t &A, Ui32t &B, Ui32t &C, Ui32t &D) {}
-    //const Ui32t* DigestWords() {}
 
 // -- Basic MD5 Functions -- //
    protected:
@@ -217,22 +249,26 @@ namespace scire
     /* FF, GG, HH, and II transformations for rounds 1, 2, 3, and 4.
     Rotation is separate from addition to prevent recomputation.
     */
-    static void FF(Ui32t &a, Ui32t b, Ui32t c, Ui32t d, Ui32t x, Ui32t s, Ui32t ac)
+    static void FF(Ui32t &a, Ui32t b, Ui32t c, Ui32t d,
+                   Ui32t x, Ui32t s, Ui32t ac)
     {
       a = rotateleft(a + F(b, c, d) + x + ac, s) + b;
     }
 
-    static void GG(Ui32t &a, Ui32t b, Ui32t c, Ui32t d, Ui32t x, Ui32t s, Ui32t ac)
+    static void GG(Ui32t &a, Ui32t b, Ui32t c, Ui32t d,
+                   Ui32t x, Ui32t s, Ui32t ac)
     {
       a = rotateleft(a + G(b, c, d) + x + ac, s) + b;
     }
 
-    static void HH(Ui32t &a, Ui32t b, Ui32t c, Ui32t d, Ui32t x, Ui32t s, Ui32t ac)
+    static void HH(Ui32t &a, Ui32t b, Ui32t c, Ui32t d,
+                   Ui32t x, Ui32t s, Ui32t ac)
     {
       a = rotateleft(a + H(b, c, d) + x + ac, s) + b;
     }
 
-    static void II(Ui32t &a, Ui32t b, Ui32t c, Ui32t d, Ui32t x, Ui32t s, Ui32t ac)
+    static void II(Ui32t &a, Ui32t b, Ui32t c, Ui32t d,
+                   Ui32t x, Ui32t s, Ui32t ac)
     {
       a = rotateleft(a + I(b, c, d) + x + ac, s) + b;
     }
@@ -241,31 +277,31 @@ namespace scire
     * decodes input (unsigned char) into output (Ui32t). Assumes len is a
     * multiple of 4.
     */
-    static void decode(Ui32t output[], const ByteT input[], SzType len)
+    static void decode(Ui32t out[], const ByteT input[], SzType len)
     {
       for (unsigned int i = 0, j = 0; j < len; i++, j += 4)
-        output[i] = ((Ui32t)input[j]) | (((Ui32t)input[j + 1]) << 8) |
-                    (((Ui32t)input[j + 2]) << 16) | (((Ui32t)input[j + 3]) << 24);
+        out[i] = ((Ui32t)input[j]) | (((Ui32t)input[j + 1]) << 8) |
+                 (((Ui32t)input[j + 2]) << 16) | (((Ui32t)input[j + 3]) << 24);
     }
 
     /**
     * encodes input (Ui32t) into output (unsigned char). Assumes len is
     * a multiple of 4.
     */
-    static void encode(ByteT output[], const Ui32t input[], SzType len)
+    static void encode(ByteT out[], const Ui32t input[], SzType len)
     {
       for (SzType i = 0, j = 0; j < len; i++, j += 4) {
-        output[j] = input[i] & 0xff;
-        output[j + 1] = (input[i] >> 8) & 0xff;
-        output[j + 2] = (input[i] >> 16) & 0xff;
-        output[j + 3] = (input[i] >> 24) & 0xff;
+        out[j] = input[i] & 0xff;
+        out[j + 1] = (input[i] >> 8) & 0xff;
+        out[j + 2] = (input[i] >> 16) & 0xff;
+        out[j + 3] = (input[i] >> 24) & 0xff;
       }
     }
   };
 
-//--------------------------//
-// -- MD5 IMPLEMENTATION -- //
-//--------------------------//
+//------------------//
+// -- MD5 CTORS -- //
+//----------------//
 
   template<typename SzType, typename Ui32t, typename ByteT, typename SByteT>
   MD5<SzType, Ui32t, ByteT, SByteT>::
@@ -276,7 +312,41 @@ namespace scire
   }
 
 
-  template<typename SzType, typename Ui32t,typename ByteT, typename SByteT>
+  template<typename SzType, typename Ui32t, typename ByteT, typename SByteT>
+  MD5<SzType, Ui32t, ByteT, SByteT>::
+  MD5(char msg[])
+    : finalized(false)
+  {
+    Init();
+    Update(reinterpret_cast<const ByteT*>(msg), strlen(msg));
+    Final();
+  }
+
+  template<typename SzType, typename Ui32t, typename ByteT, typename SByteT>
+  MD5<SzType, Ui32t, ByteT, SByteT>::
+  MD5(std::string msg)
+    : finalized(false)
+  {
+    Init();
+    Update(reinterpret_cast<const ByteT*>(msg.c_str()), msg.length());
+    Final();
+  }
+
+  template<typename SzType, typename Ui32t, typename ByteT, typename SByteT>
+  std::ostream&
+  operator<<(std::ostream& out, const MD5<SzType, Ui32t, ByteT, SByteT>& md5)
+  {
+    for (SzType i = 0; i < 16; i++) {
+      out << setfill('0') << setw(2) << hex << (int)md5.digest[i];
+    }
+    return out;
+  }
+
+  //---------------------------//
+  // -- MD5 IMPLEMENTATION -- //
+  //-------------------------//
+
+  template<typename SzType, typename Ui32t, typename ByteT, typename SByteT>
   void MD5<SzType, Ui32t, ByteT, SByteT>::
   Init()
   {
@@ -308,7 +378,7 @@ namespace scire
 
   template<typename SzType, typename Ui32t, typename ByteT, typename SByteT>
   bool MD5<SzType, Ui32t, ByteT, SByteT>::
-  Update(const SByteT input[], SzType length)
+  Update(const SByteT * input, SzType length)
   {
     Update((const unsigned char*)input, length);
   }
@@ -316,9 +386,9 @@ namespace scire
 
   template<typename SzType, typename Ui32t, typename ByteT, typename SByteT>
   bool MD5<SzType, Ui32t, ByteT, SByteT>::
-  Update(const ByteT input[], SzType inputLen)
+  Update(const ByteT * input, SzType inputLen)
   {
-    if (!finalized) return false; // ignore all Update() after Final() is called
+    if (finalized) return false; // ignore all Update() after Final() is called
 
     // Compute number of bytes mod 64
     SzType index = (unsigned int)((this->count[0] >> 3) & 0x3F);
@@ -346,6 +416,8 @@ namespace scire
 
     //buffer remaining input for padding shall occur
     memcpy(&buffer[index], &input[i], inputLen - i);
+
+    return true;
   }//end MD5::Update
 
 

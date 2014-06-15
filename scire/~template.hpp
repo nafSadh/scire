@@ -25,8 +25,8 @@ namespace scire
 #ifndef SCIRE_ClassName_CLASS
 #define SCIRE_ClassName_CLASS
 
-/**
-*/
+  /**
+  */
 
 #endif SCIRE_ClassName_CLASS
 }
