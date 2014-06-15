@@ -47,6 +47,9 @@
     <ClCompile Include="..\test\struct\queue.cpp">
       <Filter>scire-test\struct</Filter>
     </ClCompile>
+    <ClCompile Include="..\test\hash\md5.cpp">
+      <Filter>scire-test\hash</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\scire\struct\container.hpp">

@@ -1,6 +1,5 @@
 #include <iostream>
 #include "../../scire/struct/queue.hpp"
-#include "../../scire/hash/md5.hpp"
 #include <queue>
 
 using namespace std;
@@ -33,17 +32,9 @@ namespace sciretest
   }
 }
 
-#ifndef SCIRE_TEST_QUEUE
+#ifdef SCIRE_TEST_QUEUE
 int main()
 {
-  unsigned char digest[16];
-  unsigned char data[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  MD5<> md5;
-  md5.Init();
-  md5.Update(data, strlen((char*)data));
-  md5.Final();
-  md5.printDigest();
-  cout << endl;
-  //return sciretest::struct_queue_main();
+  return sciretest::struct_queue_main();
 }
 #endif
