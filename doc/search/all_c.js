@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['queue',['Queue',['../da/dca/classscire_1_1_queue.html',1,'scire']]],
-  ['queue',['Queue',['../da/dca/classscire_1_1_queue.html#a04786149becef15f21a8648f78980062',1,'scire::Queue']]],
-  ['queue_2ehpp',['queue.hpp',['../d7/ded/queue_8hpp.html',1,'']]]
+  ['next',['next',['../d3/d71/classscire_1_1_singly_list_1_1_singly_node.html#a37a457095200178119cb10cf043477b1',1,'scire::SinglyList::SinglyNode']]]
 ];

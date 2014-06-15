@@ -1,22 +1,8 @@
 var searchData=
 [
-  ['scire',['scire',['../d6/d73/namespacescire.html',1,'']]],
-  ['scire_5fclassname_5fclass',['SCIRE_ClassName_CLASS',['../d3/df2/~template_8hpp.html#ab89e2e8e8f9eff92c5c533e2b03377e9',1,'~template.hpp']]],
-  ['scire_5fcontainer_5fabstr',['SCIRE_Container_ABSTR',['../dc/d6e/container_8hpp.html#a0d0fb758f9f9c691a9411cc87301fc32',1,'container.hpp']]],
-  ['scire_5fcrate_5fintfc',['SCIRE_Crate_INTFC',['../dc/d6e/container_8hpp.html#a451462a69c73cf3424c6efd54c3184c1',1,'container.hpp']]],
-  ['scire_5fqueue_5fabstr',['SCIRE_Queue_ABSTR',['../d7/ded/queue_8hpp.html#ab20b70840d26da5f6d6daa38b429d037',1,'queue.hpp']]],
-  ['scire_5fqueue_5fclass',['SCIRE_Queue_CLASS',['../d7/ded/queue_8hpp.html#adf592c8c37fbe79de11e106ac4e34436',1,'queue.hpp']]],
-  ['scire_5fsinglylist_5fclass',['SCIRE_SinglyList_CLASS',['../db/ded/linkedlist_8hpp.html#a0efe8e67ac27503777783b7e9d011bdf',1,'linkedlist.hpp']]],
-  ['scire_5fstack_5fabstr',['SCIRE_Stack_ABSTR',['../df/d47/stack_8hpp.html#a106a103266cd99aa29cd6148371ab3c8',1,'stack.hpp']]],
-  ['scire_5fstack_5fclass',['SCIRE_Stack_CLASS',['../df/d47/stack_8hpp.html#ae2157bf9a69978bf3dd2804bad811c81',1,'stack.hpp']]],
-  ['scire_5fstackcrate_5fclass',['SCIRE_StackCrate_CLASS',['../df/d47/stack_8hpp.html#aed9ed8e2e189a17f9b4bf7c6368a2b9e',1,'stack.hpp']]],
-  ['singlylist',['SinglyList',['../d7/d94/classscire_1_1_singly_list.html',1,'scire']]],
-  ['singlylist',['SinglyList',['../d7/d94/classscire_1_1_singly_list.html#a948f00780cdfc1dd766cd8b62fc8027b',1,'scire::SinglyList']]],
-  ['singlynode',['SinglyNode',['../d3/d71/classscire_1_1_singly_list_1_1_singly_node.html',1,'scire::SinglyList']]],
-  ['size',['Size',['../d3/de4/classscire_1_1_a_container.html#a43a4cdce1541a2f5917dc546040b1e44',1,'scire::AContainer::Size()'],['../d7/d94/classscire_1_1_singly_list.html#a50d5957191e3207856fb35dd498d5b42',1,'scire::SinglyList::Size()'],['../de/d92/classscire_1_1_a_queue.html#a6183b208a2313eeaf9ffa6667712b7f1',1,'scire::AQueue::Size()'],['../da/dca/classscire_1_1_queue.html#a31b41bbb6ae4ee6c9e8454c70dec2134',1,'scire::Queue::Size()'],['../d3/d3d/classscire_1_1_a_stack.html#a489466c2d6331058bac843300951e2c4',1,'scire::AStack::Size()'],['../da/d7f/classscire_1_1_stack.html#a081621ccdd732ac1bd33844625f83da2',1,'scire::Stack::Size()'],['../d7/d67/classscire_1_1_stack_crate.html#ae313802b12b4a2eabe7943d670a60c0f',1,'scire::StackCrate::Size()']]],
-  ['stack',['Stack',['../da/d7f/classscire_1_1_stack.html',1,'scire']]],
-  ['stack',['Stack',['../da/d7f/classscire_1_1_stack.html#af4883ab880c75fc8345e9abe27a0ff4a',1,'scire::Stack']]],
-  ['stack_2ehpp',['stack.hpp',['../df/d47/stack_8hpp.html',1,'']]],
-  ['stackcrate',['StackCrate',['../d7/d67/classscire_1_1_stack_crate.html#a77d0dde4abc6a38685a8794f3f3037e2',1,'scire::StackCrate']]],
-  ['stackcrate',['StackCrate',['../d7/d67/classscire_1_1_stack_crate.html',1,'scire']]]
+  ['queue',['Queue',['../da/dca/classscire_1_1_queue.html',1,'scire']]],
+  ['queue',['Queue',['../da/dca/classscire_1_1_queue.html#a04786149becef15f21a8648f78980062',1,'scire::Queue']]],
+  ['queue_2ehpp',['queue.hpp',['../d7/ded/queue_8hpp.html',1,'']]],
+  ['queuecrate',['QueueCrate',['../df/dfb/classscire_1_1_queue_crate.html',1,'scire']]],
+  ['queuecrate',['QueueCrate',['../df/dfb/classscire_1_1_queue_crate.html#aaac3df92c161ab69f289dd434a5eb122',1,'scire::QueueCrate']]]
 ];

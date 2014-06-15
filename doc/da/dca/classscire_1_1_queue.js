@@ -8,9 +8,9 @@ var classscire_1_1_queue =
     [ "Dequeue", "da/dca/classscire_1_1_queue.html#a6d28fefdb7b64283a55ca95232756af3", null ],
     [ "Enque", "da/dca/classscire_1_1_queue.html#a6f45e235af8e188e1828612fc7af71e3", null ],
     [ "Enqueue", "da/dca/classscire_1_1_queue.html#a9785ebf162ab8ec96fb4b4fef209206a", null ],
-    [ "Fore", "da/dca/classscire_1_1_queue.html#a6d2f2f3f076b6508ed46fdfdc411d289", null ],
-    [ "Front", "da/dca/classscire_1_1_queue.html#a127f63c84a42fd21397f04b1ee4bf605", null ],
-    [ "IsEmpty", "da/dca/classscire_1_1_queue.html#ae974ecf31e86c5501f3d738ef8388aa0", null ],
-    [ "Peek", "da/dca/classscire_1_1_queue.html#a170aae3477009ea39fee4056413ea841", null ],
-    [ "Size", "da/dca/classscire_1_1_queue.html#a31b41bbb6ae4ee6c9e8454c70dec2134", null ]
+    [ "Fore", "da/dca/classscire_1_1_queue.html#a1274035540a647c221b1d6278430c66f", null ],
+    [ "Front", "da/dca/classscire_1_1_queue.html#ac9bdf3c165876579fa05697c47e359dc", null ],
+    [ "IsEmpty", "da/dca/classscire_1_1_queue.html#af8415e3cd3b12aeeabf1c8ec072f5a4c", null ],
+    [ "Peek", "da/dca/classscire_1_1_queue.html#ae7fc4044f590443e9fd9a547cd53e25f", null ],
+    [ "Size", "da/dca/classscire_1_1_queue.html#a8cacc2ccf372fe0e59797845d593c6bf", null ]
 ];
