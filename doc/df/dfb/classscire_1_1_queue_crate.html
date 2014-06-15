@@ -21,6 +21,7 @@
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../customdoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -96,7 +97,7 @@ $(document).ready(function(){initNavTree('df/dfb/classscire_1_1_queue_crate.html
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -118,17 +119,6 @@ $(document).ready(function(){initNavTree('df/dfb/classscire_1_1_queue_crate.html
  <a href="../../df/dfb/classscire_1_1_queue_crate.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d7/ded/queue_8hpp_source.html">queue.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for scire::QueueCrate&lt; Type, SzType &gt;:</div>
-<div class="dyncontent">
- <div class="center">
-  <img src="../../df/dfb/classscire_1_1_queue_crate.png" usemap="#scire::QueueCrate&lt; Type, SzType &gt;_map" alt=""/>
-  <map id="scire::QueueCrate&lt; Type, SzType &gt;_map" name="scire::QueueCrate&lt; Type, SzType &gt;_map">
-<area href="../../de/d92/classscire_1_1_a_queue.html" title="A Queue should support Enque(), Deque() and Front() operations. " alt="scire::AQueue&lt; Type, SzType &gt;" shape="rect" coords="0,56,218,80"/>
-<area href="../../dd/dc6/classscire_1_1_i_crate.html" title="Crate contains elements in an arrays. " alt="scire::ICrate&lt; Type, SzType &gt;" shape="rect" coords="228,56,446,80"/>
-<area href="../../d3/de4/classscire_1_1_a_container.html" title="Container Inferface. " alt="scire::AContainer&lt; Type, SzType &gt;" shape="rect" coords="0,0,218,24"/>
-</map>
- </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -179,7 +169,18 @@ class scire::QueueCrate&lt; Type, SzType &gt;</h3>
 <p>Array implementation of <a class="el" href="../../da/dca/classscire_1_1_queue.html" title="Linked List implementation of Queue. ">Queue</a>. </p>
 
 <p>Definition at line <a class="el" href="../../d7/ded/queue_8hpp_source.html#l00234">234</a> of file <a class="el" href="../../d7/ded/queue_8hpp_source.html">queue.hpp</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><div class="dynheader">
+Inheritance diagram for scire::QueueCrate&lt; Type, SzType &gt;:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../df/dfb/classscire_1_1_queue_crate.png" usemap="#scire::QueueCrate&lt; Type, SzType &gt;_map" alt=""/>
+  <map id="scire::QueueCrate&lt; Type, SzType &gt;_map" name="scire::QueueCrate&lt; Type, SzType &gt;_map">
+<area href="../../de/d92/classscire_1_1_a_queue.html" title="A Queue should support Enque(), Deque() and Front() operations. " alt="scire::AQueue&lt; Type, SzType &gt;" shape="rect" coords="0,56,218,80"/>
+<area href="../../dd/dc6/classscire_1_1_i_crate.html" title="Crate contains elements in an arrays. " alt="scire::ICrate&lt; Type, SzType &gt;" shape="rect" coords="228,56,446,80"/>
+<area href="../../d3/de4/classscire_1_1_a_container.html" title="Container Inferface. " alt="scire::AContainer&lt; Type, SzType &gt;" shape="rect" coords="0,0,218,24"/>
+</map>
+ </div></div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aaac3df92c161ab69f289dd434a5eb122"></a>
 <div class="memitem">
 <div class="memproto">
@@ -596,7 +597,7 @@ template&lt;typename Type , typename SzType &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d6/d73/namespacescire.html">scire</a></li><li class="navelem"><a class="el" href="../../df/dfb/classscire_1_1_queue_crate.html">QueueCrate</a></li>
-    <li class="footer">Generated on Sat Jun 14 2014 21:23:38 for scire by
+    <li class="footer">Generated on Sun Jun 15 2014 04:52:09 for scire by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>
