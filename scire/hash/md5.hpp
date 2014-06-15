@@ -17,9 +17,9 @@
   none
 
  acknowledgement:
-  RFC 1321, Rivest,  http://tools.ietf.org/html/rfc1321
-  quantq, https://github.com/quantq/md5
-
+  [1] RFC 1321, Rivest,  http://tools.ietf.org/html/rfc1321
+  [2] quantq, https://github.com/quantq/md5
+  [3] Marshall Cline, http://www.parashift.com/c++-faq-lite/template-friends.html
 
   */
 #ifndef SCIRE_hash_md5_HPP
@@ -75,14 +75,6 @@ namespace scire
            typename SByteT = int8_t/* signed byte type */>
   class MD5
   {
-    /* example use:
-     * @code{.cpp}
-     *   MD5<> md5; // ctor calls Init(), so you can start using md5 directly
-     *   md5.Update(message, msglen); //once or manu times
-     *   md5.Final(); // digest is ready, any subsequent updates will be ignored
-     *   md5.Digest(digest); // fill 'digest' byte array with digest values
-     * @encode
-     */
    public:
     // -- Informative CONSTANTS --//
     enum Info {
@@ -95,18 +87,21 @@ namespace scire
       Rounds = 4 /**< MD5 has 4 rounds */
     };
     enum Magic {
-      MagicWordA = 0x01234567,
-      MagicWordB = 0x89abcdef,
-      MagicWordC = 0xfedcba98,
-      MagicWordD = 0X76543210
+      MagicWordA = 0x01234567, /**< 0x01234567 */
+      MagicWordB = 0x89abcdef, /**< 0x89abcdef */
+      MagicWordC = 0xfedcba98, /**< 0xfedcba98 */
+      MagicWordD = 0X76543210  /**< 0X76543210 */
     };
 
     /** allocate MD5 context and init */
     MD5();
-    /** init MD5 object with a c-string message */
-    MD5(char message[]);
-    /** init MD5 object with a stl::string message */
+
+    /** Construct MD5 object with a string message. This will cause full stack
+    of the algorithm to execute. Hence, Initi(), Update() and Final() shall be
+    called within and the object is ready to yield digest. */
     MD5(std::string message);
+    /** @copydoc MD5::MD5(std::string) */
+    MD5(char message[]);
 
     /** release MD5 resources */
     //~MD5();
@@ -159,7 +154,9 @@ namespace scire
     // -- MD5 Added Interface -- //             // alias and extra functionality
 
     /** output digest to ostream */
-    friend std::ostream& operator<< (std::ostream& out, const MD5<SzType, Ui32t, ByteT, SByteT>& md5)
+    friend std::ostream&
+    operator<< (std::ostream& out,
+                const MD5<SzType, Ui32t, ByteT, SByteT>& md5)
     {
       for (SzType i = 0; i < 16; i++) {
         out << setfill('0') << setw(2) << hex << (int)md5.digest[i];

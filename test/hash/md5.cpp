@@ -9,7 +9,7 @@ namespace sciretest
   int hash_md5_main()
   {
     unsigned char digest[16];
-    unsigned int digWord[4];
+    //unsigned int digWord[4];
     unsigned char data[] = "abc";
     MD5<> md5;
     md5.Init();
