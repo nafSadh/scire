@@ -37,13 +37,6 @@ namespace scire
 #define SCIRE_MD5_CLASS
 
 
-  template<typename SzType, typename Ui32t, typename ByteT, typename SByteT>
-  class MD5;  // pre-declare the template class itself
-  // pre-declare templae operator overload
-  template<typename SzType, typename Ui32t, typename ByteT, typename SByteT>
-  std::ostream&
-  operator<< (std::ostream& out, const MD5<SzType, Ui32t, ByteT, SByteT>& md5);
-
   /**
   * MD5 Message-Digest Algorithm.
   * scire adaptation of the MD5 algorithm, adopted from RFC 1321.
@@ -149,9 +142,6 @@ namespace scire
     */
     bool Digest(ByteT digest[DigestSize_bytes]);
 
-    /** output digest to ostream */
-    friend std::ostream& operator<< <>(std::ostream& out, const MD5<SzType, Ui32t, ByteT, SByteT>& md5);
-
     // -- ADOPTED FROM RFC 1321 -- //
    private:
     // -- MD5 context --//
@@ -167,6 +157,16 @@ namespace scire
 
    public:
     // -- MD5 Added Interface -- //             // alias and extra functionality
+
+    /** output digest to ostream */
+    friend std::ostream& operator<< (std::ostream& out, const MD5<SzType, Ui32t, ByteT, SByteT>& md5)
+    {
+      for (SzType i = 0; i < 16; i++) {
+        out << setfill('0') << setw(2) << hex << (int)md5.digest[i];
+      }
+      return out;
+    }
+
     /** Reset object, similar to doing Init() */
     void Reset()
     {
@@ -332,15 +332,6 @@ namespace scire
     Final();
   }
 
-  template<typename SzType, typename Ui32t, typename ByteT, typename SByteT>
-  std::ostream&
-  operator<<(std::ostream& out, const MD5<SzType, Ui32t, ByteT, SByteT>& md5)
-  {
-    for (SzType i = 0; i < 16; i++) {
-      out << setfill('0') << setw(2) << hex << (int)md5.digest[i];
-    }
-    return out;
-  }
 
   //---------------------------//
   // -- MD5 IMPLEMENTATION -- //
