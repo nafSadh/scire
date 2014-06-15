@@ -136,7 +136,7 @@ namespace scire
     * @return false if Final has yet not been called
     * @param digest   a 16 byte array to read digest values in
     */
-    bool Digest(ByteT digest[DigestSize_bytes]);
+    bool Digest(ByteT digest[DigestSize_bytes]) const;
 
     // -- ADOPTED FROM RFC 1321 -- //
    private:
@@ -157,7 +157,7 @@ namespace scire
     /** fingerprint is the 128bit message-digest */
     std::string Fingerprint() const;
 
-    std::string Fingerprint() const
+    std::string ToString() const
     {
       return Fingerprint();
     }
@@ -372,7 +372,7 @@ namespace scire
 
   template<typename SzType, typename Ui32t, typename ByteT, typename SByteT>
   bool MD5<SzType, Ui32t, ByteT, SByteT>::
-  Digest(ByteT digest_[DigestSize_bytes])
+  Digest(ByteT digest_[DigestSize_bytes]) const
   {
     if (!finalized) return false;
 
