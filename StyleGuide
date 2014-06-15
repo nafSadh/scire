@@ -45,6 +45,10 @@ Other Conventions:
  13. a class that is ABSTR has a virtual dtor and vice versa
  14. Interfaces are named with 'I' prefixed, have only pure virtual functions, 
       no fields, and no explicit ctor nor dtor
+ 15. Class member function definitions when written outside class, generally
+      do not have any comment header. Hence, use of two newlines to seperate
+      functions is advised. Also put the func name in newline, when there is 
+      a long template associated with it. 
 
 ifdef Conventions:
   
