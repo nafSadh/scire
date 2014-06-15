@@ -30,6 +30,7 @@
 #include <cstdint>
 #include <cstring>
 #include <string>
+#include <sstream>
 
 namespace scire
 {
@@ -153,15 +154,20 @@ namespace scire
    public:
     // -- MD5 Added Interface -- //             // alias and extra functionality
 
+    /** fingerprint is the 128bit message-digest */
+    std::string Fingerprint() const;
+
+    std::string Fingerprint() const
+    {
+      return Fingerprint();
+    }
+
     /** output digest to ostream */
     friend std::ostream&
     operator<< (std::ostream& out,
                 const MD5<SzType, Ui32t, ByteT, SByteT>& md5)
     {
-      for (SzType i = 0; i < 16; i++) {
-        out << setfill('0') << setw(2) << hex << (int)md5.digest[i];
-      }
-      return out;
+      return out << md5.Fingerprint();
     }
 
     /** Reset object, similar to doing Init() */
@@ -329,6 +335,20 @@ namespace scire
     Final();
   }
 
+  //-----------------------//
+  // -- MD5 Interfaces -- //
+  //---------------------//
+
+  template<typename SzType, typename Ui32t, typename ByteT, typename SByteT>
+  std::string MD5<SzType, Ui32t, ByteT, SByteT>::
+  Fingerprint() const
+  {
+    std::stringstream strm;
+    for (SzType i = 0; i < 16; i++) {
+      strm << setfill('0') << setw(2) << hex << (int)digest[i];
+    }
+    return strm.str();
+  }
 
   //---------------------------//
   // -- MD5 IMPLEMENTATION -- //
