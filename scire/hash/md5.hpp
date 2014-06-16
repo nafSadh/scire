@@ -48,7 +48,8 @@ namespace scire
   *   - SzType : size type, integer; default: size_t
   *   - Ui32t : unsigned 32bit integer, default: uint32_t of <cstdint>
   *   - ByteT : unsigned byte (8bit int), default: uint8_t of <cstdint>
-  *   - SByteT : signed byte (8bit int), default: int8_t of <cstdint>\n
+  *   - SByteT : signed byte (8bit int), default: int8_t of <cstdint>
+  *
   * In most cases it will simply suffice to use MD5<>
   *
   * Example usage:
@@ -573,6 +574,6 @@ namespace scire
     // Zeroize sensitive information.
     memset(x, 0, sizeof x);
   }
-#endif SCIRE_MD5_CLASS
-}
-#endif SCIRE_hash_md5_HPP
+#endif//SCIRE_MD5_CLASS
+}//scire namespace
+#endif//SCIRE_hash_md5_HPP
