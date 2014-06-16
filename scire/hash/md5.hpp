@@ -121,9 +121,9 @@ namespace scire
     * @param input    an array of bytes
     * @param lenght   number of bytes in input chunk
     */
-    bool Update(const ByteT *input, SzType lenght);
+    bool Update(const ByteT* input, SzType lenght);
     /** @copydoc MD5::Update */
-    bool Update(const SByteT *input, SzType lenght);
+    bool Update(const SByteT* input, SzType lenght);
 
     /**
     * MD5 finalization. Ends an MD5 message-digest operation, writing the
@@ -157,17 +157,18 @@ namespace scire
     /** fingerprint is the 128bit message-digest */
     std::string Fingerprint() const;
 
-    std::string ToString() const
-    {
-      return Fingerprint();
-    }
+    /** String representation of Four State Words (ABCD) */
+    std::string StatePhrase() const;
 
-    /** output digest to ostream */
+    /** string reprsentation | fingerpring on finalize, else status words */
+    std::string ToString() const;
+
+    /** in finalized output digest to ostream, or current state words */
     friend std::ostream&
     operator<< (std::ostream& out,
                 const MD5<SzType, Ui32t, ByteT, SByteT>& md5)
     {
-      return out << md5.Fingerprint();
+      return out << md5.ToString();
     }
 
     /** Reset object, similar to doing Init() */
@@ -176,12 +177,7 @@ namespace scire
       Init();
     }
 
-    /** return  */
-    //void Digest(ByteT *digest) {}
-    //void Digest(Ui32t *digest) {}
-    //void Digest(Ui32t &A, Ui32t &B, Ui32t &C, Ui32t &D) {}
-
-// -- Basic MD5 Functions -- //
+    // -- Basic MD5 Functions -- //
    protected:
     /**
     * F(X,Y,Z) = XY v not(X) Z
@@ -345,9 +341,30 @@ namespace scire
   {
     std::stringstream strm;
     for (SzType i = 0; i < 16; i++) {
-      strm << setfill('0') << setw(2) << hex << (int)digest[i];
+      strm << setfill('0') << setw(2) << hex << (unsigned int)digest[i];
     }
     return strm.str();
+  }
+
+
+  template<typename SzType, typename Ui32t, typename ByteT, typename SByteT>
+  std::string MD5<SzType, Ui32t, ByteT, SByteT>::
+  StatePhrase() const
+  {
+    std::stringstream strm;
+    strm << setfill('0') << setw(2) << hex
+         <<  "A:" << (unsigned int)state[A]
+         << " B:" << (unsigned int)state[B]
+         << " C:" << (unsigned int)state[C]
+         << " D:" << (unsigned int)state[D];
+
+    return strm.str();
+  }
+  template<typename SzType, typename Ui32t, typename ByteT, typename SByteT>
+  std::string MD5<SzType, Ui32t, ByteT, SByteT>::
+  ToString() const
+  {
+    return (finalized) ? Fingerprint() : StatePhrase();
   }
 
   //---------------------------//
@@ -463,7 +480,8 @@ namespace scire
     }
   }
 
-
+  // exact copy paste from Rivest's RFC
+  // yes bit  44's ac is indeed small
   template<typename SzType, typename Ui32t, typename ByteT, typename SByteT>
   void MD5<SzType, Ui32t, ByteT, SByteT>::
   transform(const ByteT block[BlockSize_bytes])
@@ -523,7 +541,7 @@ namespace scire
     HH(a, b, c, d, x[13], S31, 0x289b7ec6); /* 41 */
     HH(d, a, b, c, x[ 0], S32, 0xeaa127fa); /* 42 */
     HH(c, d, a, b, x[ 3], S33, 0xd4ef3085); /* 43 */
-    HH(b, c, d, a, x[ 6], S34, 0x4881d05); /* 44 */
+    HH(b, c, d, a, x[ 6], S34,  0x4881d05); /* 44 */
     HH(a, b, c, d, x[ 9], S31, 0xd9d4d039); /* 45 */
     HH(d, a, b, c, x[12], S32, 0xe6db99e5); /* 46 */
     HH(c, d, a, b, x[15], S33, 0x1fa27cf8); /* 47 */

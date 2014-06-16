@@ -4,15 +4,17 @@
 using namespace std;
 using namespace scire;
 
+#define MSG "abc"
+
 namespace sciretest
 {
   int hash_md5_main()
   {
     unsigned char digest[16];
     //unsigned int digWord[4];
-    unsigned char data[] = "abc";
+    unsigned char data[] = MSG;
     MD5<> md5;
-    md5.Init();
+    cout << md5 << endl;
     md5.Update(data, strlen((char*)data));
     md5.Final();
     //md5.printDigest();
@@ -20,9 +22,9 @@ namespace sciretest
     for (int i = 0; i < 16; i++) {
       printf("%02x", (unsigned int)digest[i]);
     }
-    cout << endl;
-    string str("abc");
-    MD5<> hash("abc");
+    cout <<endl <<md5.StatePhrase()<<endl << md5 << endl;
+    string str(MSG);
+    MD5<> hash(MSG);
     hash.Digest(digest);
     /*for (int i = 0; i < 16; i++) {
       printf("%02x", (unsigned int)digest[i]);
