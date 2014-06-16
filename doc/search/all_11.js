@@ -20,5 +20,6 @@ var searchData=
   ['stack',['Stack',['../da/d7f/classscire_1_1_stack.html',1,'scire']]],
   ['stack_2ehpp',['stack.hpp',['../df/d47/stack_8hpp.html',1,'']]],
   ['stackcrate',['StackCrate',['../d7/d67/classscire_1_1_stack_crate.html#a77d0dde4abc6a38685a8794f3f3037e2',1,'scire::StackCrate']]],
-  ['stackcrate',['StackCrate',['../d7/d67/classscire_1_1_stack_crate.html',1,'scire']]]
+  ['stackcrate',['StackCrate',['../d7/d67/classscire_1_1_stack_crate.html',1,'scire']]],
+  ['statephrase',['StatePhrase',['../d3/de0/classscire_1_1_m_d5.html#ac9a4c30b6757b06d6cc915ece6393e80',1,'scire::MD5']]]
 ];
