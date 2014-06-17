@@ -87,6 +87,7 @@
     <ClCompile Include="..\test\util\filetype.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\scire\hash\hashcomn.hpp" />
     <ClInclude Include="..\scire\hash\md5.hpp" />
     <ClInclude Include="..\scire\struct\container.hpp" />
     <ClInclude Include="..\scire\struct\linkedlist.hpp" />

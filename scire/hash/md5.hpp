@@ -32,6 +32,10 @@
 #include <string>
 #include <sstream>
 
+#ifndef STANDALONE
+#include "hashcomn.hpp"
+#endif
+
 namespace scire
 {
 #ifndef SCIRE_MD5_CLASS
@@ -76,6 +80,9 @@ namespace scire
            typename ByteT = uint8_t,/* byte type, 8bit unsigned integer */
            typename SByteT = int8_t/* signed byte type */>
   class MD5
+#ifndef STANDALONE
+    : IHashAlgo<SzType, Ui32t, ByteT, SByteT>
+#endif
   {
    public:
     // -- Informative CONSTANTS --//
@@ -406,7 +413,7 @@ namespace scire
   bool MD5<SzType, Ui32t, ByteT, SByteT>::
   Update(const SByteT * input, SzType length)
   {
-    Update((const unsigned char*)input, length);
+    return Update((const unsigned char*)input, length);
   }
 
 
