@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "../../scire/hash/md5.hpp"
+#include "../../scire/hash/hashcomn.hpp"
 using namespace std;
 using namespace scire;
 
@@ -25,11 +26,16 @@ namespace sciretest
     cout <<endl <<md5.StatePhrase()<<endl << md5 << endl;
     string str(MSG);
     MD5<> hash(MSG);
-    hash.Digest(digest);
-    /*for (int i = 0; i < 16; i++) {
-      printf("%02x", (unsigned int)digest[i]);
-    }*/
     cout<<hash << endl;
+
+    MD5<> Md5;
+    Hash::Compute(Md5, str);
+    cout << "a:" << Md5 << endl;
+
+    cout << endl << "----------------------------------------------\n";
+    cout << "file\n";
+    Hash::ComputeFile(Md5, "C:\\Users\\nafSadh\\Downloads\\Die-Mannschaft.png");
+    cout << Md5 << endl;
     return 0;
   }
 }

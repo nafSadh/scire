@@ -218,3 +218,5 @@ pip-log.txt
 .svn/format
 .svn/entries
 gh-pages
+scire/{81A07D1B-74C1-4896-B256-B6A33063EB36}/CodeAnalysisLog.xml
+scire/{81A07D1B-74C1-4896-B256-B6A33063EB36}/WebProject.lastcodeanalysissucceeded
