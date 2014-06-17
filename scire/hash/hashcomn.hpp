@@ -73,6 +73,9 @@ namespace scire
 #endif//SCIRE_HashAlgo_INTFC
 
 #ifndef  NO_HASH_UTILITY
+
+#ifndef SCIRE_Hash_FUNCS
+#define SCIRE_Hash_FUNCS
   /** static utility routines for hash algorithms */
   class Hash
   {
@@ -84,11 +87,11 @@ namespace scire
     template<typename SzT, typename U32, typename B8, typename SB8>
     static void Compute(
       IHashAlgo<SzT, U32, B8, SB8>& iHA,/**< algo to compute with */
-      std::string msg/**< message string to compute hash for */
+      std::string message/**< message string to compute hash for */
     )
     {
       iHA.Init();
-      iHA.Update(reinterpret_cast<const B8*>(msg.c_str()), msg.length());
+      iHA.Update(reinterpret_cast<const B8*>(message.c_str()),message.length());
       iHA.Final();
     }
 
@@ -129,7 +132,7 @@ namespace scire
         if (readc < 0 || !ifs) {
           finished = true;
         } else {
-          iHA.Update(reinterpret_cast<const B8*>(buffer), readc);
+          iHA.Update(reinterpret_cast<const B8*>(buffer), (SzT)readc);
           processed += readc;
         }
       }
@@ -164,6 +167,7 @@ namespace scire
     }
 
   };
+#endif//SCIRE_Hash_FUNCS
 #endif//YES_HASH_UTILITY
 }//scire namespace
 #endif//SCIRE_hash_common_HPP

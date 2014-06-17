@@ -56,6 +56,7 @@ ifdef Conventions:
   2. for class: SCIRE_ClassName_CLASS
   3. for interface: SCIRE_NameOfInterface_INTFC , i.e. macro drops the prefix
   4. for abstraction: SCIRE_AbsractClass_ABSTR , i.e. macro drops the prefix
+  5. for class with static functions only: SCIRE_ClassName_FUNCS
 
 
 Shorthands:

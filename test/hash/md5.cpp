@@ -34,7 +34,7 @@ namespace sciretest
 
     cout << endl << "----------------------------------------------\n";
     cout << "file\n";
-    Hash::ComputeFile(Md5, "C:\\Users\\nafSadh\\Downloads\\Die-Mannschaft.png");
+    Hash::ComputeFile(Md5, "J:\\FilmSet\\The Lord of the Rings\\LOTR1 The Fellowship of the Ring.mkv");
     cout << Md5 << endl;
     return 0;
   }
