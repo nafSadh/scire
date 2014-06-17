@@ -54,14 +54,6 @@ namespace scire
     */
     virtual void Final() = 0;
 
-    /**
-    * get digest bytes in
-    * @return false if Final has yet not been called
-    * @param digest   a 16 byte array to read digest values in
-    */
-    virtual bool Digest(ByteT *digest) const = 0;
-
-
     /** fingerprint is the 128bit message-digest */
     virtual std::string Fingerprint() const = 0;
 
@@ -70,7 +62,6 @@ namespace scire
 
     /** string reprsentation | fingerpring on finalize, else status words */
     virtual std::string ToString() const = 0;
-
   };
 #endif//SCIRE_HashAlgo_INTFC
 }
