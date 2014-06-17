@@ -81,7 +81,7 @@ namespace scire
            typename SByteT = int8_t/* signed byte type */>
   class MD5
 #ifndef STANDALONE
-    : IHashAlgo<SzType, Ui32t, ByteT, SByteT>
+    : public IHashAlgo<SzType, Ui32t, ByteT, SByteT>
 #endif
   {
    public:
@@ -112,7 +112,7 @@ namespace scire
     /** @copydoc MD5::MD5(std::string) */
     MD5(char message[]);
 
-    /** release MD5 resources */
+    /* release MD5 resources */
     //~MD5();
 
     // -- MD5 INTERFACE --//                        // adopted from Rivest's RFC
@@ -170,14 +170,6 @@ namespace scire
 
     /** string reprsentation | fingerpring on finalize, else status words */
     std::string ToString() const;
-
-    /** in finalized output digest to ostream, or current state words */
-    friend std::ostream&
-    operator<< (std::ostream& out,
-                const MD5<SzType, Ui32t, ByteT, SByteT>& md5)
-    {
-      return out << md5.ToString();
-    }
 
     /** Reset object, similar to doing Init() */
     void Reset()
@@ -305,6 +297,21 @@ namespace scire
       }
     }
   };
+
+  //-----------------------------//
+  // -- NON-MEMBER functions -- //
+  //---------------------------//
+  /**
+   * @relates MD5
+   * if MD5 finalized then output digest, else current state words to ostream
+   */
+  template<typename SzType, typename Ui32t, typename ByteT, typename SByteT>
+  std::ostream&
+  operator<< (std::ostream& out,
+              const MD5<SzType, Ui32t, ByteT, SByteT>& md5)
+  {
+    return out << md5.ToString();
+  }
 
 //------------------//
 // -- MD5 CTORS -- //
