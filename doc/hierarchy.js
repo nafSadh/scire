@@ -12,10 +12,13 @@ var hierarchy =
       [ "scire::SinglyList< Type, SzType >", "d7/d94/classscire_1_1_singly_list.html", null ]
     ] ],
     [ "scire::FileType", "d9/dbc/classscire_1_1_file_type.html", null ],
+    [ "scire::Hash", "df/dcc/classscire_1_1_hash.html", null ],
     [ "scire::ICrate< Type, SzType >", "dd/dc6/classscire_1_1_i_crate.html", [
       [ "scire::QueueCrate< Type, SzType >", "df/dfb/classscire_1_1_queue_crate.html", null ],
       [ "scire::StackCrate< Type, SzType >", "d7/d67/classscire_1_1_stack_crate.html", null ]
     ] ],
-    [ "scire::MD5< SzType, Ui32t, ByteT, SByteT >", "d3/de0/classscire_1_1_m_d5.html", null ],
+    [ "scire::IHashAlgo< SzType, Ui32t, ByteT, SByteT >", "d1/d3e/classscire_1_1_i_hash_algo.html", [
+      [ "scire::MD5< SzType, Ui32t, ByteT, SByteT >", "d3/de0/classscire_1_1_m_d5.html", null ]
+    ] ],
     [ "scire::SinglyList< Type, SzType >::SinglyNode", "d3/d71/classscire_1_1_singly_list_1_1_singly_node.html", null ]
 ];

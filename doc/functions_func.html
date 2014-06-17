@@ -84,7 +84,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
-      <li><a href="functions_rela.html"><span>Related&#160;Functions</span></a></li>
     </ul>
   </div>
   <div id="navrow4" class="tabs3">
@@ -98,6 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="#index_h"><span>h</span></a></li>
       <li><a href="#index_i"><span>i</span></a></li>
       <li><a href="#index_m"><span>m</span></a></li>
+      <li><a href="#index_o"><span>o</span></a></li>
       <li><a href="#index_p"><span>p</span></a></li>
       <li><a href="#index_q"><span>q</span></a></li>
       <li><a href="#index_r"><span>r</span></a></li>
@@ -127,7 +127,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -154,6 +154,12 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="dd/dc6/classscire_1_1_i_crate.html#acb6871c97b0a9645a9558ca2a6cfd155">scire::ICrate&lt; Type, SzType &gt;</a>
 , <a class="el" href="df/dfb/classscire_1_1_queue_crate.html#aaa5ef12b2c1314333d87cb6e39c19655">scire::QueueCrate&lt; Type, SzType &gt;</a>
 , <a class="el" href="d7/d67/classscire_1_1_stack_crate.html#adb8b4717b98e7e80cc6e5ccdbbd4cdc5">scire::StackCrate&lt; Type, SzType &gt;</a>
+</li>
+<li>Compute()
+: <a class="el" href="df/dcc/classscire_1_1_hash.html#a646cf33e4a3183bd3b7fca57c84796d4">scire::Hash</a>
+</li>
+<li>ComputeFile()
+: <a class="el" href="df/dcc/classscire_1_1_hash.html#a5a51c2c80afdee3b1560e2df57d7b655">scire::Hash</a>
 </li>
 </ul>
 
@@ -199,10 +205,12 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="d9/dbc/classscire_1_1_file_type.html#a8c009ea19a1d378298b153e3d995472a">scire::FileType</a>
 </li>
 <li>Final()
-: <a class="el" href="d3/de0/classscire_1_1_m_d5.html#a68654c90443a7ae8c17cd06d3f5cbc17">scire::MD5&lt; SzType, Ui32t, ByteT, SByteT &gt;</a>
+: <a class="el" href="d1/d3e/classscire_1_1_i_hash_algo.html#ab1067d332caaf085740b4fb3e740b313">scire::IHashAlgo&lt; SzType, Ui32t, ByteT, SByteT &gt;</a>
+, <a class="el" href="d3/de0/classscire_1_1_m_d5.html#a68654c90443a7ae8c17cd06d3f5cbc17">scire::MD5&lt; SzType, Ui32t, ByteT, SByteT &gt;</a>
 </li>
 <li>Fingerprint()
-: <a class="el" href="d3/de0/classscire_1_1_m_d5.html#a74027cd23d3e5720f9c1ba5821c28578">scire::MD5&lt; SzType, Ui32t, ByteT, SByteT &gt;</a>
+: <a class="el" href="d1/d3e/classscire_1_1_i_hash_algo.html#af60af7af90262bdfccf46dc46111ccb5">scire::IHashAlgo&lt; SzType, Ui32t, ByteT, SByteT &gt;</a>
+, <a class="el" href="d3/de0/classscire_1_1_m_d5.html#a74027cd23d3e5720f9c1ba5821c28578">scire::MD5&lt; SzType, Ui32t, ByteT, SByteT &gt;</a>
 </li>
 <li>Fore()
 : <a class="el" href="de/d92/classscire_1_1_a_queue.html#a1274035540a647c221b1d6278430c66f">scire::AQueue&lt; Type, SzType &gt;</a>
@@ -234,7 +242,8 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="d3/de0/classscire_1_1_m_d5.html#a6f608e457057df25804a7c3e66c2b093">scire::MD5&lt; SzType, Ui32t, ByteT, SByteT &gt;</a>
 </li>
 <li>Init()
-: <a class="el" href="d3/de0/classscire_1_1_m_d5.html#a30bd15b17a423b2051091365ffab6394">scire::MD5&lt; SzType, Ui32t, ByteT, SByteT &gt;</a>
+: <a class="el" href="d1/d3e/classscire_1_1_i_hash_algo.html#ad6317440ad5b938f09950dcce6337aba">scire::IHashAlgo&lt; SzType, Ui32t, ByteT, SByteT &gt;</a>
+, <a class="el" href="d3/de0/classscire_1_1_m_d5.html#a30bd15b17a423b2051091365ffab6394">scire::MD5&lt; SzType, Ui32t, ByteT, SByteT &gt;</a>
 </li>
 <li>Insert()
 : <a class="el" href="d7/d94/classscire_1_1_singly_list.html#ae2ef1fa357c0225529c0d36fd26918b6">scire::SinglyList&lt; Type, SzType &gt;</a>
@@ -248,6 +257,13 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
 <li>MD5()
 : <a class="el" href="d3/de0/classscire_1_1_m_d5.html#a5435a034bd7b1986cf7dc068fae248ee">scire::MD5&lt; SzType, Ui32t, ByteT, SByteT &gt;</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_o"></a>- o -</h3><ul>
+<li>operator&lt;&lt;()
+: <a class="el" href="d3/de0/classscire_1_1_m_d5.html#a294c2407e3245927e02c491a9ae0c015">scire::MD5&lt; SzType, Ui32t, ByteT, SByteT &gt;</a>
 </li>
 </ul>
 
@@ -310,7 +326,8 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="d7/d67/classscire_1_1_stack_crate.html#a77d0dde4abc6a38685a8794f3f3037e2">scire::StackCrate&lt; Type, SzType &gt;</a>
 </li>
 <li>StatePhrase()
-: <a class="el" href="d3/de0/classscire_1_1_m_d5.html#ac9a4c30b6757b06d6cc915ece6393e80">scire::MD5&lt; SzType, Ui32t, ByteT, SByteT &gt;</a>
+: <a class="el" href="d1/d3e/classscire_1_1_i_hash_algo.html#a15c41402eea9e3facc1a3163f8b40a1a">scire::IHashAlgo&lt; SzType, Ui32t, ByteT, SByteT &gt;</a>
+, <a class="el" href="d3/de0/classscire_1_1_m_d5.html#ac9a4c30b6757b06d6cc915ece6393e80">scire::MD5&lt; SzType, Ui32t, ByteT, SByteT &gt;</a>
 </li>
 </ul>
 
@@ -322,7 +339,8 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 , <a class="el" href="d7/d67/classscire_1_1_stack_crate.html#a887ad9cc8744356dd399796a95cd96c3">scire::StackCrate&lt; Type, SzType &gt;</a>
 </li>
 <li>ToString()
-: <a class="el" href="d3/de0/classscire_1_1_m_d5.html#a10654f3afe57841f827b0664318585d0">scire::MD5&lt; SzType, Ui32t, ByteT, SByteT &gt;</a>
+: <a class="el" href="d1/d3e/classscire_1_1_i_hash_algo.html#a6ad8c2e953f502d558c0e95db24bd7e5">scire::IHashAlgo&lt; SzType, Ui32t, ByteT, SByteT &gt;</a>
+, <a class="el" href="d3/de0/classscire_1_1_m_d5.html#a10654f3afe57841f827b0664318585d0">scire::MD5&lt; SzType, Ui32t, ByteT, SByteT &gt;</a>
 </li>
 <li>transform()
 : <a class="el" href="d3/de0/classscire_1_1_m_d5.html#a5c25ec930eed3b1062f39f155f671afa">scire::MD5&lt; SzType, Ui32t, ByteT, SByteT &gt;</a>
@@ -335,7 +353,8 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 <h3><a class="anchor" id="index_u"></a>- u -</h3><ul>
 <li>Update()
-: <a class="el" href="d3/de0/classscire_1_1_m_d5.html#a7ba491118b5b0af8bd51194a26a29303">scire::MD5&lt; SzType, Ui32t, ByteT, SByteT &gt;</a>
+: <a class="el" href="d1/d3e/classscire_1_1_i_hash_algo.html#a4d7ccf044fb8b5b67f51ed17ecd1b67b">scire::IHashAlgo&lt; SzType, Ui32t, ByteT, SByteT &gt;</a>
+, <a class="el" href="d3/de0/classscire_1_1_m_d5.html#a7ba491118b5b0af8bd51194a26a29303">scire::MD5&lt; SzType, Ui32t, ByteT, SByteT &gt;</a>
 </li>
 </ul>
 
@@ -368,7 +387,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Jun 16 2014 02:11:47 for scire by
+    <li class="footer">Generated on Tue Jun 17 2014 01:11:37 for scire by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>
