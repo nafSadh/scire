@@ -30,6 +30,7 @@ namespace scire
 #define SCIRE_SinglyList_CLASS
   /**
   * A Singly Linked List class.
+  *
   * Singly linked list contains a linear list of items. Each item points to it's
   * next; the last item of the list points to nullptr. A head pointer points to
   * the first item of the list.
