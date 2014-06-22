@@ -1,7 +1,10 @@
 // scire/hash/md5
 
-// Copyright (c) 2014, Khan 'Sadh' Mostafa (http://nafSadh.com/Khan)
-// Distributed under the Boost Software License, Version 1.0.
+// "RSA Data Security, Inc. MD5 Message-Digest Algorithm"
+// Copyright (C) 1991-2, RSA Data Security, Inc. Created 1991. All rights reserved.
+
+// Adopted 2014, (C) by Khan 'Sadh' Mostafa (http://nafSadh.com/Khan)
+// Distributed as part of 'scire' under the Boost Software License, Version 1.0.
 // (See accompanying text at http://www.boost.org/LICENSE_1_0.txt)
 
 /**
