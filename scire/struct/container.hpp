@@ -29,6 +29,7 @@ namespace scire
 #define SCIRE_Container_ABSTR
   /**
   * Container Inferface.
+  *
   * Size() function is necessary to all containers;
   * Each container shall also implement Add(), Deduce() and Peek() function
   * eventually allowing programs to switch between completely different
