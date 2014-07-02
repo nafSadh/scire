@@ -3,59 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "scire.vs.proj", "vs-proj\scire.vs.proj.vcxproj", "{64F4A32E-2623-4FF3-B7F8-577A6307931A}"
-EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "scire", "http://localhost:64699", "{81A07D1B-74C1-4896-B256-B6A33063EB36}"
-	ProjectSection(WebsiteProperties) = preProject
-		UseIISExpress = "true"
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_64699"
-		Debug.AspNetCompiler.PhysicalPath = "..\scire\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_64699\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_64699"
-		Release.AspNetCompiler.PhysicalPath = "..\scire\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_64699\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		SlnRelativePath = "..\scire\"
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "scire", "vs-proj\scire.vcxproj", "{5236FA1D-FF38-4CDB-A63E-91726F5B07E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Debug|Mixed Platforms = Debug|Mixed Platforms
 		Debug|Win32 = Debug|Win32
-		Release|Any CPU = Release|Any CPU
-		Release|Mixed Platforms = Release|Mixed Platforms
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{64F4A32E-2623-4FF3-B7F8-577A6307931A}.Debug|Any CPU.ActiveCfg = Debug|Win32
-		{64F4A32E-2623-4FF3-B7F8-577A6307931A}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
-		{64F4A32E-2623-4FF3-B7F8-577A6307931A}.Debug|Mixed Platforms.Build.0 = Debug|Win32
-		{64F4A32E-2623-4FF3-B7F8-577A6307931A}.Debug|Win32.ActiveCfg = Debug|Win32
-		{64F4A32E-2623-4FF3-B7F8-577A6307931A}.Debug|Win32.Build.0 = Debug|Win32
-		{64F4A32E-2623-4FF3-B7F8-577A6307931A}.Release|Any CPU.ActiveCfg = Release|Win32
-		{64F4A32E-2623-4FF3-B7F8-577A6307931A}.Release|Mixed Platforms.ActiveCfg = Release|Win32
-		{64F4A32E-2623-4FF3-B7F8-577A6307931A}.Release|Mixed Platforms.Build.0 = Release|Win32
-		{64F4A32E-2623-4FF3-B7F8-577A6307931A}.Release|Win32.ActiveCfg = Release|Win32
-		{64F4A32E-2623-4FF3-B7F8-577A6307931A}.Release|Win32.Build.0 = Release|Win32
-		{81A07D1B-74C1-4896-B256-B6A33063EB36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{81A07D1B-74C1-4896-B256-B6A33063EB36}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{81A07D1B-74C1-4896-B256-B6A33063EB36}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{81A07D1B-74C1-4896-B256-B6A33063EB36}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{81A07D1B-74C1-4896-B256-B6A33063EB36}.Debug|Win32.ActiveCfg = Debug|Any CPU
-		{81A07D1B-74C1-4896-B256-B6A33063EB36}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{81A07D1B-74C1-4896-B256-B6A33063EB36}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{81A07D1B-74C1-4896-B256-B6A33063EB36}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{81A07D1B-74C1-4896-B256-B6A33063EB36}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
-		{81A07D1B-74C1-4896-B256-B6A33063EB36}.Release|Win32.ActiveCfg = Debug|Any CPU
+		{5236FA1D-FF38-4CDB-A63E-91726F5B07E3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5236FA1D-FF38-4CDB-A63E-91726F5B07E3}.Debug|Win32.Build.0 = Debug|Win32
+		{5236FA1D-FF38-4CDB-A63E-91726F5B07E3}.Release|Win32.ActiveCfg = Release|Win32
+		{5236FA1D-FF38-4CDB-A63E-91726F5B07E3}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

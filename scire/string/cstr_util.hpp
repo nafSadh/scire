@@ -19,6 +19,8 @@ author:
 #ifndef SCIRE_string_cstr_util_HPP
 #define SCIRE_string_cstr_util_HPP
 
+#include <cstring>
+
 namespace scire
 {
 
@@ -27,6 +29,26 @@ namespace scire
 
   /**
   */
+  class CharStringUtil
+  {
+   public:
+    static bool IsAllCharUnique(const char str[])
+    {
+      size_t len = strlen(str);
+      if (len > 128) return false;
+
+      bool chrmap[128] = {false};
+      size_t i = 0;
+      while (i < len) {
+        if (chrmap[str[i]] == true)
+          return false;
+        chrmap[str[i]] = true;
+        i++;
+      }
+
+      return true;
+    }
+  };
 
 #endif SCIRE_CharStringUtil_FUNCS
 }
