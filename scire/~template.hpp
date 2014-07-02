@@ -1,11 +1,11 @@
-// scire/<dir>/<filename>
+// scire/dir/filename
 
 // Copyright (c) 2014, Khan 'Sadh' Mostafa (http://nafSadh.com/Khan)
 // Distributed under the Boost Software License, Version 1.0.
 // (See accompanying text at http://www.boost.org/LICENSE_1_0.txt)
 
 /**
- scire/<dir>/<filename>.hpp
+ scire/dir/filename.hpp
 
  scire <thing> implementation:
  - ClassName	            : very brief description
