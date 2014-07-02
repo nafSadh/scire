@@ -9,9 +9,16 @@ namespace sciretest
 {
   int cstr_util_main()
   {
-    char str[500];
-    cin >> str;
-    cout << endl << CharStringUtil::IsAllCharUnique(str);
+    char str[500], a[500],b[500];
+    //cin >> str;
+    //cout << CharStringUtil::IsAllCharUnique(str)<<endl;
+    //CharStringUtil::Reverse(str);
+    //cout << str << endl;
+
+    while (true) {
+      cin >> a >> b;
+      cout << CharStringUtil::IsPermutation<128>(a, b)<<endl;
+    }
     return 0;
   }
 }

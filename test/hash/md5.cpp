@@ -40,7 +40,7 @@ namespace sciretest
   }
 }
 
-#ifndef SCIRE_TEST_MD5
+#ifdef SCIRE_TEST_MD5
 int main()
 {
   return sciretest::hash_md5_main();

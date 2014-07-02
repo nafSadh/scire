@@ -19,15 +19,57 @@
     <Filter Include="test\string">
       <UniqueIdentifier>{2cff1e72-95c9-4564-b511-325874bae3ea}</UniqueIdentifier>
     </Filter>
+    <Filter Include="scire\struct">
+      <UniqueIdentifier>{434ff6d5-d4cc-42cc-a6f0-89f98a10924c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scire\hash">
+      <UniqueIdentifier>{e997ab4b-060b-4c52-b0c9-d0a9e2585d56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test\hash">
+      <UniqueIdentifier>{3a28d0d3-2fc9-402a-98a6-029cb98883fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test\struct">
+      <UniqueIdentifier>{83e96296-20be-4e67-a04d-a7f7ae8c4d67}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\scire\string\cstr_util.hpp">
       <Filter>scire\string</Filter>
     </ClInclude>
+    <ClInclude Include="..\scire\struct\container.hpp">
+      <Filter>scire\struct</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scire\struct\linkedlist.hpp">
+      <Filter>scire\struct</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scire\struct\queue.hpp">
+      <Filter>scire\struct</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scire\struct\stack.hpp">
+      <Filter>scire\struct</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scire\hash\hashcomn.hpp">
+      <Filter>scire\hash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scire\hash\md5.hpp">
+      <Filter>scire\hash</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\test\string\cstr_util.cpp">
       <Filter>test\string</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\hash\md5.cpp">
+      <Filter>test\hash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\struct\linkedlist.cpp">
+      <Filter>test\struct</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\struct\queue.cpp">
+      <Filter>test\struct</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\struct\stack.cpp">
+      <Filter>test\struct</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

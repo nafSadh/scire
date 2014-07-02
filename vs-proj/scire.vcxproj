@@ -47,6 +47,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -61,13 +62,24 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\scire\hash\hashcomn.hpp" />
+    <ClInclude Include="..\scire\hash\md5.hpp" />
     <ClInclude Include="..\scire\string\cstr_util.hpp" />
+    <ClInclude Include="..\scire\struct\container.hpp" />
+    <ClInclude Include="..\scire\struct\linkedlist.hpp" />
+    <ClInclude Include="..\scire\struct\queue.hpp" />
+    <ClInclude Include="..\scire\struct\stack.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\test\hash\md5.cpp" />
     <ClCompile Include="..\test\string\cstr_util.cpp" />
+    <ClCompile Include="..\test\struct\linkedlist.cpp" />
+    <ClCompile Include="..\test\struct\queue.cpp" />
+    <ClCompile Include="..\test\struct\stack.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

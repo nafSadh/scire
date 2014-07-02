@@ -32,7 +32,11 @@ namespace scire
   class CharStringUtil
   {
    public:
-    static bool IsAllCharUnique(const char str[])
+    /**
+    * check if all characater in a string is unique
+    * @return false if at least one char appear more than once in the string
+    */
+    static bool IsAllCharUnique(const char str[]/**< string to check */)
     {
       size_t len = strlen(str);
       if (len > 128) return false;
@@ -44,6 +48,46 @@ namespace scire
           return false;
         chrmap[str[i]] = true;
         i++;
+      }
+
+      return true;
+    }
+
+    /** reverse the passed string */
+    static void Reverse(char str[] /**<string to reverse */)
+    {
+      size_t len = strlen(str);
+      size_t mid = len / 2;
+      size_t end = len - 1;
+
+      for (size_t i = 0; i < mid; i++) {
+        char temp = str[i];
+        str[i] = str[end - i];
+        str[end - i] = temp;
+      }
+    }
+
+    template <size_t N>
+    static bool IsPermutation(const char a[], const char b[])
+    {
+      size_t len = strlen(a);
+
+      if (len != strlen(b)) {
+        return false;
+      }
+
+      int map[N] = {0};
+
+      size_t i = 0;
+
+      while (i < len) {
+        map[a[i]]++;
+        map[b[i]]--;
+        i++;
+      }
+
+      for (i = 0; i < N; i++) {
+        if (map[i] != 0) return false;
       }
 
       return true;
