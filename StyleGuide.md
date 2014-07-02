@@ -2,12 +2,14 @@
   scire style guide
 ----------------------
 
-Code Formatting:
+Code Formatting
+---------------
  
  with AStyle: 
  --style=kr --indent=spaces=2 --indent-modifiers --indent-namespaces --mode=c
 
-Naming Conventions:
+Naming Conventions
+------------------
 
   1. ClassNames are in UpperCamelCase
   2. ClassPublicFunction names are in UpperCamelCase
@@ -26,7 +28,8 @@ Naming Conventions:
  10. AClassThatIsAbstract has 'A' prefixed to its name
 
 
-Other Conventions:
+Other Conventions
+-----------------
 
   1. local variables shall be declared near place of use
   2. function local variables that is used throughout can be at top
@@ -51,7 +54,8 @@ Other Conventions:
       a long template associated with it. 
  16. file_name shall be all lower case and will use underscores.
   
-ifdef Conventions:
+ifdef Conventions
+-----------------
   
   1. for files: SCIRE_directory_filename_EXT
   2. for class: SCIRE_ClassName_CLASS
