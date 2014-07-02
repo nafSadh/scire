@@ -5,7 +5,7 @@
 Code Formatting
 ---------------
  
- with AStyle: 
+ with AStyle:<br/>
  --style=kr --indent=spaces=2 --indent-modifiers --indent-namespaces --mode=c
 
 Naming Conventions
