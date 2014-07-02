@@ -49,7 +49,8 @@ Other Conventions:
       do not have any comment header. Hence, use of two newlines to seperate
       functions is advised. Also put the func name in newline, when there is 
       a long template associated with it. 
-
+ 16. file_name shall be all lower case and will use underscores.
+  
 ifdef Conventions:
   
   1. for files: SCIRE_directory_filename_EXT
