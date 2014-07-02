@@ -67,6 +67,7 @@ namespace scire
       }
     }
 
+    /** check if a string passed is a permutation of the other */
     template <size_t N>
     static bool IsPermutation(const char a[], const char b[])
     {
@@ -92,8 +93,109 @@ namespace scire
 
       return true;
     }
-  };
 
-#endif SCIRE_CharStringUtil_FUNCS
+    /** replace all occurrences of a character with some string */
+    static size_t Replace(const char subject[],/**<string to operate on */
+                          char result[],/**<result string*/
+                          char search,/**<character to replace*/
+                          char replace[]/**<string to replace with*/)
+    {
+      size_t len = 0;
+
+      size_t rep = strlen(replace);
+
+      size_t i = 0;
+      while (subject[i] != '\0') {
+        if (subject[i] == search) {
+          for (size_t j = 0; j < rep; j++) {
+            result[len++] = replace[j];
+          }
+        } else {
+          result[len++] = subject[i];
+        }
+        i++;
+      }
+      result[len] = '\0';
+      return len;
+    }
+
+    template <typename Type>
+    static size_t NumToDecimalString(Type num, char str[])
+    {
+      size_t base = 10;
+      size_t len;
+
+      //estimate place count
+      len = 0;
+      Type copy = num;
+      while (copy > 0) {
+        len++;
+        copy /= base;
+      }
+
+      for (int i = len - 1; i >= 0; i--) {
+        str[i] = (num % base) + '0';
+        num /= base;
+      }
+      str[len] = '\0';
+
+      return len;
+    }
+
+    /** encode a string such that every repeated character is encoded as the
+    character followed by count. e.g. aabcccaaaa -> a2b1c3a4
+    @return lenght of encoded string */
+    static size_t CharCountEncoding(const char subject[],/**<string to encode*/
+                                    char encstr[]/**<encoded string*/)
+    {
+      size_t len = 0;
+
+      size_t i = 0;
+      char curc = subject[i];
+      size_t count = 1;
+      while (subject[i] != '\0') {
+        if (subject[i+1] == curc) {
+          count++;
+        } else { //update encoded string
+          encstr[len++] = curc;
+          //encstr[len++] = count + '0';
+          char nstr[32];
+          size_t nlen = NumToDecimalString(count, nstr);
+          for (size_t j = 0; j < nlen; j++) {
+            encstr[len++] = nstr[j];
+          }
+          //reset
+          curc = subject[i + 1];
+          count = 1;
+        }
+        i++;
+      }
+      encstr[len] = '\0';
+
+      return len;
+    }
+
+    /** compress a string such that every repeated character is encoded as the
+    character followed by count. e.g. aabcccaaaa -> a2b1c3a4. If encoded string
+    is not smaller then return original string.
+    @return lenght of encoded string */
+    static size_t CharCountCompress(const char subject[],/**<string to encode*/
+                                    char compstr[]/**<encoded string*/)
+    {
+      size_t enclen = CharCountEncoding(subject, compstr);
+      if (enclen < strlen(subject))
+        return enclen;
+      else {
+        size_t i = 0;
+        while (subject[i] != '\0') {
+          compstr[i] = subject[i];
+          i++;
+        }
+        compstr[i] = '\0';
+        return i;
+      }
+    }
+  };
+#endif//SCIRE_CharStringUtil_FUNCS
 }
-#endif SCIRE_string_cstr_util_HPP
+#endif//SCIRE_string_cstr_util_HPP

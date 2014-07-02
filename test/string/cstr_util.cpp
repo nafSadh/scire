@@ -15,9 +15,28 @@ namespace sciretest
     //CharStringUtil::Reverse(str);
     //cout << str << endl;
 
+    //while (true) {
+    //  cin >> a >> b;
+    //  cout << CharStringUtil::IsPermutation<128>(a, b)<<endl;
+    //}
+
+    //while (true) {
+    //  cin >> str;
+    //  CharStringUtil::Replace(str, a, '_', "%20");
+    //  cout << a << endl;
+    //}
+
+    //while (true) {
+    //  int x;
+    //  cin >> x;
+    //  CharStringUtil::NumToDecimalString<int>(x, str);
+    //  cout << str << endl;
+    //}
+
     while (true) {
-      cin >> a >> b;
-      cout << CharStringUtil::IsPermutation<128>(a, b)<<endl;
+      cin >> str;
+      cout << strlen(str) << "->" << CharStringUtil::CharCountCompress(str, a) << ": ";
+      cout << a << endl;
     }
     return 0;
   }
