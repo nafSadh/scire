@@ -24,7 +24,7 @@ Naming Conventions
       -  type Property(){} as public getter function
       -  void Property(type){} as public setter function
       -  type theProperty or property as associated (protected/private) field
-  9. IAllInterface names are prefixed with 'I'
+  9. IAllInterface names has 'I' prefixed to its name
  10. AClassThatIsAbstract has 'A' prefixed to its name
 
 
@@ -64,6 +64,7 @@ ifdef Conventions
   5. for class with static functions only: SCIRE_ClassName_FUNCS
 
 
-Shorthands:
+Shorthands
+----------
   
   1. lhs, rhs = left (right) hand side (operands)
