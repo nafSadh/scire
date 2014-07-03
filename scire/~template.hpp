@@ -27,6 +27,10 @@ namespace scire
 
   /**
   */
+  class ClassName
+  {
+
+  };
 
 #endif//SCIRE_ClassName_CLASS
 }

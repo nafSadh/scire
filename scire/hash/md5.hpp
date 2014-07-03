@@ -17,7 +17,9 @@
  - MD5	            : a class offering MD5 functionalities
 
  other required scire files:
-  none
+  scire/hash/hash_comn.hpp
+
+ can be STANDALONE : Yes
 
  acknowledgement:
   [1] RFC 1321, Rivest,  http://tools.ietf.org/html/rfc1321
@@ -36,7 +38,7 @@
 #include <sstream>
 
 #ifndef STANDALONE
-#include "hashcomn.hpp"
+#include "hash_comn.hpp"
 #endif
 
 namespace scire
