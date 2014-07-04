@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['reset',['Reset',['../d3/de0/classscire_1_1_m_d5.html#aed8af301984b3c9b6df1bf511f1d79b2',1,'scire::MD5']]]
+  ['queue',['Queue',['../da/dca/classscire_1_1_queue.html#a04786149becef15f21a8648f78980062',1,'scire::Queue']]],
+  ['queuecrate',['QueueCrate',['../df/dfb/classscire_1_1_queue_crate.html#aaac3df92c161ab69f289dd434a5eb122',1,'scire::QueueCrate']]]
 ];

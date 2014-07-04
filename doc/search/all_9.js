@@ -10,5 +10,7 @@ var searchData=
   ['int32',['int32',['../d3/d63/_typedefs_8h.html#ad3ce9f24199b79b2629169eebf59489b',1,'Typedefs.h']]],
   ['int64',['int64',['../d3/d63/_typedefs_8h.html#a92a47ab0e245f0ae4d01c38a64b6c427',1,'Typedefs.h']]],
   ['int8',['int8',['../d3/d63/_typedefs_8h.html#aaf44e46c719bc25ff3de1341e7aa4094',1,'Typedefs.h']]],
-  ['isempty',['IsEmpty',['../d3/de4/classscire_1_1_a_container.html#af8415e3cd3b12aeeabf1c8ec072f5a4c',1,'scire::AContainer']]]
+  ['isallcharunique',['IsAllCharUnique',['../d4/de2/classscire_1_1_char_string_util.html#af468b4fe497b3c9fd2584a1fc3580606',1,'scire::CharStringUtil']]],
+  ['isempty',['IsEmpty',['../d3/de4/classscire_1_1_a_container.html#af8415e3cd3b12aeeabf1c8ec072f5a4c',1,'scire::AContainer']]],
+  ['ispermutation',['IsPermutation',['../d4/de2/classscire_1_1_char_string_util.html#a547238d50741df48b0e903fa88930e3a',1,'scire::CharStringUtil']]]
 ];

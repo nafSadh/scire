@@ -242,7 +242,7 @@ class scire::MD5&lt; SzType, Ui32t, ByteT, SByteT &gt;</h3>
 </div><!-- fragment --><p> Client should create an <a class="el" href="../../d3/de0/classscire_1_1_m_d5.html" title="MD5 Message-Digest Algorithm. ">MD5</a> object. The construcor calls Init inside it, so it is redundant to call <a class="el" href="../../d3/de0/classscire_1_1_m_d5.html#a30bd15b17a423b2051091365ffab6394" title="MD5 initialization. ">Init()</a> upor first use of the object. To compute <a class="el" href="../../d3/de0/classscire_1_1_m_d5.html" title="MD5 Message-Digest Algorithm. ">MD5</a> checksum of a buffer, call <a class="el" href="../../d3/de0/classscire_1_1_m_d5.html#a7ba491118b5b0af8bd51194a26a29303" title="MD5 block update operation. ">Update()</a> once or several times with chunks of the message. A call to <a class="el" href="../../d3/de0/classscire_1_1_m_d5.html#a68654c90443a7ae8c17cd06d3f5cbc17" title="MD5 finalization. ">Final()</a> indicated <a class="el" href="../../d3/de0/classscire_1_1_m_d5.html" title="MD5 Message-Digest Algorithm. ">MD5</a> object that, message is complete. Then, <a class="el" href="../../d3/de0/classscire_1_1_m_d5.html" title="MD5 Message-Digest Algorithm. ">MD5</a> object computes finalized the digest. Client can receive digest bytes by passing a byte array to fill digest values with it. Digest size is 16 byte. After a call to <a class="el" href="../../d3/de0/classscire_1_1_m_d5.html#a68654c90443a7ae8c17cd06d3f5cbc17" title="MD5 finalization. ">Final()</a>, all subsequent <a class="el" href="../../d3/de0/classscire_1_1_m_d5.html#a7ba491118b5b0af8bd51194a26a29303" title="MD5 block update operation. ">Update()</a> calls will be ignored. <br />
 <a class="el" href="../../d3/de0/classscire_1_1_m_d5.html" title="MD5 Message-Digest Algorithm. ">MD5</a> object can be reused by invoking <a class="el" href="../../d3/de0/classscire_1_1_m_d5.html#aed8af301984b3c9b6df1bf511f1d79b2" title="Reset object, similar to doing Init() ">Reset()</a> and then using it in a similar fashion. </p>
 
-<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00082">82</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00087">87</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="ae3dc73f267e639feeb53199c0a94b28a"></a>
 <div class="memitem">
@@ -279,7 +279,7 @@ template&lt;typename SzType  = size_t, typename Ui32t  = uint32_t, typename Byte
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00089">89</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00094">94</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
 
 </div>
 </div>
@@ -309,7 +309,7 @@ template&lt;typename SzType  = size_t, typename Ui32t  = uint32_t, typename Byte
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00098">98</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00103">103</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
 
 </div>
 </div>
@@ -331,7 +331,7 @@ template&lt;typename SzType , typename Ui32t , typename ByteT , typename SByteT 
 
 <p>allocate <a class="el" href="../../d3/de0/classscire_1_1_m_d5.html" title="MD5 Message-Digest Algorithm. ">MD5</a> context and init </p>
 
-<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00322">322</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00327">327</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
 
 </div>
 </div>
@@ -354,7 +354,7 @@ template&lt;typename SzType , typename Ui32t , typename ByteT , typename SByteT 
 <p>Construct <a class="el" href="../../d3/de0/classscire_1_1_m_d5.html" title="MD5 Message-Digest Algorithm. ">MD5</a> object with a string message. </p>
 <p>This will cause full stack of the algorithm to execute. Hence, Initi(), <a class="el" href="../../d3/de0/classscire_1_1_m_d5.html#a7ba491118b5b0af8bd51194a26a29303" title="MD5 block update operation. ">Update()</a> and <a class="el" href="../../d3/de0/classscire_1_1_m_d5.html#a68654c90443a7ae8c17cd06d3f5cbc17" title="MD5 finalization. ">Final()</a> shall be called within and the object is ready to yield digest. </p>
 
-<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00341">341</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00346">346</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
 
 </div>
 </div>
@@ -377,7 +377,7 @@ template&lt;typename SzType , typename Ui32t , typename ByteT , typename SByteT 
 <p>Construct <a class="el" href="../../d3/de0/classscire_1_1_m_d5.html" title="MD5 Message-Digest Algorithm. ">MD5</a> object with a string message. </p>
 <p>This will cause full stack of the algorithm to execute. Hence, Initi(), <a class="el" href="../../d3/de0/classscire_1_1_m_d5.html#a7ba491118b5b0af8bd51194a26a29303" title="MD5 block update operation. ">Update()</a> and <a class="el" href="../../d3/de0/classscire_1_1_m_d5.html#a68654c90443a7ae8c17cd06d3f5cbc17" title="MD5 finalization. ">Final()</a> shall be called within and the object is ready to yield digest. </p>
 
-<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00331">331</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00336">336</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
 
 </div>
 </div>
@@ -407,7 +407,7 @@ template&lt;typename SzType , typename Ui32t , typename ByteT , typename SByteT 
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00407">407</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00412">412</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
 
 </div>
 </div>
@@ -455,7 +455,7 @@ template&lt;typename SzType  = size_t, typename Ui32t  = uint32_t, typename Byte
 <p>from RFC 1321:<br />
 In each bit position F acts as a conditional: if X then Y else Z. The function F could have been defined using + instead of v since XY and not(X)Z will never have 1's in the same bit position.) It is interesting to note that if the bits of X, Y, and Z are independent and unbiased, the each bit of F(X,Y,Z) will be independent and unbiased. </p>
 
-<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00193">193</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00198">198</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
 
 </div>
 </div>
@@ -487,7 +487,7 @@ template&lt;typename SzType , typename Ui32t , typename ByteT , typename SByteT 
 
 <p>Implements <a class="el" href="../../d1/d3e/classscire_1_1_i_hash_algo.html#ab1067d332caaf085740b4fb3e740b313">scire::IHashAlgo&lt; SzType, Ui32t, ByteT, SByteT &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00466">466</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00471">471</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
 
 </div>
 </div>
@@ -518,7 +518,7 @@ template&lt;typename SzType , typename Ui32t , typename ByteT , typename SByteT 
 
 <p>Implements <a class="el" href="../../d1/d3e/classscire_1_1_i_hash_algo.html#af60af7af90262bdfccf46dc46111ccb5">scire::IHashAlgo&lt; SzType, Ui32t, ByteT, SByteT &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00355">355</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00360">360</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
 
 </div>
 </div>
@@ -566,7 +566,7 @@ template&lt;typename SzType  = size_t, typename Ui32t  = uint32_t, typename Byte
 <p>from RFC 1321:<br />
 The functions G, H, and I are similar to the function F, in that they act in "bitwise parallel" to produce their output from the bits of X, Y, and Z, in such a manner that if the corresponding bits of X, Y, and Z are independent and unbiased, then each bit of G(X,Y,Z), H(X,Y,Z), and I(X,Y,Z) will be independent and unbiased. Note that the function H is the bit-wise "xor" or "parity" function of its inputs. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d3/de0/classscire_1_1_m_d5.html#a24be445cb13c76c2c95d343ef56cf500" title="F(X,Y,Z) = XY v not(X) Z. ">MD5::F</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00210">210</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00215">215</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
 
 </div>
 </div>
@@ -613,7 +613,7 @@ template&lt;typename SzType  = size_t, typename Ui32t  = uint32_t, typename Byte
 <p>H(X,Y,Z) = X xor Y xor Z. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d3/de0/classscire_1_1_m_d5.html#a33ac39fec1eaf8835c9300d27db41530" title="G(X,Y,Z) = XZ v Y not(Z) ">MD5::G</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00215">215</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00220">220</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
 
 </div>
 </div>
@@ -660,7 +660,7 @@ template&lt;typename SzType  = size_t, typename Ui32t  = uint32_t, typename Byte
 <p>I(X,Y,Z) = Y xor (X v not(Z)) </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d3/de0/classscire_1_1_m_d5.html#a33ac39fec1eaf8835c9300d27db41530" title="G(X,Y,Z) = XZ v Y not(Z) ">MD5::G</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00220">220</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00225">225</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
 
 </div>
 </div>
@@ -692,7 +692,7 @@ template&lt;typename SzType , typename Ui32t , typename ByteT , typename SByteT 
 
 <p>Implements <a class="el" href="../../d1/d3e/classscire_1_1_i_hash_algo.html#ad6317440ad5b938f09950dcce6337aba">scire::IHashAlgo&lt; SzType, Ui32t, ByteT, SByteT &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00391">391</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00396">396</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
 
 </div>
 </div>
@@ -721,7 +721,7 @@ template&lt;typename SzType  = size_t, typename Ui32t  = uint32_t, typename Byte
 
 <p>Reset object, similar to doing <a class="el" href="../../d3/de0/classscire_1_1_m_d5.html#a30bd15b17a423b2051091365ffab6394" title="MD5 initialization. ">Init()</a> </p>
 
-<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00175">175</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00180">180</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
 
 </div>
 </div>
@@ -752,7 +752,7 @@ template&lt;typename SzType , typename Ui32t , typename ByteT , typename SByteT 
 
 <p>Implements <a class="el" href="../../d1/d3e/classscire_1_1_i_hash_algo.html#a15c41402eea9e3facc1a3163f8b40a1a">scire::IHashAlgo&lt; SzType, Ui32t, ByteT, SByteT &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00367">367</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00372">372</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
 
 </div>
 </div>
@@ -783,7 +783,7 @@ template&lt;typename SzType , typename Ui32t , typename ByteT , typename SByteT 
 
 <p>Implements <a class="el" href="../../d1/d3e/classscire_1_1_i_hash_algo.html#a6ad8c2e953f502d558c0e95db24bd7e5">scire::IHashAlgo&lt; SzType, Ui32t, ByteT, SByteT &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00380">380</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00385">385</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
 
 </div>
 </div>
@@ -813,7 +813,7 @@ template&lt;typename SzType , typename Ui32t , typename ByteT , typename SByteT 
 
 <p>the phenomenal transform function </p>
 
-<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00502">502</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00507">507</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
 
 </div>
 </div>
@@ -862,7 +862,7 @@ template&lt;typename SzType , typename Ui32t , typename ByteT , typename SByteT 
 
 <p>Implements <a class="el" href="../../d1/d3e/classscire_1_1_i_hash_algo.html#a4d7ccf044fb8b5b67f51ed17ecd1b67b">scire::IHashAlgo&lt; SzType, Ui32t, ByteT, SByteT &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00429">429</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00434">434</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
 
 </div>
 </div>
@@ -911,7 +911,7 @@ template&lt;typename SzType , typename Ui32t , typename ByteT , typename SByteT 
 
 <p>Implements <a class="el" href="../../d1/d3e/classscire_1_1_i_hash_algo.html#a347d7308fa054de7c907a41775a295d1">scire::IHashAlgo&lt; SzType, Ui32t, ByteT, SByteT &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00421">421</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00426">426</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
 
 </div>
 </div>
@@ -951,7 +951,7 @@ template&lt;typename SzType , typename Ui32t , typename ByteT , typename SByteT 
 </div><div class="memdoc">
 <p>if <a class="el" href="../../d3/de0/classscire_1_1_m_d5.html" title="MD5 Message-Digest Algorithm. ">MD5</a> finalized then output digest, else current state words to ostream </p>
 
-<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00310">310</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d4/d0f/md5_8hpp_source.html#l00315">315</a> of file <a class="el" href="../../d4/d0f/md5_8hpp_source.html">md5.hpp</a>.</p>
 
 </div>
 </div>
@@ -964,7 +964,7 @@ template&lt;typename SzType , typename Ui32t , typename ByteT , typename SByteT 
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d6/d73/namespacescire.html">scire</a></li><li class="navelem"><a class="el" href="../../d3/de0/classscire_1_1_m_d5.html">MD5</a></li>
-    <li class="footer">Generated on Thu Jun 19 2014 00:23:40 for scire by
+    <li class="footer">Generated on Fri Jul 4 2014 05:40:43 for scire by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>
