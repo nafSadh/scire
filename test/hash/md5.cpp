@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include "../../scire/hash/md5.hpp"
-#include "../../scire/hash/hashcomn.hpp"
+#include "../../scire/hash/hash_comn.hpp"
 using namespace std;
 using namespace scire;
 

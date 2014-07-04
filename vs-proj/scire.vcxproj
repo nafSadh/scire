@@ -66,13 +66,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\scire\hash\hashcomn.hpp" />
+    <ClInclude Include="..\scire\hash\hash_comn.hpp" />
     <ClInclude Include="..\scire\hash\md5.hpp" />
     <ClInclude Include="..\scire\string\cstr_util.hpp" />
+    <ClInclude Include="..\scire\string\knuth_morris_pratt.hpp" />
+    <ClInclude Include="..\scire\string\string_match.hpp" />
     <ClInclude Include="..\scire\struct\container.hpp" />
     <ClInclude Include="..\scire\struct\linkedlist.hpp" />
     <ClInclude Include="..\scire\struct\queue.hpp" />
     <ClInclude Include="..\scire\struct\stack.hpp" />
+    <ClInclude Include="..\scire\~template.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\test\hash\md5.cpp" />
@@ -80,6 +83,10 @@
     <ClCompile Include="..\test\struct\linkedlist.cpp" />
     <ClCompile Include="..\test\struct\queue.cpp" />
     <ClCompile Include="..\test\struct\stack.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.md" />
+    <None Include="..\StyleGuide.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

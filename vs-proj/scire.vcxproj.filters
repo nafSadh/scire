@@ -48,11 +48,20 @@
     <ClInclude Include="..\scire\struct\stack.hpp">
       <Filter>scire\struct</Filter>
     </ClInclude>
-    <ClInclude Include="..\scire\hash\hashcomn.hpp">
-      <Filter>scire\hash</Filter>
-    </ClInclude>
     <ClInclude Include="..\scire\hash\md5.hpp">
       <Filter>scire\hash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scire\~template.hpp">
+      <Filter>scire</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scire\hash\hash_comn.hpp">
+      <Filter>scire\hash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scire\string\knuth_morris_pratt.hpp">
+      <Filter>scire\string</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scire\string\string_match.hpp">
+      <Filter>scire\string</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -71,5 +80,9 @@
     <ClCompile Include="..\test\struct\stack.cpp">
       <Filter>test\struct</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.md" />
+    <None Include="..\StyleGuide.md" />
   </ItemGroup>
 </Project>

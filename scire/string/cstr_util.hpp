@@ -11,7 +11,7 @@ scire <thing> implementation:
 - CharStringUtil	            : very brief description
 
 other required scire files:
-none
+  knuth_morris_pratt.hpp
 
 author:
 ~nafSadh
@@ -20,6 +20,7 @@ author:
 #define SCIRE_string_cstr_util_HPP
 
 #include <cstring>
+#include "knuth_morris_pratt.hpp"
 
 namespace scire
 {

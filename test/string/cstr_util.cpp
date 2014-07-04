@@ -33,11 +33,18 @@ namespace sciretest
     //  cout << str << endl;
     //}
 
-    while (true) {
+    /*while (true) {
       cin >> str;
       cout << strlen(str) << "->" << CharStringUtil::CharCountCompress(str, a) << ": ";
       cout << a << endl;
+    }*/
+
+    while (true) {
+      char text[500], key[50];
+      cin >> key >> text;
+      cout << StringMatchKMP<>::GetIndex(key, strlen(key), text, strlen(text)) << endl;
     }
+
     return 0;
   }
 }
