@@ -180,8 +180,9 @@ namespace scire
     character followed by count. e.g. aabcccaaaa -> a2b1c3a4. If encoded string
     is not smaller then return original string.
     @return lenght of encoded string */
-    static size_t CharCountCompress(const char subject[],/**<string to encode*/
-                                    char compstr[]/**<encoded string*/)
+    static size_t CharCountCompress(
+      const char subject[],/**<string to encode*/
+      char compstr[]/**<encoded string*/)
     {
       size_t enclen = CharCountEncoding(subject, compstr);
       if (enclen < strlen(subject))
@@ -195,6 +196,50 @@ namespace scire
         compstr[i] = '\0';
         return i;
       }
+    }
+
+    /** Find the position of the first occurrence of a substring in a text
+    @return position (index) of first occurrence of substring in text if found,
+    if not found then the lenght of text */
+    static size_t StrPos(
+      const char* haystack,/**< text to search in */
+      const char* needle, /**< substring to look for */
+      size_t offset = 0/** offset to start search from */
+    )
+    {
+      return StringMatchKMP<>::Position(
+               haystack + offset, strlen(haystack) - offset,
+               needle, strlen(needle));
+    }
+
+    /** check if a string is a substring of other */
+    static bool isSubstring(
+      const char* string, /**< text to find substring in (haystack) */
+      const char* substring/**< substring to look for (needle) */
+    )
+    {
+      size_t pos = StrPos(string, substring);
+      if (strlen(string) == pos)
+        return false;
+      else return true;
+    }
+
+    /** check if a string is a roation of another */
+    static bool isRotation(
+      const char* str,
+      const char* rstr
+    )
+    {
+      size_t len = strlen(str);
+      if (strlen(rstr) != len) return false;
+
+      size_t dublen = len * 2 + 1;
+      char* strstr = new char[dublen];
+      strstr[0] = '\0';
+      strcat_s(strstr, dublen, str);
+      strcat_s(strstr, dublen, str);
+
+      return isSubstring(strstr, rstr);
     }
   };
 #endif//SCIRE_CharStringUtil_FUNCS

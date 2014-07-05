@@ -41,8 +41,9 @@ namespace sciretest
 
     while (true) {
       char text[500], key[50];
-      cin >> key >> text;
-      cout << StringMatchKMP<>::GetIndex(key, strlen(key), text, strlen(text)) << endl;
+      cin >> text >> key;
+      //cout << StringMatchKMP<>::GetIndex(text, strlen(text), key, strlen(key)) << endl;
+      cout << CharStringUtil::isRotation(text, key) << endl;
     }
 
     return 0;

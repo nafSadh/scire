@@ -32,6 +32,18 @@ namespace scire
   *
   * A KMP object is initialized with a pattern to find. Each character of text
   * is then fed to the object with ReadNext() for matching.
+  *
+  * ref:
+  *   -#  "<a href='http://community.topcoder.com/tc?module=Static&d1=tutorials&d2=stringSearching'>
+          Introduction to String Searching Algorithms - Rabin-Karp and
+          Knuth-Morris-Pratt Algorithms</a>". TheLlama (TopCoder Member)
+
+      -#  "<a href='http://www.ics.uci.edu/~eppstein/161/kmp/'>Example code for
+          Knuth-Morris-Pratt algorithm</a>". Prof. David Eppstein, UC Irvine
+
+      -#  Knuth, Donald; Morris, James H., jr; Pratt, Vaughan (1977). "Fast
+          pattern matching in strings". SIAM Journal on Computing 6 (2): 323-350.
+          doi:10.1137/0206024. Zbl 0372.68005.
   */
   template<typename CharType = char, typename SzType = size_t>
   class StringMatchKMP
@@ -150,16 +162,16 @@ namespace scire
     }
 
     /**
-    * Get the first index of text where pattern matched.
+    * Find the position of the first occurrence of a substring in a text
     *
-    * @return index of text where pattern matched. if pattern not found then
-    * last index of text (text len)
+    * @return index (position) of text where substring (pattern) matched. if not
+    * found then the last index of text (text len)
     */
-    static SzType GetIndex(
-      const CharType* pattern,/**< pattern to find */
-      SzType patternlen, /**< length of pattern*/
-      const CharType* text,/**< text to search in */
-      SzType textlen /**< lenth of text */
+    static SzType Position(
+      const CharType* text,/**< text to search in (haystack) */
+      SzType textlen, /**< lenth of text */
+      const CharType* pattern,/**< pattern to find (substring, needle) */
+      SzType patternlen /**< length of pattern */
     )
     {
       StringMatchKMP kmp(pattern, patternlen);

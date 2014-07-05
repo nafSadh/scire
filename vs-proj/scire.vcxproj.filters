@@ -84,5 +84,6 @@
   <ItemGroup>
     <None Include="..\README.md" />
     <None Include="..\StyleGuide.md" />
+    <None Include="..\Doxyfile" />
   </ItemGroup>
 </Project>
