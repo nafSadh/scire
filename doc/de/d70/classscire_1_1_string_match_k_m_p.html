@@ -132,18 +132,25 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a50e0bfadf7e2b44fdfdabe34fb85d082"><td class="memItemLeft" align="right" valign="top">static SzType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d70/classscire_1_1_string_match_k_m_p.html#a50e0bfadf7e2b44fdfdabe34fb85d082">GetIndex</a> (const CharType *pattern, SzType patternlen, const CharType *text, SzType textlen)</td></tr>
-<tr class="memdesc:a50e0bfadf7e2b44fdfdabe34fb85d082"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the first index of text where pattern matched.  <a href="#a50e0bfadf7e2b44fdfdabe34fb85d082">More...</a><br /></td></tr>
-<tr class="separator:a50e0bfadf7e2b44fdfdabe34fb85d082"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cb136ab8d182ef9948c93ba41db39c1"><td class="memItemLeft" align="right" valign="top">static SzType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d70/classscire_1_1_string_match_k_m_p.html#a5cb136ab8d182ef9948c93ba41db39c1">Position</a> (const CharType *text, SzType textlen, const CharType *pattern, SzType patternlen)</td></tr>
+<tr class="memdesc:a5cb136ab8d182ef9948c93ba41db39c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the position of the first occurrence of a substring in a text.  <a href="#a5cb136ab8d182ef9948c93ba41db39c1">More...</a><br /></td></tr>
+<tr class="separator:a5cb136ab8d182ef9948c93ba41db39c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename CharType = char, typename SzType = size_t&gt;<br />
 class scire::StringMatchKMP&lt; CharType, SzType &gt;</h3>
 
 <p>The Knuth-Morris-Pratt (KMP) algorithm for string-matching problem. </p>
-<p>A KMP object is initialized with a pattern to find. Each character of text is then fed to the object with <a class="el" href="../../de/d70/classscire_1_1_string_match_k_m_p.html#aeee322e18178da0f13e73be08712c583" title="read next character in text stream ">ReadNext()</a> for matching. </p>
+<p>A KMP object is initialized with a pattern to find. Each character of text is then fed to the object with <a class="el" href="../../de/d70/classscire_1_1_string_match_k_m_p.html#aeee322e18178da0f13e73be08712c583" title="read next character in text stream ">ReadNext()</a> for matching.</p>
+<p>ref:</p><ol type="1">
+<li>"<a href="http://community.topcoder.com/tc?module=Static&amp;d1=tutorials&amp;d2=stringSearching">Introduction to String Searching Algorithms - Rabin-Karp and Knuth-Morris-Pratt Algorithms</a>". TheLlama (TopCoder Member)</li>
+<li>"&lt;a href='http://www.ics.uci.edu/~eppstein/161/kmp/'&gt;Example code for
+      Knuth-Morris-Pratt algorithm&lt;/a&gt;". Prof. David Eppstein, UC Irvine</li>
+<li>Knuth, Donald; Morris, James H., jr; Pratt, Vaughan (1977). "Fast
+      pattern matching in strings". SIAM Journal on Computing 6 (2): 323-350. doi:10.1137/0206024. Zbl 0372.68005. </li>
+</ol>
 
-<p>Definition at line <a class="el" href="../../d3/d01/knuth__morris__pratt_8hpp_source.html#l00037">37</a> of file <a class="el" href="../../d3/d01/knuth__morris__pratt_8hpp_source.html">knuth_morris_pratt.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d01/knuth__morris__pratt_8hpp_source.html#l00049">49</a> of file <a class="el" href="../../d3/d01/knuth__morris__pratt_8hpp_source.html">knuth_morris_pratt.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ad3abbb284f132024806b896ec22853e2"></a>
 <div class="memitem">
@@ -188,12 +195,12 @@ template&lt;typename CharType  = char, typename SzType  = size_t&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d3/d01/knuth__morris__pratt_8hpp_source.html#l00119">119</a> of file <a class="el" href="../../d3/d01/knuth__morris__pratt_8hpp_source.html">knuth_morris_pratt.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d01/knuth__morris__pratt_8hpp_source.html#l00131">131</a> of file <a class="el" href="../../d3/d01/knuth__morris__pratt_8hpp_source.html">knuth_morris_pratt.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a50e0bfadf7e2b44fdfdabe34fb85d082"></a>
+<a class="anchor" id="a5cb136ab8d182ef9948c93ba41db39c1"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -203,20 +210,8 @@ template&lt;typename CharType  = char, typename SzType  = size_t&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static SzType <a class="el" href="../../de/d70/classscire_1_1_string_match_k_m_p.html">scire::StringMatchKMP</a>&lt; CharType, SzType &gt;::GetIndex </td>
+          <td class="memname">static SzType <a class="el" href="../../de/d70/classscire_1_1_string_match_k_m_p.html">scire::StringMatchKMP</a>&lt; CharType, SzType &gt;::Position </td>
           <td>(</td>
-          <td class="paramtype">const CharType *&#160;</td>
-          <td class="paramname"><em>pattern</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">SzType&#160;</td>
-          <td class="paramname"><em>patternlen</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">const CharType *&#160;</td>
           <td class="paramname"><em>text</em>, </td>
         </tr>
@@ -224,7 +219,19 @@ template&lt;typename CharType  = char, typename SzType  = size_t&gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">SzType&#160;</td>
-          <td class="paramname"><em>textlen</em>&#160;</td>
+          <td class="paramname"><em>textlen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const CharType *&#160;</td>
+          <td class="paramname"><em>pattern</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SzType&#160;</td>
+          <td class="paramname"><em>patternlen</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -239,19 +246,19 @@ template&lt;typename CharType  = char, typename SzType  = size_t&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Get the first index of text where pattern matched. </p>
-<dl class="section return"><dt>Returns</dt><dd>index of text where pattern matched. if pattern not found then last index of text (text len) </dd></dl>
+<p>Find the position of the first occurrence of a substring in a text. </p>
+<dl class="section return"><dt>Returns</dt><dd>index (position) of text where substring (pattern) matched. if not found then the last index of text (text len) </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pattern</td><td>pattern to find </td></tr>
-    <tr><td class="paramname">patternlen</td><td>length of pattern </td></tr>
-    <tr><td class="paramname">text</td><td>text to search in </td></tr>
+    <tr><td class="paramname">text</td><td>text to search in (haystack) </td></tr>
     <tr><td class="paramname">textlen</td><td>lenth of text </td></tr>
+    <tr><td class="paramname">pattern</td><td>pattern to find (substring, needle) </td></tr>
+    <tr><td class="paramname">patternlen</td><td>length of pattern </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d3/d01/knuth__morris__pratt_8hpp_source.html#l00158">158</a> of file <a class="el" href="../../d3/d01/knuth__morris__pratt_8hpp_source.html">knuth_morris_pratt.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d01/knuth__morris__pratt_8hpp_source.html#l00170">170</a> of file <a class="el" href="../../d3/d01/knuth__morris__pratt_8hpp_source.html">knuth_morris_pratt.hpp</a>.</p>
 
 </div>
 </div>
@@ -288,7 +295,7 @@ template&lt;typename CharType  = char, typename SzType  = size_t&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d3/d01/knuth__morris__pratt_8hpp_source.html#l00135">135</a> of file <a class="el" href="../../d3/d01/knuth__morris__pratt_8hpp_source.html">knuth_morris_pratt.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d01/knuth__morris__pratt_8hpp_source.html#l00147">147</a> of file <a class="el" href="../../d3/d01/knuth__morris__pratt_8hpp_source.html">knuth_morris_pratt.hpp</a>.</p>
 
 </div>
 </div>
@@ -301,7 +308,7 @@ template&lt;typename CharType  = char, typename SzType  = size_t&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d6/d73/namespacescire.html">scire</a></li><li class="navelem"><a class="el" href="../../de/d70/classscire_1_1_string_match_k_m_p.html">StringMatchKMP</a></li>
-    <li class="footer">Generated on Fri Jul 4 2014 05:40:43 for scire by
+    <li class="footer">Generated on Sat Jul 5 2014 00:33:17 for scire by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>

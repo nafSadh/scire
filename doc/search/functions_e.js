@@ -5,5 +5,6 @@ var searchData=
   ['stack',['Stack',['../da/d7f/classscire_1_1_stack.html#af4883ab880c75fc8345e9abe27a0ff4a',1,'scire::Stack']]],
   ['stackcrate',['StackCrate',['../d7/d67/classscire_1_1_stack_crate.html#a77d0dde4abc6a38685a8794f3f3037e2',1,'scire::StackCrate']]],
   ['statephrase',['StatePhrase',['../d1/d3e/classscire_1_1_i_hash_algo.html#a15c41402eea9e3facc1a3163f8b40a1a',1,'scire::IHashAlgo::StatePhrase()'],['../d3/de0/classscire_1_1_m_d5.html#ac9a4c30b6757b06d6cc915ece6393e80',1,'scire::MD5::StatePhrase()']]],
-  ['stringmatchkmp',['StringMatchKMP',['../de/d70/classscire_1_1_string_match_k_m_p.html#ad3abbb284f132024806b896ec22853e2',1,'scire::StringMatchKMP']]]
+  ['stringmatchkmp',['StringMatchKMP',['../de/d70/classscire_1_1_string_match_k_m_p.html#ad3abbb284f132024806b896ec22853e2',1,'scire::StringMatchKMP']]],
+  ['strpos',['StrPos',['../d4/de2/classscire_1_1_char_string_util.html#ac7f0ba93ae191969797998e9da3d4b6f',1,'scire::CharStringUtil']]]
 ];

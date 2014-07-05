@@ -5,5 +5,7 @@ var searchData=
   ['insert',['Insert',['../d7/d94/classscire_1_1_singly_list.html#ae2ef1fa357c0225529c0d36fd26918b6',1,'scire::SinglyList']]],
   ['isallcharunique',['IsAllCharUnique',['../d4/de2/classscire_1_1_char_string_util.html#af468b4fe497b3c9fd2584a1fc3580606',1,'scire::CharStringUtil']]],
   ['isempty',['IsEmpty',['../d3/de4/classscire_1_1_a_container.html#af8415e3cd3b12aeeabf1c8ec072f5a4c',1,'scire::AContainer']]],
-  ['ispermutation',['IsPermutation',['../d4/de2/classscire_1_1_char_string_util.html#a547238d50741df48b0e903fa88930e3a',1,'scire::CharStringUtil']]]
+  ['ispermutation',['IsPermutation',['../d4/de2/classscire_1_1_char_string_util.html#a547238d50741df48b0e903fa88930e3a',1,'scire::CharStringUtil']]],
+  ['isrotation',['isRotation',['../d4/de2/classscire_1_1_char_string_util.html#a16ece21923e10b9d0f1955e0a5f9abd2',1,'scire::CharStringUtil']]],
+  ['issubstring',['isSubstring',['../d4/de2/classscire_1_1_char_string_util.html#a529dbb33e7cd1736c72de846d3c560bd',1,'scire::CharStringUtil']]]
 ];
