@@ -50,7 +50,7 @@ namespace sciretest
   }
 }
 
-#ifndef SCIRE_TEST_CSTR_UTIL
+#ifdef SCIRE_TEST_CSTR_UTIL
 int main()
 {
   return sciretest::cstr_util_main();
