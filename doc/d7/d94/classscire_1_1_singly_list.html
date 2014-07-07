@@ -133,8 +133,8 @@ Inheritance diagram for scire::SinglyList&lt; Type, SzType &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d71/classscire_1_1_singly_list_1_1_singly_node.html">SinglyNode</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">represent an item node in Singly Linked List  <a href="../../d3/d71/classscire_1_1_singly_list_1_1_singly_node.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d0f/structscire_1_1_singly_list_1_1_node.html">Node</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">represent an item node in Singly Linked List  <a href="../../d5/d0f/structscire_1_1_singly_list_1_1_node.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -145,9 +145,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a694fb5a5ed576e4263f36f5fd47bfbb9"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d94/classscire_1_1_singly_list.html#a694fb5a5ed576e4263f36f5fd47bfbb9">~SinglyList</a> ()</td></tr>
 <tr class="memdesc:a694fb5a5ed576e4263f36f5fd47bfbb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">finalize a <a class="el" href="../../d7/d94/classscire_1_1_singly_list.html" title="A Singly Linked List class. ">SinglyList</a> object by deleting all items from the list  <a href="#a694fb5a5ed576e4263f36f5fd47bfbb9">More...</a><br /></td></tr>
 <tr class="separator:a694fb5a5ed576e4263f36f5fd47bfbb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cd5df7be5b44f23873bbe06642d2308"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d94/classscire_1_1_singly_list.html#a6cd5df7be5b44f23873bbe06642d2308">Traverse</a> (void(*travfunc)(Type))</td></tr>
-<tr class="memdesc:a6cd5df7be5b44f23873bbe06642d2308"><td class="mdescLeft">&#160;</td><td class="mdescRight">Traverse each element of the list.  <a href="#a6cd5df7be5b44f23873bbe06642d2308">More...</a><br /></td></tr>
-<tr class="separator:a6cd5df7be5b44f23873bbe06642d2308"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99b066af89ca50195831f55119e48446"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d94/classscire_1_1_singly_list.html#a99b066af89ca50195831f55119e48446">Traverse</a> (void(*travfunc)(const Type &amp;)) const </td></tr>
+<tr class="memdesc:a99b066af89ca50195831f55119e48446"><td class="mdescLeft">&#160;</td><td class="mdescRight">Traverse each element of the list.  <a href="#a99b066af89ca50195831f55119e48446">More...</a><br /></td></tr>
+<tr class="separator:a99b066af89ca50195831f55119e48446"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2ef1fa357c0225529c0d36fd26918b6"><td class="memItemLeft" align="right" valign="top">SzType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d94/classscire_1_1_singly_list.html#ae2ef1fa357c0225529c0d36fd26918b6">Insert</a> (Type element, SzType location=0)</td></tr>
 <tr class="memdesc:ae2ef1fa357c0225529c0d36fd26918b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert a new item in the list with passed element after location nodes  <a href="#ae2ef1fa357c0225529c0d36fd26918b6">More...</a><br /></td></tr>
 <tr class="separator:ae2ef1fa357c0225529c0d36fd26918b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -169,12 +169,12 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:ad6c255a9418b92268b02f2e6dda18d49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d71/classscire_1_1_singly_list_1_1_singly_node.html">SinglyNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d94/classscire_1_1_singly_list.html#ad6c255a9418b92268b02f2e6dda18d49">head</a></td></tr>
-<tr class="memdesc:ad6c255a9418b92268b02f2e6dda18d49"><td class="mdescLeft">&#160;</td><td class="mdescRight">points to first item of the list  <a href="#ad6c255a9418b92268b02f2e6dda18d49">More...</a><br /></td></tr>
-<tr class="separator:ad6c255a9418b92268b02f2e6dda18d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfc88d6dd8051e5e2aa00955eed2caf8"><td class="memItemLeft" align="right" valign="top">SzType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d94/classscire_1_1_singly_list.html#adfc88d6dd8051e5e2aa00955eed2caf8">count</a></td></tr>
-<tr class="memdesc:adfc88d6dd8051e5e2aa00955eed2caf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">track count of items in the list  <a href="#adfc88d6dd8051e5e2aa00955eed2caf8">More...</a><br /></td></tr>
-<tr class="separator:adfc88d6dd8051e5e2aa00955eed2caf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc01d2241e97288a89f15b888092109a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d0f/structscire_1_1_singly_list_1_1_node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d94/classscire_1_1_singly_list.html#adc01d2241e97288a89f15b888092109a">head</a></td></tr>
+<tr class="memdesc:adc01d2241e97288a89f15b888092109a"><td class="mdescLeft">&#160;</td><td class="mdescRight">points to first item of the list  <a href="#adc01d2241e97288a89f15b888092109a">More...</a><br /></td></tr>
+<tr class="separator:adc01d2241e97288a89f15b888092109a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fc30855b11945f0e9e373f7e924ad52"><td class="memItemLeft" align="right" valign="top">SzType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d94/classscire_1_1_singly_list.html#a1fc30855b11945f0e9e373f7e924ad52">size</a></td></tr>
+<tr class="memdesc:a1fc30855b11945f0e9e373f7e924ad52"><td class="mdescLeft">&#160;</td><td class="mdescRight">track count of items in the list  <a href="#a1fc30855b11945f0e9e373f7e924ad52">More...</a><br /></td></tr>
+<tr class="separator:a1fc30855b11945f0e9e373f7e924ad52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename Type, typename SzType = int&gt;<br />
@@ -303,7 +303,7 @@ template&lt;typename Type , typename SzType &gt; </div>
 
 <p>Implements <a class="el" href="../../d3/de4/classscire_1_1_a_container.html#aa3be65bb3f7bc657a9ea8030dfe1638a">scire::AContainer&lt; Type, SzType &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="../../db/ded/linkedlist_8hpp_source.html#l00165">165</a> of file <a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/ded/linkedlist_8hpp_source.html#l00167">167</a> of file <a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a>.</p>
 
 </div>
 </div>
@@ -405,7 +405,7 @@ template&lt;typename Type , typename SzType &gt; </div>
 
 <p>Implements <a class="el" href="../../d3/de4/classscire_1_1_a_container.html#a5943a1814b93f4bc36f619962dab400e">scire::AContainer&lt; Type, SzType &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="../../db/ded/linkedlist_8hpp_source.html#l00178">178</a> of file <a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/ded/linkedlist_8hpp_source.html#l00180">180</a> of file <a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a>.</p>
 
 </div>
 </div>
@@ -437,11 +437,11 @@ template&lt;typename Type , typename SzType &gt; </div>
 
 <p>Implements <a class="el" href="../../d3/de4/classscire_1_1_a_container.html#add16004995f2412b5a68c80152a1d05b">scire::AContainer&lt; Type, SzType &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="../../db/ded/linkedlist_8hpp_source.html#l00159">159</a> of file <a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/ded/linkedlist_8hpp_source.html#l00161">161</a> of file <a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a6cd5df7be5b44f23873bbe06642d2308"></a>
+<a class="anchor" id="a99b066af89ca50195831f55119e48446"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -450,9 +450,9 @@ template&lt;typename Type , typename SzType &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="../../d7/d94/classscire_1_1_singly_list.html">scire::SinglyList</a>&lt; Type, SzType &gt;::Traverse </td>
           <td>(</td>
-          <td class="paramtype">void(*)(Type)&#160;</td>
+          <td class="paramtype">void(*)(const Type &amp;)&#160;</td>
           <td class="paramname"><em>travfunc</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -470,7 +470,7 @@ template&lt;typename Type , typename SzType &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="adfc88d6dd8051e5e2aa00955eed2caf8"></a>
+<a class="anchor" id="adc01d2241e97288a89f15b888092109a"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -480,33 +480,7 @@ template&lt;typename Type , typename SzType  = int&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">SzType <a class="el" href="../../d7/d94/classscire_1_1_singly_list.html">scire::SinglyList</a>&lt; Type, SzType &gt;::count</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>track count of items in the list </p>
-
-<p>Definition at line <a class="el" href="../../db/ded/linkedlist_8hpp_source.html#l00093">93</a> of file <a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ad6c255a9418b92268b02f2e6dda18d49"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Type , typename SzType  = int&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d3/d71/classscire_1_1_singly_list_1_1_singly_node.html">SinglyNode</a>* <a class="el" href="../../d7/d94/classscire_1_1_singly_list.html">scire::SinglyList</a>&lt; Type, SzType &gt;::head</td>
+          <td class="memname"><a class="el" href="../../d5/d0f/structscire_1_1_singly_list_1_1_node.html">Node</a>* <a class="el" href="../../d7/d94/classscire_1_1_singly_list.html">scire::SinglyList</a>&lt; Type, SzType &gt;::head</td>
         </tr>
       </table>
   </td>
@@ -522,6 +496,32 @@ template&lt;typename Type , typename SzType  = int&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a1fc30855b11945f0e9e373f7e924ad52"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type , typename SzType  = int&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SzType <a class="el" href="../../d7/d94/classscire_1_1_singly_list.html">scire::SinglyList</a>&lt; Type, SzType &gt;::size</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>track count of items in the list </p>
+
+<p>Definition at line <a class="el" href="../../db/ded/linkedlist_8hpp_source.html#l00093">93</a> of file <a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>scire/struct/<a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a></li>
 </ul>
@@ -531,7 +531,7 @@ template&lt;typename Type , typename SzType  = int&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d6/d73/namespacescire.html">scire</a></li><li class="navelem"><a class="el" href="../../d7/d94/classscire_1_1_singly_list.html">SinglyList</a></li>
-    <li class="footer">Generated on Sat Jul 5 2014 00:33:17 for scire by
+    <li class="footer">Generated on Mon Jul 7 2014 00:16:10 for scire by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>

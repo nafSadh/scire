@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['queue',['Queue',['../da/dca/classscire_1_1_queue.html',1,'scire']]],
-  ['queuecrate',['QueueCrate',['../df/dfb/classscire_1_1_queue_crate.html',1,'scire']]]
+  ['node',['Node',['../d5/d0f/structscire_1_1_singly_list_1_1_node.html',1,'scire::SinglyList']]]
 ];

@@ -22,6 +22,6 @@ var hierarchy =
     [ "scire::IHashAlgo< SzType, Ui32t, ByteT, SByteT >", "d1/d3e/classscire_1_1_i_hash_algo.html", [
       [ "scire::MD5< SzType, Ui32t, ByteT, SByteT >", "d3/de0/classscire_1_1_m_d5.html", null ]
     ] ],
-    [ "scire::SinglyList< Type, SzType >::SinglyNode", "d3/d71/classscire_1_1_singly_list_1_1_singly_node.html", null ],
+    [ "scire::SinglyList< Type, SzType >::Node", "d5/d0f/structscire_1_1_singly_list_1_1_node.html", null ],
     [ "scire::StringMatchKMP< CharType, SzType >", "de/d70/classscire_1_1_string_match_k_m_p.html", null ]
 ];

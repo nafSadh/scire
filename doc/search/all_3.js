@@ -8,6 +8,5 @@ var searchData=
   ['compute',['Compute',['../df/dcc/classscire_1_1_hash.html#a47617c2cb43958d55e7486cab70583dc',1,'scire::Hash::Compute(IHashAlgo&lt; SzT, U32, B8, SB8 &gt; &amp;iHA, std::string message)'],['../df/dcc/classscire_1_1_hash.html#a646cf33e4a3183bd3b7fca57c84796d4',1,'scire::Hash::Compute(IHashAlgo&lt; SzT, U32, B8, SB8 &gt; &amp;iHA, std::ifstream &amp;ifs)']]],
   ['computefile',['ComputeFile',['../df/dcc/classscire_1_1_hash.html#a5a51c2c80afdee3b1560e2df57d7b655',1,'scire::Hash::ComputeFile(IHashAlgo&lt; SzT, U32, B8, SB8 &gt; &amp;iHA, std::string filepath)'],['../df/dcc/classscire_1_1_hash.html#a0231c7be5a09bafbde0f708e9f299f50',1,'scire::Hash::ComputeFile(IHashAlgo&lt; SzT, U32, B8, SB8 &gt; &amp;iHA, char *filepath)']]],
   ['container_2ehpp',['container.hpp',['../dc/d6e/container_8hpp.html',1,'']]],
-  ['count',['count',['../d7/d94/classscire_1_1_singly_list.html#adfc88d6dd8051e5e2aa00955eed2caf8',1,'scire::SinglyList']]],
   ['cstr_5futil_2ehpp',['cstr_util.hpp',['../db/d09/cstr__util_8hpp.html',1,'']]]
 ];

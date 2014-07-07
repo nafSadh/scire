@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['next',['next',['../d3/d71/classscire_1_1_singly_list_1_1_singly_node.html#a37a457095200178119cb10cf043477b1',1,'scire::SinglyList::SinglyNode']]]
+  ['size',['size',['../d7/d94/classscire_1_1_singly_list.html#a1fc30855b11945f0e9e373f7e924ad52',1,'scire::SinglyList']]]
 ];
