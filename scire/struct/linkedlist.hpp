@@ -60,6 +60,14 @@ namespace scire
     */
     SzType Insert(Type element, SzType location = 0);
 
+    /** remove the item at location
+    @return true on success */
+    bool RemoveAt(SzType location = 0/**< index of item to remove */);
+
+    /** remove first item in the linked list that matches passed item.
+    @return true if found and removed */
+    bool RemoveFirst(Type elementh/**< item to remove */);
+
     //@implement Container
     virtual SzType Size() const;
 
@@ -146,15 +154,40 @@ namespace scire
     //if list is not empty and location is not at beginning
     SzType i = 0;
     Node *prev = this->head;
-    Node *curr = this->head;
-    while (i++ < location && curr != nullptr) {
-      prev = curr;
-      curr = curr->next;
+    //Node *curr = this->head;
+    //while (i++ < location && curr != nullptr) {
+    while (i++ < location && prev->next != nullptr) {
+      prev = prev->next;
     }
     node->next = prev->next;
     prev->next = node;
 
     return i;
+  }//end Insert(Type, SzType)
+
+
+  template<typename Type, typename SzType>
+  bool SinglyList<Type, SzType>::RemoveAt(SzType location)
+  {
+    if (this->Size() < 1) return false;
+
+    SzType i = 0;
+    Node node = head;
+
+
+    return true;
+  }
+
+  template<typename Type, typename SzType>
+  bool SinglyList<Type, SzType>::RemoveFirst(Type element)
+  {
+    if (this->Size() < 1) return false;
+
+    SzType i = 0;
+    Node node = head;
+
+
+    return true;
   }
 
   template<typename Type, typename SzType>
