@@ -1,22 +1,22 @@
 // scire/struct/linkedlist
 
-// Copyright (c) 2014, Khan 'Sadh' Mostafa (http://nafSadh.com/Khan)
+// Copyright (c) 2014, Khan 'Sadh' Mostafa (http:// nafSadh.com/Khan)
 // Distributed under the Boost Software License, Version 1.0.
-// (See accompanying text at http://www.boost.org/LICENSE_1_0.txt)
+// (See accompanying text at http:// www.boost.org/LICENSE_1_0.txt)
 
 /**
  scire/struct/linkedlist.hpp
 
  scire Linked List implementations:
- - SinglyList         : Singly Linked List
- - DoublyList	        : Doubly Linked List
- - CircularList	      : Circular List
+ - SinglyList     : Singly Linked List
+ - DoublyList	    : Doubly Linked List
+ - CircularList	   : Circular List
 
  other required scire files:
-  scire/struct/container.hpp
+ scire/struct/container.hpp
 
  author:
-  ~nafSadh
+ ~nafSadh
  */
 #ifndef SCIRE_struct_linkedlist_HPP
 #define SCIRE_struct_linkedlist_HPP
@@ -48,39 +48,43 @@ namespace scire
 
     /**
     * Traverse each element of the list
-    * @param travfunc     function to traverse each element of list with
+    * @param travfunc   function to traverse each element of list with
     */
     void Traverse(void(*travfunc)(const Type&)) const;
 
     /**
     * insert a new item in the list with passed element after location nodes
-    * @param element        element to insert as new item in the list
-    * @param location       location in the list where the new element to insert
-    * @return SzType        location where item inserted
+    * @param element    element to insert as new item in the list
+    * @param location    location in the list where the new element to insert
+    * @return SzType    location where item inserted
     */
     SzType Insert(Type element, SzType location = 0);
 
     /** remove the item at location
     @return true on success */
-    bool RemoveAt(SzType location = 0/**< index of item to remove */);
+    bool RemoveAt(
+      SzType location = 0/**< index of item to remove */
+    );
 
     /** remove first item in the linked list that matches passed item.
     @return true if found and removed */
-    bool RemoveFirst(Type elementh/**< item to remove */);
+    bool Remove(
+      const Type& element/**< item to remove */
+    );
 
-    //@implement Container
+    // @implement Container
     virtual SzType Size() const;
 
-    //@implement Container
+    // @implement Container
     virtual bool Add(const Type& element)
     {
       return (this->Insert(element, 0) == 0);
     }
 
-    //@implement Container
+    // @implement Container
     virtual bool Deduce();
 
-    //@implement Container
+    // @implement Container
     virtual Type Peek() const;
 
    protected:
@@ -105,7 +109,7 @@ namespace scire
   SinglyList<Type,SzType>::SinglyList()
     : head(0), size()
   {
-    //empty ctor body, all init on initlist
+    // empty ctor body, all init on initlist
   }
 
   template<typename Type, typename SzType>
@@ -132,6 +136,7 @@ namespace scire
     }
   }
 
+
   template<typename Type, typename SzType>
   SzType SinglyList<Type, SzType>::Insert(Type element, SzType location)
   {
@@ -151,11 +156,11 @@ namespace scire
       return 0;
     }
 
-    //if list is not empty and location is not at beginning
+    // if list is not empty and location is not at beginning
     SzType i = 0;
     Node *prev = this->head;
-    //Node *curr = this->head;
-    //while (i++ < location && curr != nullptr) {
+    // Node *curr = this->head;
+    // while (i++ < location && curr != nullptr) {
     while (i++ < location && prev->next != nullptr) {
       prev = prev->next;
     }
@@ -163,30 +168,68 @@ namespace scire
     prev->next = node;
 
     return i;
-  }//end Insert(Type, SzType)
+  }//<<Insert(Type,SzType)
 
 
+  // # operation: RemoveAt # //
   template<typename Type, typename SzType>
   bool SinglyList<Type, SzType>::RemoveAt(SzType location)
   {
-    if (this->Size() < 1) return false;
+    if (this->IsEmpty()) return false; // can't remove from empty list
+    if (location >= size) return false; // check loc in bound
+    if (location < 0) return false;
 
+    // if location 0 then remove from head
+    if (location == 0) {
+      Node* tmphd = head; // node to delete
+      head = head->next; // move head to next node
+      size--; // bookkeeping count
+      delete tmphd; // free the node
+      return true; // success
+    }
+
+    // removing from location other than head
     SzType i = 0;
-    Node node = head;
+    Node* cur = head; // put cursor at head
+    SzType prevLoc = location - 1;
+    // move cursor to previous node
+    while (++i < prevLoc) {
+      cur = cur->next;
+    }
+    Node* temp = cur->next; // node to delete
+    if (cur->next == nullptr)
+      return false; // this node shouldn't have been null
+    cur->next = cur->next->next; // relink prev node with next to next
+    size--; // bookkeeping count
+    delete temp; // free the node
+    return true; // success
+  }//<<RemoveAt(SzType)
 
 
-    return true;
-  }
-
+  // # opeartion : Remove # //
   template<typename Type, typename SzType>
-  bool SinglyList<Type, SzType>::RemoveFirst(Type element)
+  bool SinglyList<Type, SzType>::Remove(const Type& element)
   {
-    if (this->Size() < 1) return false;
+    if (this->IsEmpty()) return false;
 
-    SzType i = 0;
-    Node node = head;
+    // remove from head
+    if (element == head->element) {
+      Node* tmphd = head;
+      head = head->next;
+      size--;
+      delete tmphd;
+      return true;
+    }
 
-
+    Node* cur = head;
+    while (cur->next != nullptr && cur->next->element != element) {
+      cur = cur->next;
+    }
+    if (cur->next == nullptr) return false;
+    Node* temp = cur->next;
+    cur->next = cur->next->next;
+    size--;
+    delete temp;
     return true;
   }
 
@@ -214,6 +257,6 @@ namespace scire
   {
     return this->head->element;
   }
-#endif//SCIRE_SinglyList_CLASS
-}//scire namespace
-#endif//SCIRE_struct_linkedlist_HPP
+#endif// SCIRE_SinglyList_CLASS
+}// scire namespace
+#endif// SCIRE_struct_linkedlist_HPP

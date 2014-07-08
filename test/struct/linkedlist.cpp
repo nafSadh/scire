@@ -1,6 +1,6 @@
 #include <iostream>
 #include "../../scire/struct/linkedlist.hpp"
-#include <list>
+#include <random>
 
 using namespace std;
 using namespace scire;
@@ -12,7 +12,7 @@ namespace sciretest
     cout << a << " ";
   }
 
-  int SinglyListMain()
+  int SinglyListTraverse()
   {
     //list<int> kst;
     SinglyList<int> slist;
@@ -22,7 +22,7 @@ namespace sciretest
      */ slist.Traverse(read);
     cout << endl;
     for (int i = 0; i < 100; i++) {
-      slist.Insert(i, 0);
+      slist.Insert(i, i/2);
       //slist.Traverse(read);
       //cout << endl;
     }
@@ -41,16 +41,35 @@ namespace sciretest
 
     return 0;
   }
+
+  int SinglyListTestMain()
+  {
+    SinglyList<int> slist;
+    std::random_device rd;
+
+    int sz;
+    cin >> sz;
+    for (int i = 0; i < sz; i++) {
+      slist.Insert(rd()%100);
+    }
+    slist.Traverse(read);
+    cout << endl;
+
+    int dat=0;
+    while (dat>= 0) {
+      cin >> dat;
+      slist.Remove(dat);
+      slist.Traverse(read);
+      cout<<endl;
+    }
+
+    return 0;
+  }
 }
 
 #ifndef SCIRE_TEST_LINKEDLIST
 int main()
 {
-  sciretest::SinglyListMain();
-  cout << "exit\n";
-  int a;
-  cin >> a;
-
-  return 0;
+  return sciretest::SinglyListTestMain();
 }
 #endif
