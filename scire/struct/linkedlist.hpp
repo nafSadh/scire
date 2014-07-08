@@ -21,6 +21,7 @@
 #ifndef SCIRE_struct_linkedlist_HPP
 #define SCIRE_struct_linkedlist_HPP
 
+#include <unordered_map>
 #include "container.hpp"
 
 namespace scire
@@ -96,13 +97,80 @@ namespace scire
 
       Node(const Type& newElement, Node *nextNode)
         : element(newElement), next(nextNode) {}
+      const Type& Element() const
+      {
+        return element;
+      }
     };
 
     /** points to first item of the list */
-    Node *head;
+    Node* head;
+
+    const Node* Head() const
+    {
+      return head;
+    }
 
     /** track count of items in the list */
     SzType size;
+    // ------------------------------ //
+    // Some Utility Friend Functions //
+    // ---------------------------- //
+
+   public:
+    /** iterate through the list and remove duplicate items (i.e. remove those
+    items that appear more than once)
+    @return number of duplicates detected in original list */
+    friend SzType GetRidOfDuplicates(
+      SinglyList<Type, SzType>& list /**< list to operate on*/
+    )
+    {
+      // trivial case: no dup in an list with less than 2 items
+      if (list.Size() < 2) return 0;
+
+      // iterate over the list, insert each new item in hashmap and delete all
+      // detected duplicate items from list
+      SzType dupCount = 0;
+      unordered_map<Type, bool> map;
+      Node* cur = list.head;
+      map.insert({cur->element, true});
+
+      while (cur->next != nullptr) {
+        if (map.find(cur->next->element) == map.end()) {
+          map.insert({cur->next->element, true});
+          cur = cur->next;
+        } else {
+          dupCount++;
+          list.size--;
+          Node* temp = cur->next;
+          cur->next = cur->next->next;
+          delete temp;
+        }
+      }
+      return dupCount;
+    }
+
+    /** return the kth to the last item */
+    friend const Type& KthToTheLast(
+      const SinglyList<Type, SzType>& list, /**< list ti operate on*/
+      SzType k /** k */
+    )
+    {
+      k++;
+      Node* runr = list.head;
+      while (runr != nullptr && k-- > 0) {
+        runr = runr->next;
+      }
+      if (k > 0) return NULL;
+      Node* cur = list.head;
+      while (runr != nullptr) {
+        cur = cur->next;
+        runr = runr->next;
+      }
+
+      return (cur->Element());
+    }
+
   };
 
   template<typename Type, typename SzType>

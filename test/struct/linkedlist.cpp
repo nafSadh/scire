@@ -50,18 +50,26 @@ namespace sciretest
     int sz;
     cin >> sz;
     for (int i = 0; i < sz; i++) {
-      slist.Insert(rd()%100);
+      slist.Insert(rd()%101);
     }
     slist.Traverse(read);
     cout << endl;
 
-    int dat=0;
+    //cout << GetRidOfDuplicates(slist) << endl;
+    //slist.Traverse(read);
+    //cout << endl;
+    int k;
+    cin >> k;
+    cout << KthToTheLast(slist,k)<<endl;
+
+
+    /*int dat=0;
     while (dat>= 0) {
       cin >> dat;
       slist.Remove(dat);
       slist.Traverse(read);
       cout<<endl;
-    }
+    }*/
 
     return 0;
   }
