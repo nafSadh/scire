@@ -48,18 +48,18 @@ namespace scire
     virtual ~SinglyList();
 
     /**
-    * Traverse each element of the list
-    * @param travfunc   function to traverse each element of list with
+    * Traverse each item of the list
+    * @param travfunc   function to traverse each item of list with
     */
     void Traverse(void(*travfunc)(const Type&)) const;
 
     /**
-    * insert a new item in the list with passed element after location nodes
-    * @param element    element to insert as new item in the list
-    * @param location    location in the list where the new element to insert
+    * insert a new item in the list with passed item after location nodes
+    * @param item    item to insert as new item in the list
+    * @param location    location in the list where the new item to insert
     * @return SzType    location where item inserted
     */
-    SzType Insert(Type element, SzType location = 0);
+    SzType Insert(Type item, SzType location = 0);
 
     /** remove the item at location
     @return true on success */
@@ -70,16 +70,16 @@ namespace scire
     /** remove first item in the linked list that matches passed item.
     @return true if found and removed */
     bool Remove(
-      const Type& element/**< item to remove */
+      const Type& item/**< item to remove */
     );
 
     // @implement Container
     virtual SzType Size() const;
 
     // @implement Container
-    virtual bool Add(const Type& element)
+    virtual bool Add(const Type& item)
     {
-      return (this->Insert(element, 0) == 0);
+      return (this->Insert(item, 0) == 0);
     }
 
     // @implement Container
@@ -92,14 +92,14 @@ namespace scire
     /** represent an item node in Singly Linked List */
     struct Node {
      public:
-      Type element; /** element at this node */
+      Type item; /** item at this node */
       Node* next; /** pointer to next item */
 
-      Node(const Type& newElement, Node *nextNode)
-        : element(newElement), next(nextNode) {}
-      const Type& Element() const
+      Node(const Type& newitem, Node *nextNode)
+        : item(newitem), next(nextNode) {}
+      const Type& Item() const
       {
-        return element;
+        return item;
       }
     };
 
@@ -133,11 +133,11 @@ namespace scire
       SzType dupCount = 0;
       unordered_map<Type, bool> map;
       Node* cur = list.head;
-      map.insert({cur->element, true});
+      map.insert({cur->item, true});
 
       while (cur->next != nullptr) {
-        if (map.find(cur->next->element) == map.end()) {
-          map.insert({cur->next->element, true});
+        if (map.find(cur->next->item) == map.end()) {
+          map.insert({cur->next->item, true});
           cur = cur->next;
         } else {
           dupCount++;
@@ -150,7 +150,9 @@ namespace scire
       return dupCount;
     }
 
-    /** return the kth to the last item */
+    /** Return the kth to the last item. If the list has n items, return (n-k)th
+    item of the list. If k=0, then return last item. If k>=n then it is an error.
+    @return const ref to (n-k)the item */
     friend const Type& KthToTheLast(
       const SinglyList<Type, SzType>& list, /**< list ti operate on*/
       SzType k /** k */
@@ -168,7 +170,7 @@ namespace scire
         runr = runr->next;
       }
 
-      return (cur->Element());
+      return (cur->Item());
     }
 
   };
@@ -199,16 +201,16 @@ namespace scire
     Node *node = this->head;
 
     while (node != nullptr) {
-      travfunc(node->element);
+      travfunc(node->item);
       node = node->next;
     }
   }
 
 
   template<typename Type, typename SzType>
-  SzType SinglyList<Type, SzType>::Insert(Type element, SzType location)
+  SzType SinglyList<Type, SzType>::Insert(Type item, SzType location)
   {
-    Node *node = new Node(element, nullptr);
+    Node *node = new Node(item, nullptr);
     // exception when new fails
     if (nullptr == node) {
       return -1;
@@ -276,12 +278,12 @@ namespace scire
 
   // # opeartion : Remove # //
   template<typename Type, typename SzType>
-  bool SinglyList<Type, SzType>::Remove(const Type& element)
+  bool SinglyList<Type, SzType>::Remove(const Type& item)
   {
     if (this->IsEmpty()) return false;
 
     // remove from head
-    if (element == head->element) {
+    if (item == head->item) {
       Node* tmphd = head;
       head = head->next;
       size--;
@@ -290,7 +292,7 @@ namespace scire
     }
 
     Node* cur = head;
-    while (cur->next != nullptr && cur->next->element != element) {
+    while (cur->next != nullptr && cur->next->item != item) {
       cur = cur->next;
     }
     if (cur->next == nullptr) return false;
@@ -323,7 +325,7 @@ namespace scire
   template<typename Type, typename SzType>
   Type SinglyList<Type, SzType>::Peek() const
   {
-    return this->head->element;
+    return this->head->item;
   }
 #endif// SCIRE_SinglyList_CLASS
 }// scire namespace
