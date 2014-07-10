@@ -97,7 +97,7 @@ $(document).ready(function(){initNavTree('d7/d94/classscire_1_1_singly_list.html
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -110,7 +110,9 @@ $(document).ready(function(){initNavTree('d7/d94/classscire_1_1_singly_list.html
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="../../d1/d9c/classscire_1_1_singly_list-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">scire::SinglyList&lt; Type, SzType &gt; Class Template Reference</div>  </div>
@@ -146,17 +148,23 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a694fb5a5ed576e4263f36f5fd47bfbb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">finalize a <a class="el" href="../../d7/d94/classscire_1_1_singly_list.html" title="A Singly Linked List class. ">SinglyList</a> object by deleting all items from the list  <a href="#a694fb5a5ed576e4263f36f5fd47bfbb9">More...</a><br /></td></tr>
 <tr class="separator:a694fb5a5ed576e4263f36f5fd47bfbb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99b066af89ca50195831f55119e48446"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d94/classscire_1_1_singly_list.html#a99b066af89ca50195831f55119e48446">Traverse</a> (void(*travfunc)(const Type &amp;)) const </td></tr>
-<tr class="memdesc:a99b066af89ca50195831f55119e48446"><td class="mdescLeft">&#160;</td><td class="mdescRight">Traverse each element of the list.  <a href="#a99b066af89ca50195831f55119e48446">More...</a><br /></td></tr>
+<tr class="memdesc:a99b066af89ca50195831f55119e48446"><td class="mdescLeft">&#160;</td><td class="mdescRight">Traverse each item of the list.  <a href="#a99b066af89ca50195831f55119e48446">More...</a><br /></td></tr>
 <tr class="separator:a99b066af89ca50195831f55119e48446"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2ef1fa357c0225529c0d36fd26918b6"><td class="memItemLeft" align="right" valign="top">SzType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d94/classscire_1_1_singly_list.html#ae2ef1fa357c0225529c0d36fd26918b6">Insert</a> (Type element, SzType location=0)</td></tr>
-<tr class="memdesc:ae2ef1fa357c0225529c0d36fd26918b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert a new item in the list with passed element after location nodes  <a href="#ae2ef1fa357c0225529c0d36fd26918b6">More...</a><br /></td></tr>
-<tr class="separator:ae2ef1fa357c0225529c0d36fd26918b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0134b3224470b16e6475150c2d0b5be5"><td class="memItemLeft" align="right" valign="top">SzType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d94/classscire_1_1_singly_list.html#a0134b3224470b16e6475150c2d0b5be5">Insert</a> (Type item, SzType location=0)</td></tr>
+<tr class="memdesc:a0134b3224470b16e6475150c2d0b5be5"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert a new item in the list with passed item after location nodes  <a href="#a0134b3224470b16e6475150c2d0b5be5">More...</a><br /></td></tr>
+<tr class="separator:a0134b3224470b16e6475150c2d0b5be5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01e18beadf75c73121f3b45fdffb99e5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d94/classscire_1_1_singly_list.html#a01e18beadf75c73121f3b45fdffb99e5">RemoveAt</a> (SzType location=0)</td></tr>
+<tr class="memdesc:a01e18beadf75c73121f3b45fdffb99e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove the item at location  <a href="#a01e18beadf75c73121f3b45fdffb99e5">More...</a><br /></td></tr>
+<tr class="separator:a01e18beadf75c73121f3b45fdffb99e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d9ebce03d4514c940420275e0dac427"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d94/classscire_1_1_singly_list.html#a6d9ebce03d4514c940420275e0dac427">Remove</a> (const Type &amp;item)</td></tr>
+<tr class="memdesc:a6d9ebce03d4514c940420275e0dac427"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove first item in the linked list that matches passed item.  <a href="#a6d9ebce03d4514c940420275e0dac427">More...</a><br /></td></tr>
+<tr class="separator:a6d9ebce03d4514c940420275e0dac427"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff6d6ec4c616f0bf27f1d3cd457c5023"><td class="memItemLeft" align="right" valign="top">virtual SzType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d94/classscire_1_1_singly_list.html#aff6d6ec4c616f0bf27f1d3cd457c5023">Size</a> () const </td></tr>
 <tr class="memdesc:aff6d6ec4c616f0bf27f1d3cd457c5023"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of elements contained in  <a href="#aff6d6ec4c616f0bf27f1d3cd457c5023">More...</a><br /></td></tr>
 <tr class="separator:aff6d6ec4c616f0bf27f1d3cd457c5023"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc9afc818fc11b32d906e950fffd14b0"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d94/classscire_1_1_singly_list.html#acc9afc818fc11b32d906e950fffd14b0">Add</a> (const Type &amp;element)</td></tr>
-<tr class="memdesc:acc9afc818fc11b32d906e950fffd14b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">add an element  <a href="#acc9afc818fc11b32d906e950fffd14b0">More...</a><br /></td></tr>
-<tr class="separator:acc9afc818fc11b32d906e950fffd14b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a221e54438c539931c40c0783c0c1b3"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d94/classscire_1_1_singly_list.html#a3a221e54438c539931c40c0783c0c1b3">Add</a> (const Type &amp;item)</td></tr>
+<tr class="memdesc:a3a221e54438c539931c40c0783c0c1b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">add an element  <a href="#a3a221e54438c539931c40c0783c0c1b3">More...</a><br /></td></tr>
+<tr class="separator:a3a221e54438c539931c40c0783c0c1b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf6ba16c402d6323bc40c6ffd9b620b6"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d94/classscire_1_1_singly_list.html#adf6ba16c402d6323bc40c6ffd9b620b6">Deduce</a> ()</td></tr>
 <tr class="memdesc:adf6ba16c402d6323bc40c6ffd9b620b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">deduce one element  <a href="#adf6ba16c402d6323bc40c6ffd9b620b6">More...</a><br /></td></tr>
 <tr class="separator:adf6ba16c402d6323bc40c6ffd9b620b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -167,6 +175,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:af8415e3cd3b12aeeabf1c8ec072f5a4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if empty  <a href="#af8415e3cd3b12aeeabf1c8ec072f5a4c">More...</a><br /></td></tr>
 <tr class="separator:af8415e3cd3b12aeeabf1c8ec072f5a4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a86a9cd0f4a59012643abfd9ff0da6dd0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d5/d0f/structscire_1_1_singly_list_1_1_node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d94/classscire_1_1_singly_list.html#a86a9cd0f4a59012643abfd9ff0da6dd0">Head</a> () const </td></tr>
+<tr class="separator:a86a9cd0f4a59012643abfd9ff0da6dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:adc01d2241e97288a89f15b888092109a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d0f/structscire_1_1_singly_list_1_1_node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d94/classscire_1_1_singly_list.html#adc01d2241e97288a89f15b888092109a">head</a></td></tr>
@@ -175,6 +188,15 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a1fc30855b11945f0e9e373f7e924ad52"><td class="memItemLeft" align="right" valign="top">SzType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d94/classscire_1_1_singly_list.html#a1fc30855b11945f0e9e373f7e924ad52">size</a></td></tr>
 <tr class="memdesc:a1fc30855b11945f0e9e373f7e924ad52"><td class="mdescLeft">&#160;</td><td class="mdescRight">track count of items in the list  <a href="#a1fc30855b11945f0e9e373f7e924ad52">More...</a><br /></td></tr>
 <tr class="separator:a1fc30855b11945f0e9e373f7e924ad52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a589cdbdb6c09bd3b5c0ed74f0a95d924"><td class="memItemLeft" align="right" valign="top">SzType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d94/classscire_1_1_singly_list.html#a589cdbdb6c09bd3b5c0ed74f0a95d924">GetRidOfDuplicates</a> (<a class="el" href="../../d7/d94/classscire_1_1_singly_list.html">SinglyList</a>&lt; Type, SzType &gt; &amp;list)</td></tr>
+<tr class="memdesc:a589cdbdb6c09bd3b5c0ed74f0a95d924"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate through the list and remove duplicate items (i.e.  <a href="#a589cdbdb6c09bd3b5c0ed74f0a95d924">More...</a><br /></td></tr>
+<tr class="separator:a589cdbdb6c09bd3b5c0ed74f0a95d924"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a241f05fb9e4af658ecd485d9f022a0"><td class="memItemLeft" align="right" valign="top">const Type &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d94/classscire_1_1_singly_list.html#a1a241f05fb9e4af658ecd485d9f022a0">KthToTheLast</a> (const <a class="el" href="../../d7/d94/classscire_1_1_singly_list.html">SinglyList</a>&lt; Type, SzType &gt; &amp;list, SzType k)</td></tr>
+<tr class="memdesc:a1a241f05fb9e4af658ecd485d9f022a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the kth to the last item.  <a href="#a1a241f05fb9e4af658ecd485d9f022a0">More...</a><br /></td></tr>
+<tr class="separator:a1a241f05fb9e4af658ecd485d9f022a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename Type, typename SzType = int&gt;<br />
@@ -183,7 +205,7 @@ class scire::SinglyList&lt; Type, SzType &gt;</h3>
 <p>A Singly Linked List class. </p>
 <p>Singly linked list contains a linear list of items. Each item points to it's next; the last item of the list points to nullptr. A head pointer points to the first item of the list. </p>
 
-<p>Definition at line <a class="el" href="../../db/ded/linkedlist_8hpp_source.html#l00039">39</a> of file <a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/ded/linkedlist_8hpp_source.html#l00040">40</a> of file <a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a948f00780cdfc1dd766cd8b62fc8027b"></a>
 <div class="memitem">
@@ -202,7 +224,7 @@ template&lt;typename Type , typename SzType &gt; </div>
 
 <p>initialize a <a class="el" href="../../d7/d94/classscire_1_1_singly_list.html" title="A Singly Linked List class. ">SinglyList</a> object, with head pointing to nullptr </p>
 
-<p>Definition at line <a class="el" href="../../db/ded/linkedlist_8hpp_source.html#l00097">97</a> of file <a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/ded/linkedlist_8hpp_source.html#l00179">179</a> of file <a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a>.</p>
 
 </div>
 </div>
@@ -231,12 +253,12 @@ template&lt;typename Type , typename SzType &gt; </div>
 
 <p>finalize a <a class="el" href="../../d7/d94/classscire_1_1_singly_list.html" title="A Singly Linked List class. ">SinglyList</a> object by deleting all items from the list </p>
 
-<p>Definition at line <a class="el" href="../../db/ded/linkedlist_8hpp_source.html#l00104">104</a> of file <a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/ded/linkedlist_8hpp_source.html#l00186">186</a> of file <a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="acc9afc818fc11b32d906e950fffd14b0"></a>
+<a class="anchor" id="a3a221e54438c539931c40c0783c0c1b3"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -271,7 +293,7 @@ template&lt;typename Type , typename SzType  = int&gt; </div>
 
 <p>Implements <a class="el" href="../../d3/de4/classscire_1_1_a_container.html#a36dd1fd197382b4d4833a499fe330f52">scire::AContainer&lt; Type, SzType &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="../../db/ded/linkedlist_8hpp_source.html#l00067">67</a> of file <a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/ded/linkedlist_8hpp_source.html#l00080">80</a> of file <a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a>.</p>
 
 </div>
 </div>
@@ -303,11 +325,38 @@ template&lt;typename Type , typename SzType &gt; </div>
 
 <p>Implements <a class="el" href="../../d3/de4/classscire_1_1_a_container.html#aa3be65bb3f7bc657a9ea8030dfe1638a">scire::AContainer&lt; Type, SzType &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="../../db/ded/linkedlist_8hpp_source.html#l00167">167</a> of file <a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/ded/linkedlist_8hpp_source.html#l00313">313</a> of file <a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ae2ef1fa357c0225529c0d36fd26918b6"></a>
+<a class="anchor" id="a86a9cd0f4a59012643abfd9ff0da6dd0"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type , typename SzType  = int&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../d5/d0f/structscire_1_1_singly_list_1_1_node.html">Node</a>* <a class="el" href="../../d7/d94/classscire_1_1_singly_list.html">scire::SinglyList</a>&lt; Type, SzType &gt;::Head </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="../../db/ded/linkedlist_8hpp_source.html#l00109">109</a> of file <a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0134b3224470b16e6475150c2d0b5be5"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -317,7 +366,7 @@ template&lt;typename Type , typename SzType &gt; </div>
           <td class="memname">SzType <a class="el" href="../../d7/d94/classscire_1_1_singly_list.html">scire::SinglyList</a>&lt; Type, SzType &gt;::Insert </td>
           <td>(</td>
           <td class="paramtype">Type&#160;</td>
-          <td class="paramname"><em>element</em>, </td>
+          <td class="paramname"><em>item</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -333,17 +382,17 @@ template&lt;typename Type , typename SzType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>insert a new item in the list with passed element after location nodes </p>
+<p>insert a new item in the list with passed item after location nodes </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">element</td><td>element to insert as new item in the list </td></tr>
-    <tr><td class="paramname">location</td><td>location in the list where the new element to insert </td></tr>
+    <tr><td class="paramname">item</td><td>item to insert as new item in the list </td></tr>
+    <tr><td class="paramname">location</td><td>location in the list where the new item to insert </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>SzType location where item inserted </dd></dl>
 
-<p>Definition at line <a class="el" href="../../db/ded/linkedlist_8hpp_source.html#l00128">128</a> of file <a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/ded/linkedlist_8hpp_source.html#l00211">211</a> of file <a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a>.</p>
 
 </div>
 </div>
@@ -405,7 +454,65 @@ template&lt;typename Type , typename SzType &gt; </div>
 
 <p>Implements <a class="el" href="../../d3/de4/classscire_1_1_a_container.html#a5943a1814b93f4bc36f619962dab400e">scire::AContainer&lt; Type, SzType &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="../../db/ded/linkedlist_8hpp_source.html#l00180">180</a> of file <a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/ded/linkedlist_8hpp_source.html#l00326">326</a> of file <a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6d9ebce03d4514c940420275e0dac427"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type , typename SzType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="../../d7/d94/classscire_1_1_singly_list.html">scire::SinglyList</a>&lt; Type, SzType &gt;::Remove </td>
+          <td>(</td>
+          <td class="paramtype">const Type &amp;&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>remove first item in the linked list that matches passed item. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if found and removed </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">item</td><td>item to remove </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../db/ded/linkedlist_8hpp_source.html#l00281">281</a> of file <a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a01e18beadf75c73121f3b45fdffb99e5"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type , typename SzType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="../../d7/d94/classscire_1_1_singly_list.html">scire::SinglyList</a>&lt; Type, SzType &gt;::RemoveAt </td>
+          <td>(</td>
+          <td class="paramtype">SzType&#160;</td>
+          <td class="paramname"><em>location</em> = <code>0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>remove the item at location </p>
+<dl class="section return"><dt>Returns</dt><dd>true on success </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">location</td><td>index of item to remove </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../db/ded/linkedlist_8hpp_source.html#l00246">246</a> of file <a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a>.</p>
 
 </div>
 </div>
@@ -437,7 +544,7 @@ template&lt;typename Type , typename SzType &gt; </div>
 
 <p>Implements <a class="el" href="../../d3/de4/classscire_1_1_a_container.html#add16004995f2412b5a68c80152a1d05b">scire::AContainer&lt; Type, SzType &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="../../db/ded/linkedlist_8hpp_source.html#l00161">161</a> of file <a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/ded/linkedlist_8hpp_source.html#l00307">307</a> of file <a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a>.</p>
 
 </div>
 </div>
@@ -457,15 +564,101 @@ template&lt;typename Type , typename SzType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Traverse each element of the list. </p>
+<p>Traverse each item of the list. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">travfunc</td><td>function to traverse each element of list with </td></tr>
+    <tr><td class="paramname">travfunc</td><td>function to traverse each item of list with </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../db/ded/linkedlist_8hpp_source.html#l00117">117</a> of file <a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/ded/linkedlist_8hpp_source.html#l00199">199</a> of file <a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a class="anchor" id="a589cdbdb6c09bd3b5c0ed74f0a95d924"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type , typename SzType  = int&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SzType GetRidOfDuplicates </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d7/d94/classscire_1_1_singly_list.html">SinglyList</a>&lt; Type, SzType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>list</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>iterate through the list and remove duplicate items (i.e. </p>
+<p>remove those items that appear more than once) </p><dl class="section return"><dt>Returns</dt><dd>number of duplicates detected in original list </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">list</td><td>list to operate on </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../db/ded/linkedlist_8hpp_source.html#l00124">124</a> of file <a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1a241f05fb9e4af658ecd485d9f022a0"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type , typename SzType  = int&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Type&amp; KthToTheLast </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d7/d94/classscire_1_1_singly_list.html">SinglyList</a>&lt; Type, SzType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SzType&#160;</td>
+          <td class="paramname"><em>k</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the kth to the last item. </p>
+<p>If the list has n items, return (n-k)th item of the list. If k=0, then return last item. If k&gt;=n then it is an error. </p><dl class="section return"><dt>Returns</dt><dd>const ref to (n-k)the item </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">list</td><td>list ti operate on </td></tr>
+    <tr><td class="paramname">k</td><td>k </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../db/ded/linkedlist_8hpp_source.html#l00156">156</a> of file <a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a>.</p>
 
 </div>
 </div>
@@ -492,7 +685,7 @@ template&lt;typename Type , typename SzType  = int&gt; </div>
 
 <p>points to first item of the list </p>
 
-<p>Definition at line <a class="el" href="../../db/ded/linkedlist_8hpp_source.html#l00090">90</a> of file <a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/ded/linkedlist_8hpp_source.html#l00107">107</a> of file <a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a>.</p>
 
 </div>
 </div>
@@ -518,7 +711,7 @@ template&lt;typename Type , typename SzType  = int&gt; </div>
 
 <p>track count of items in the list </p>
 
-<p>Definition at line <a class="el" href="../../db/ded/linkedlist_8hpp_source.html#l00093">93</a> of file <a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/ded/linkedlist_8hpp_source.html#l00115">115</a> of file <a class="el" href="../../db/ded/linkedlist_8hpp_source.html">linkedlist.hpp</a>.</p>
 
 </div>
 </div>
@@ -531,7 +724,7 @@ template&lt;typename Type , typename SzType  = int&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d6/d73/namespacescire.html">scire</a></li><li class="navelem"><a class="el" href="../../d7/d94/classscire_1_1_singly_list.html">SinglyList</a></li>
-    <li class="footer">Generated on Mon Jul 7 2014 00:16:10 for scire by
+    <li class="footer">Generated on Thu Jul 10 2014 23:14:09 for scire by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>
