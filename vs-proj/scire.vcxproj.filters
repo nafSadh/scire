@@ -31,6 +31,9 @@
     <Filter Include="test\struct">
       <UniqueIdentifier>{83e96296-20be-4e67-a04d-a7f7ae8c4d67}</UniqueIdentifier>
     </Filter>
+    <Filter Include="scire\graph">
+      <UniqueIdentifier>{153f1b1f-6296-42fe-bb02-9df811f546ec}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\scire\string\cstr_util.hpp">
@@ -62,6 +65,12 @@
     </ClInclude>
     <ClInclude Include="..\scire\string\string_match.hpp">
       <Filter>scire\string</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scire\graph\gale_shapley.hpp">
+      <Filter>scire\graph</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scire\graph\stable_matching.hpp">
+      <Filter>scire\graph</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

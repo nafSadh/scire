@@ -66,6 +66,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\scire\graph\gale_shapley.hpp" />
+    <ClInclude Include="..\scire\graph\stable_matching.hpp" />
     <ClInclude Include="..\scire\hash\hash_comn.hpp" />
     <ClInclude Include="..\scire\hash\md5.hpp" />
     <ClInclude Include="..\scire\string\cstr_util.hpp" />
