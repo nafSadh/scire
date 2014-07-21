@@ -1,7 +1,7 @@
 var searchData=
 [
   ['scire_5fcharstringutil_5ffuncs',['SCIRE_CharStringUtil_FUNCS',['../db/d09/cstr__util_8hpp.html#a6d5bdad9252aa75a63c8546c79b4da18',1,'cstr_util.hpp']]],
-  ['scire_5fclassname_5fclass',['SCIRE_ClassName_CLASS',['../d1/dfb/string__match_8hpp.html#ab89e2e8e8f9eff92c5c533e2b03377e9',1,'SCIRE_ClassName_CLASS():&#160;string_match.hpp'],['../d3/df2/~template_8hpp.html#ab89e2e8e8f9eff92c5c533e2b03377e9',1,'SCIRE_ClassName_CLASS():&#160;~template.hpp']]],
+  ['scire_5fclassname_5fclass',['SCIRE_ClassName_CLASS',['../d6/d2f/gale__shapley_8hpp.html#ab89e2e8e8f9eff92c5c533e2b03377e9',1,'SCIRE_ClassName_CLASS():&#160;gale_shapley.hpp'],['../d5/db1/stable__matching_8hpp.html#ab89e2e8e8f9eff92c5c533e2b03377e9',1,'SCIRE_ClassName_CLASS():&#160;stable_matching.hpp'],['../d1/dfb/string__match_8hpp.html#ab89e2e8e8f9eff92c5c533e2b03377e9',1,'SCIRE_ClassName_CLASS():&#160;string_match.hpp'],['../d3/df2/~template_8hpp.html#ab89e2e8e8f9eff92c5c533e2b03377e9',1,'SCIRE_ClassName_CLASS():&#160;~template.hpp']]],
   ['scire_5fcontainer_5fabstr',['SCIRE_Container_ABSTR',['../dc/d6e/container_8hpp.html#a0d0fb758f9f9c691a9411cc87301fc32',1,'container.hpp']]],
   ['scire_5fcrate_5fintfc',['SCIRE_Crate_INTFC',['../dc/d6e/container_8hpp.html#a451462a69c73cf3424c6efd54c3184c1',1,'container.hpp']]],
   ['scire_5fhash_5ffuncs',['SCIRE_Hash_FUNCS',['../db/d55/hash__comn_8hpp.html#afbc13b4569d11ea211dcd2515271247f',1,'hash_comn.hpp']]],

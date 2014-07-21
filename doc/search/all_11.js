@@ -1,6 +1,7 @@
 var searchData=
 [
   ['readme',['README',['../d2/d04/md_scire__r_e_a_d_m_e.html',1,'']]],
+  ['rank',['rank',['../d4/d4c/classscire_1_1_actor.html#a707756f49862cae3651665f70cd752d4',1,'scire::Actor']]],
   ['readme_2emd',['README.md',['../d9/dd6/_r_e_a_d_m_e_8md.html',1,'']]],
   ['readnext',['ReadNext',['../de/d70/classscire_1_1_string_match_k_m_p.html#aeee322e18178da0f13e73be08712c583',1,'scire::StringMatchKMP']]],
   ['remove',['Remove',['../d7/d94/classscire_1_1_singly_list.html#a6d9ebce03d4514c940420275e0dac427',1,'scire::SinglyList']]],

@@ -11,6 +11,7 @@ var hierarchy =
       ] ],
       [ "scire::SinglyList< Type, SzType >", "d7/d94/classscire_1_1_singly_list.html", null ]
     ] ],
+    [ "scire::Actor< type >", "d4/d4c/classscire_1_1_actor.html", null ],
     [ "scire::CharStringUtil", "d4/de2/classscire_1_1_char_string_util.html", null ],
     [ "scire::ClassName", "d3/db7/classscire_1_1_class_name.html", null ],
     [ "scire::FileType", "d9/dbc/classscire_1_1_file_type.html", null ],

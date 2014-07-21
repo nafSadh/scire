@@ -1,6 +1,7 @@
 var namespacescire =
 [
     [ "AContainer", "d3/de4/classscire_1_1_a_container.html", "d3/de4/classscire_1_1_a_container" ],
+    [ "Actor", "d4/d4c/classscire_1_1_actor.html", "d4/d4c/classscire_1_1_actor" ],
     [ "AQueue", "de/d92/classscire_1_1_a_queue.html", "de/d92/classscire_1_1_a_queue" ],
     [ "AStack", "d3/d3d/classscire_1_1_a_stack.html", "d3/d3d/classscire_1_1_a_stack" ],
     [ "CharStringUtil", "d4/de2/classscire_1_1_char_string_util.html", "d4/de2/classscire_1_1_char_string_util" ],
