@@ -46,7 +46,10 @@ namespace scire
     node2t* root;
 
    public:
+    void Inorder()
+    {
 
+    }
 
   };
 
