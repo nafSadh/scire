@@ -46,7 +46,15 @@ namespace scire
     node2t* root;
 
    public:
-    void Inorder()
+    void PreOrder()
+    {
+
+    }
+    void InOrder()
+    {
+
+    }
+    void PostOrder()
     {
 
     }
