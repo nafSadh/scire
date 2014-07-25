@@ -72,6 +72,9 @@
     <ClInclude Include="..\scire\graph\stable_matching.hpp">
       <Filter>scire\graph</Filter>
     </ClInclude>
+    <ClInclude Include="..\scire\struct\tree.hpp">
+      <Filter>scire\struct</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\test\string\cstr_util.cpp">

@@ -48,7 +48,9 @@ namespace scire
    public:
     void PreOrder()
     {
-
+      //trav
+      //visit left
+      //visit right
     }
     void InOrder()
     {
