@@ -34,6 +34,12 @@
     <Filter Include="scire\graph">
       <UniqueIdentifier>{153f1b1f-6296-42fe-bb02-9df811f546ec}</UniqueIdentifier>
     </Filter>
+    <Filter Include="scire\search">
+      <UniqueIdentifier>{20ed4379-9209-47e4-9aeb-70a9bbeb8eea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test\search">
+      <UniqueIdentifier>{371a35b5-835d-40bf-bed9-69663d667c8c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\scire\string\cstr_util.hpp">
@@ -75,6 +81,9 @@
     <ClInclude Include="..\scire\struct\tree.hpp">
       <Filter>scire\struct</Filter>
     </ClInclude>
+    <ClInclude Include="..\scire\search\union_find.hpp">
+      <Filter>scire\search</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\test\string\cstr_util.cpp">
@@ -91,6 +100,9 @@
     </ClCompile>
     <ClCompile Include="..\test\struct\stack.cpp">
       <Filter>test\struct</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test\search\union_find.cpp">
+      <Filter>test\search</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

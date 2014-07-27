@@ -70,6 +70,7 @@
     <ClInclude Include="..\scire\graph\stable_matching.hpp" />
     <ClInclude Include="..\scire\hash\hash_comn.hpp" />
     <ClInclude Include="..\scire\hash\md5.hpp" />
+    <ClInclude Include="..\scire\search\union_find.hpp" />
     <ClInclude Include="..\scire\string\cstr_util.hpp" />
     <ClInclude Include="..\scire\string\knuth_morris_pratt.hpp" />
     <ClInclude Include="..\scire\string\string_match.hpp" />
@@ -82,6 +83,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\test\hash\md5.cpp" />
+    <ClCompile Include="..\test\search\union_find.cpp" />
     <ClCompile Include="..\test\string\cstr_util.cpp" />
     <ClCompile Include="..\test\struct\linkedlist.cpp" />
     <ClCompile Include="..\test\struct\queue.cpp" />

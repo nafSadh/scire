@@ -75,7 +75,7 @@ namespace sciretest
   }
 }
 
-#ifndef SCIRE_TEST_LINKEDLIST
+#ifdef SCIRE_TEST_LINKEDLIST
 int main()
 {
   return sciretest::SinglyListTestMain();
