@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['charstringutil',['CharStringUtil',['../d4/de2/classscire_1_1_char_string_util.html',1,'scire']]],
-  ['classname',['ClassName',['../d3/db7/classscire_1_1_class_name.html',1,'scire']]]
+  ['binarytree',['BinaryTree',['../d7/d0f/classscire_1_1_binary_tree.html',1,'scire']]]
 ];

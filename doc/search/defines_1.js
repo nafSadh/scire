@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['scire_5fbinarytree_5fclass',['SCIRE_BinaryTree_CLASS',['../de/dfd/tree_8hpp.html#a230c91b9329d0a22ac1ebaffee94945c',1,'tree.hpp']]],
   ['scire_5fcharstringutil_5ffuncs',['SCIRE_CharStringUtil_FUNCS',['../db/d09/cstr__util_8hpp.html#a6d5bdad9252aa75a63c8546c79b4da18',1,'cstr_util.hpp']]],
   ['scire_5fclassname_5fclass',['SCIRE_ClassName_CLASS',['../d6/d2f/gale__shapley_8hpp.html#ab89e2e8e8f9eff92c5c533e2b03377e9',1,'SCIRE_ClassName_CLASS():&#160;gale_shapley.hpp'],['../d5/db1/stable__matching_8hpp.html#ab89e2e8e8f9eff92c5c533e2b03377e9',1,'SCIRE_ClassName_CLASS():&#160;stable_matching.hpp'],['../d1/dfb/string__match_8hpp.html#ab89e2e8e8f9eff92c5c533e2b03377e9',1,'SCIRE_ClassName_CLASS():&#160;string_match.hpp'],['../d3/df2/~template_8hpp.html#ab89e2e8e8f9eff92c5c533e2b03377e9',1,'SCIRE_ClassName_CLASS():&#160;~template.hpp']]],
   ['scire_5fcontainer_5fabstr',['SCIRE_Container_ABSTR',['../dc/d6e/container_8hpp.html#a0d0fb758f9f9c691a9411cc87301fc32',1,'container.hpp']]],
@@ -14,5 +15,6 @@ var searchData=
   ['scire_5fstack_5fabstr',['SCIRE_Stack_ABSTR',['../df/d47/stack_8hpp.html#a106a103266cd99aa29cd6148371ab3c8',1,'stack.hpp']]],
   ['scire_5fstack_5fclass',['SCIRE_Stack_CLASS',['../df/d47/stack_8hpp.html#ae2157bf9a69978bf3dd2804bad811c81',1,'stack.hpp']]],
   ['scire_5fstackcrate_5fclass',['SCIRE_StackCrate_CLASS',['../df/d47/stack_8hpp.html#aed9ed8e2e189a17f9b4bf7c6368a2b9e',1,'stack.hpp']]],
-  ['scire_5fstringmatchkmp_5fclass',['SCIRE_StringMatchKMP_CLASS',['../d3/d01/knuth__morris__pratt_8hpp.html#afa9a4317c2b196fa24c6a056b9e94ba3',1,'knuth_morris_pratt.hpp']]]
+  ['scire_5fstringmatchkmp_5fclass',['SCIRE_StringMatchKMP_CLASS',['../d3/d01/knuth__morris__pratt_8hpp.html#afa9a4317c2b196fa24c6a056b9e94ba3',1,'knuth_morris_pratt.hpp']]],
+  ['scire_5funionfind_5fclass',['SCIRE_UnionFind_CLASS',['../d7/dcb/union__find_8hpp.html#a555b2132c15328285367a07b0cd46d8e',1,'union_find.hpp']]]
 ];

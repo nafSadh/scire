@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['filetype',['FileType',['../d9/dbc/classscire_1_1_file_type.html',1,'scire']]]
+  ['charstringutil',['CharStringUtil',['../d4/de2/classscire_1_1_char_string_util.html',1,'scire']]],
+  ['classname',['ClassName',['../d3/db7/classscire_1_1_class_name.html',1,'scire']]]
 ];

@@ -12,6 +12,7 @@ var hierarchy =
       [ "scire::SinglyList< Type, SzType >", "d7/d94/classscire_1_1_singly_list.html", null ]
     ] ],
     [ "scire::Actor< type >", "d4/d4c/classscire_1_1_actor.html", null ],
+    [ "scire::BinaryTree< Type >", "d7/d0f/classscire_1_1_binary_tree.html", null ],
     [ "scire::CharStringUtil", "d4/de2/classscire_1_1_char_string_util.html", null ],
     [ "scire::ClassName", "d3/db7/classscire_1_1_class_name.html", null ],
     [ "scire::FileType", "d9/dbc/classscire_1_1_file_type.html", null ],
@@ -24,5 +25,6 @@ var hierarchy =
       [ "scire::MD5< SzType, Ui32t, ByteT, SByteT >", "d3/de0/classscire_1_1_m_d5.html", null ]
     ] ],
     [ "scire::SinglyList< Type, SzType >::Node", "d5/d0f/structscire_1_1_singly_list_1_1_node.html", null ],
-    [ "scire::StringMatchKMP< CharType, SzType >", "de/d70/classscire_1_1_string_match_k_m_p.html", null ]
+    [ "scire::StringMatchKMP< CharType, SzType >", "de/d70/classscire_1_1_string_match_k_m_p.html", null ],
+    [ "scire::UnionFind< type >", "dc/dd4/classscire_1_1_union_find.html", null ]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['head',['head',['../d7/d94/classscire_1_1_singly_list.html#ad6c255a9418b92268b02f2e6dda18d49',1,'scire::SinglyList::head()'],['../da/dca/classscire_1_1_queue.html#a5c8110ab30d5ab55493adebb1cb3aa78',1,'scire::Queue::head()']]]
+  ['size',['size',['../d7/d94/classscire_1_1_singly_list.html#a1fc30855b11945f0e9e373f7e924ad52',1,'scire::SinglyList']]],
+  ['sz',['sz',['../dc/dd4/classscire_1_1_union_find.html#aa0d0e01614a0fb941055410622f47f8f',1,'scire::UnionFind']]]
 ];
