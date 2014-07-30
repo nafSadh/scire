@@ -8,6 +8,7 @@ var namespacescire =
     [ "CharStringUtil", "d4/de2/classscire_1_1_char_string_util.html", "d4/de2/classscire_1_1_char_string_util" ],
     [ "ClassName", "d3/db7/classscire_1_1_class_name.html", null ],
     [ "FileType", "d9/dbc/classscire_1_1_file_type.html", "d9/dbc/classscire_1_1_file_type" ],
+    [ "GaleShapley", "dc/d0a/classscire_1_1_gale_shapley.html", null ],
     [ "Hash", "df/dcc/classscire_1_1_hash.html", "df/dcc/classscire_1_1_hash" ],
     [ "ICrate", "dd/dc6/classscire_1_1_i_crate.html", "dd/dc6/classscire_1_1_i_crate" ],
     [ "IHashAlgo", "d1/d3e/classscire_1_1_i_hash_algo.html", "d1/d3e/classscire_1_1_i_hash_algo" ],
