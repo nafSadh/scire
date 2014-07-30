@@ -27,7 +27,7 @@ namespace scire
 
   /**
   */
-  class ClassName
+  class GaleShapley
   {
 
   };
