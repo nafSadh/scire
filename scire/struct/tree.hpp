@@ -61,6 +61,16 @@ namespace scire
 
     }
 
+    static bool isNodeBST(const node2t& node, Type minima, Type maxima)
+    {
+      return true;
+    }
+
+    friend bool IsBST(const BinaryTree& tree, Type min, Type max)
+    {
+      return isNodeBST(tree.root);
+    }
+
   };
 
 #endif//SCIRE_BinaryTree_CLASS

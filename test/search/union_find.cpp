@@ -32,7 +32,7 @@ namespace sciretest
   }
 }
 
-#ifndef SCIRE_TEST_UNION_FIND
+#ifdef SCIRE_TEST_UNION_FIND
 int main()
 {
   return sciretest::union_find_main();
