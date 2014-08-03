@@ -104,6 +104,9 @@
     <ClCompile Include="..\test\search\union_find.cpp">
       <Filter>test\search</Filter>
     </ClCompile>
+    <ClCompile Include="Source.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md" />
