@@ -16,7 +16,7 @@ bool isCavity(int a, int b, int n)
   int depth = grid[a][b];
 
   for (int i = 0; i<4; i++) {
-    if (depth<grid[i][j]) {
+    if (depth<grid[i][i]) {
       return false;
     }
   }
