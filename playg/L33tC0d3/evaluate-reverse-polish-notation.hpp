@@ -12,7 +12,7 @@ Some examples:
 using namespace std;
 namespace L33tC0d3
 {
-  namespace binary_tree_preorder_traversal
+  namespace evaluate_reverse_polish_notation
   {
 
     class Solution
