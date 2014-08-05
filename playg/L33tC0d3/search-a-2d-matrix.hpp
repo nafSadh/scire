@@ -30,7 +30,7 @@ namespace L33tC0d3
       int rowc;
       int colc;
      public:
-      int searchForRow(int low, int high, int target)
+      int searchForRow(int low, int high, int target) const
       {
         if (low > high) return -1;
         int mid = (low + high) / 2;
@@ -44,12 +44,12 @@ namespace L33tC0d3
         }
       }
 
-      bool findInRow(int r, int target)
+      bool findInRow(int r, int target) const
       {
         return binary_search(mat[r].begin(), mat[r].end(), target);
       }
 
-      bool searchMatrix(vector<vector<int> > &matrix, int target)
+      bool searchMatrix(const vector<vector<int> > &matrix, int target)
       {
         rowc = matrix.size();
         colc = matrix[0].size();
