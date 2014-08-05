@@ -1,46 +1,41 @@
 #include <iostream>
-#include <cstdint>
-
+#include <vector>
+#include <algorithm>
 using namespace std;
 
-int8_t grid[100][100];
-int dx[] = {-0, +1, +0, -1};
-int dy[] = {-1, +0, +1, -0};
-
-
-bool isCavity(int a, int b, int n)
+class Solution
 {
-  if (a == 0 || b == 0 || a == n - 1 || b == n - 1)
-    return false;
+ public:
+  int threeSumClosest(vector<int> &num, int target)
+  {
+    int delta = INT_MAX;
+    int close = INT_MAX;
 
-  int depth = grid[a][b];
+    sort(num.begin(), num.end());
+    int n = num.size();
 
-  for (int i = 0; i<4; i++) {
-    if (depth<grid[i][i]) {
-      return false;
+    for (int i = 0; i <= (n - 3); i++) {
+      int a = num[i];
+      int j = i + 1;
+      int k = n - 1;
+      while (j<k) {
+        int d = a + num[j] + num[k];
+        if (abs(d - target)<delta) {
+          close = d;
+          delta = abs(d - target);
+        }
+        if (d > target) k--;
+        else j++;
+      }
     }
+    return close;
   }
-
-  return true;
-}
+};
 
 int main()
 {
-  int n, i, j;
-  cin >> n;
-
-  for (i = 0; i<n; i++) {
-    for (j = 0; j<n; j++) {
-      cin >> grid[i][j];
-    }
-  }
-
-  for (i = 0; i<n; i++) {
-    for (j = 0; j<n; j++) {
-      if (isCavity(i, j, n))
-        cout << 'X';
-      else cout << grid[i][j];
-    }
-    cout << endl;
-  }
+  vector<int> x {0, 2, 1, -3};
+  Solution s;
+  cout << s.threeSumClosest(x, 1);
+  return 0;
 }

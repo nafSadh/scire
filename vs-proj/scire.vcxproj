@@ -66,6 +66,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\playg\L33tC0d3\3sum-closest.hpp" />
+    <ClInclude Include="..\playg\L33tC0d3\binary-tree-postorder-traversal.hpp" />
+    <ClInclude Include="..\playg\L33tC0d3\binary-tree-preorder-traversal.hpp" />
+    <ClInclude Include="..\playg\L33tC0d3\evaluate-reverse-polish-notation.hpp" />
+    <ClInclude Include="..\playg\L33tC0d3\palindrome-partitioning-ii.hpp" />
+    <ClInclude Include="..\playg\L33tC0d3\two-sum.hpp" />
     <ClInclude Include="..\scire\graph\gale_shapley.hpp" />
     <ClInclude Include="..\scire\graph\stable_matching.hpp" />
     <ClInclude Include="..\scire\hash\hash_comn.hpp" />
@@ -80,9 +86,6 @@
     <ClInclude Include="..\scire\struct\stack.hpp" />
     <ClInclude Include="..\scire\struct\tree.hpp" />
     <ClInclude Include="..\scire\~template.hpp" />
-    <ClInclude Include="binary-tree-postorder-traversal.hpp" />
-    <ClInclude Include="binary-tree-preorder-traversal.hpp" />
-    <ClInclude Include="evaluate-reverse-polish-notation.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\test\hash\md5.cpp" />

@@ -87,13 +87,22 @@
     <ClInclude Include="..\scire\search\union_find.hpp">
       <Filter>scire\search</Filter>
     </ClInclude>
-    <ClInclude Include="binary-tree-postorder-traversal.hpp">
+    <ClInclude Include="..\playg\L33tC0d3\binary-tree-postorder-traversal.hpp">
       <Filter>ojL33tC0d3</Filter>
     </ClInclude>
-    <ClInclude Include="binary-tree-preorder-traversal.hpp">
+    <ClInclude Include="..\playg\L33tC0d3\binary-tree-preorder-traversal.hpp">
       <Filter>ojL33tC0d3</Filter>
     </ClInclude>
-    <ClInclude Include="evaluate-reverse-polish-notation.hpp">
+    <ClInclude Include="..\playg\L33tC0d3\evaluate-reverse-polish-notation.hpp">
+      <Filter>ojL33tC0d3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\playg\L33tC0d3\palindrome-partitioning-ii.hpp">
+      <Filter>ojL33tC0d3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\playg\L33tC0d3\two-sum.hpp">
+      <Filter>ojL33tC0d3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\playg\L33tC0d3\3sum-closest.hpp">
       <Filter>ojL33tC0d3</Filter>
     </ClInclude>
   </ItemGroup>
