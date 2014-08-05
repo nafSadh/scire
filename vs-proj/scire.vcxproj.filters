@@ -40,6 +40,9 @@
     <Filter Include="test\search">
       <UniqueIdentifier>{371a35b5-835d-40bf-bed9-69663d667c8c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ojL33tC0d3">
+      <UniqueIdentifier>{1f903c15-d6b1-4800-84ce-33623e821863}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\scire\string\cstr_util.hpp">
@@ -83,6 +86,15 @@
     </ClInclude>
     <ClInclude Include="..\scire\search\union_find.hpp">
       <Filter>scire\search</Filter>
+    </ClInclude>
+    <ClInclude Include="binary-tree-postorder-traversal.hpp">
+      <Filter>ojL33tC0d3</Filter>
+    </ClInclude>
+    <ClInclude Include="binary-tree-preorder-traversal.hpp">
+      <Filter>ojL33tC0d3</Filter>
+    </ClInclude>
+    <ClInclude Include="evaluate-reverse-polish-notation.hpp">
+      <Filter>ojL33tC0d3</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -80,6 +80,9 @@
     <ClInclude Include="..\scire\struct\stack.hpp" />
     <ClInclude Include="..\scire\struct\tree.hpp" />
     <ClInclude Include="..\scire\~template.hpp" />
+    <ClInclude Include="binary-tree-postorder-traversal.hpp" />
+    <ClInclude Include="binary-tree-preorder-traversal.hpp" />
+    <ClInclude Include="evaluate-reverse-polish-notation.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\test\hash\md5.cpp" />
