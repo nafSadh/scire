@@ -4,52 +4,72 @@
 #include <algorithm>
 using namespace std;
 
+/**
+* Definition for singly-linked list.*/
+struct ListNode {
+  int val;
+  ListNode *next;
+  ListNode(int x) : val(x), next(NULL) {}
+};
+
 class Solution
 {
-  vector<vector<int>> mat;
-  int rowc;
-  int colc;
  public:
-  int searchForRow(int low, int high, int target)
+  ListNode *rotateRight(ListNode* head, int k)
   {
-    if (low > high) return -1;
-    int mid = (low + high) / 2;
-    if (mat[mid][0] <= target && target <= mat[mid][colc - 1]) {
-      return mid;
+    int i = 0;
+    if (head == nullptr) return head;
+    ListNode *fwp = head;
+    while (i++<k) {
+      if (fwp->next == nullptr) {
+        k = k%i;
+        fwp = head;
+        i = 0;
+      } else {
+        fwp = fwp->next;
+      }
     }
-    if (target<mat[mid][0]) {
-      return searchForRow(low, mid - 1, target);
-    } else {
-      return searchForRow(mid + 1, high, target);
+    if (fwp == nullptr) return head;
+    ListNode* swap = head;
+    while (fwp->next != nullptr) {
+      fwp = fwp->next;
+      swap = swap->next;
     }
-  }
 
-  bool findInRow(int r, int target)
-  {
-    return binary_search(mat[r].begin(),mat[r].end(), target);
-  }
-
-  bool searchMatrix(vector<vector<int> > &matrix, int target)
-  {
-    rowc = matrix.size();
-    colc = matrix[0].size();
-    mat = matrix;
-
-    //find the row
-    int row = searchForRow(0, rowc-1, target);
-    if (row<0) return false;
-    return findInRow(row, target);
+    fwp->next = head;
+    head = swap->next;
+    swap->next = nullptr;
+    return head;
   }
 };
 
+void trav(ListNode* node)
+{
+  while (node != nullptr) {
+    cout << node->val << ' ';
+    node = node->next;
+  }
+  cout << endl;
+}
+
+ListNode* pushFront(ListNode* head, int val)
+{
+  ListNode *node = new ListNode(val);
+  node->next= head;
+
+  return node;
+}
+
 int main()
 {
-  vector<int> x {1};
-  vector<int> y {3};
-  vector<vector<int>> v;
-  v.push_back(x);
-  v.push_back(y);
+  ListNode* x = nullptr;
+  for (int i = 3; i > 0; i--) {
+    x = pushFront(x, i);
+  }
+
+  trav(x);
   Solution s;
-  cout << s.searchMatrix(v, 3);
+  x = s.rotateRight(x, 5);
+  trav(x);
   return 0;
 }
