@@ -111,6 +111,21 @@
     <ClInclude Include="..\playg\L33tC0d3\search-a-2d-matrix.hpp">
       <Filter>ojL33tC0d3</Filter>
     </ClInclude>
+    <ClInclude Include="..\playg\L33tC0d3\validate-binary-search-tree.hpp">
+      <Filter>ojL33tC0d3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\playg\L33tC0d3\sorted-array-to-bst.hpp">
+      <Filter>ojL33tC0d3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\playg\L33tC0d3\rotate-linked-list.hpp">
+      <Filter>ojL33tC0d3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\playg\L33tC0d3\path-sum.hpp">
+      <Filter>ojL33tC0d3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\playg\L33tC0d3\partition-list.hpp">
+      <Filter>ojL33tC0d3</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\test\string\cstr_util.cpp">
