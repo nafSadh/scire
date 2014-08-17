@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['kthtothelast',['KthToTheLast',['../d7/d94/classscire_1_1_singly_list.html#a1a241f05fb9e4af658ecd485d9f022a0',1,'scire::SinglyList']]]
+  ['isbst',['IsBST',['../d7/d0f/classscire_1_1_binary_tree.html#ab004cedd7daa6a785beedf4c8003b80d',1,'scire::BinaryTree']]]
 ];

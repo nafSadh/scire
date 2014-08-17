@@ -8,6 +8,7 @@ var searchData=
   ['isallcharunique',['IsAllCharUnique',['../d4/de2/classscire_1_1_char_string_util.html#af468b4fe497b3c9fd2584a1fc3580606',1,'scire::CharStringUtil']]],
   ['isconnected',['IsConnected',['../dc/dd4/classscire_1_1_union_find.html#a19488b37faff45d413931684ebc9d131',1,'scire::UnionFind']]],
   ['isempty',['IsEmpty',['../d3/de4/classscire_1_1_a_container.html#af8415e3cd3b12aeeabf1c8ec072f5a4c',1,'scire::AContainer']]],
+  ['isnodebst',['isNodeBST',['../d7/d0f/classscire_1_1_binary_tree.html#a1997cb2dee71f9955ec1a0d624375f24',1,'scire::BinaryTree']]],
   ['ispermutation',['IsPermutation',['../d4/de2/classscire_1_1_char_string_util.html#a547238d50741df48b0e903fa88930e3a',1,'scire::CharStringUtil']]],
   ['isrotation',['isRotation',['../d4/de2/classscire_1_1_char_string_util.html#a16ece21923e10b9d0f1955e0a5f9abd2',1,'scire::CharStringUtil']]],
   ['issubstring',['isSubstring',['../d4/de2/classscire_1_1_char_string_util.html#a529dbb33e7cd1736c72de846d3c560bd',1,'scire::CharStringUtil']]],

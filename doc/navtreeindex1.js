@@ -1,5 +1,7 @@
 var NAVTREEINDEX1 =
 {
+"df/dfb/classscire_1_1_queue_crate.html":[2,0,0,14],
+"df/dfb/classscire_1_1_queue_crate.html#a1274035540a647c221b1d6278430c66f":[2,0,0,14,9],
 "df/dfb/classscire_1_1_queue_crate.html#a1e207d146e3c1dde8d450eaa909671e2":[2,0,0,14,1],
 "df/dfb/classscire_1_1_queue_crate.html#a2e9a33c086ff6b203ff280a26d9924a2":[2,0,0,14,2],
 "df/dfb/classscire_1_1_queue_crate.html#a6f45e235af8e188e1828612fc7af71e3":[2,0,0,14,7],

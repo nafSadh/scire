@@ -16,7 +16,7 @@ var indexSectionsWithContent =
   6: "biuw",
   7: "im",
   8: "bdmr",
-  9: "gk",
+  9: "gik",
   10: "_s",
   11: "r"
 };
