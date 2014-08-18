@@ -1,75 +1,43 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
+#include <fstream>
 #include <vector>
 #include <set>
 #include <algorithm>
+#include "../playg/L33tC0d3/Anagrams.hpp"
+
+
 using namespace std;
-
-/**
-* Definition for singly-linked list.*/
-struct ListNode {
-  int val;
-  ListNode *next;
-  ListNode(int x) : val(x), next(NULL) {}
-};
-
 class Solution
 {
  public:
-  ListNode *rotateRight(ListNode* head, int k)
+  int maxProfit(vector<int> &prices)
   {
-    int i = 0;
-    if (head == nullptr) return head;
-    ListNode *fwp = head;
-    while (i++<k) {
-      if (fwp->next == nullptr) {
-        k = k%i;
-        fwp = head;
-        i = 0;
-      } else {
-        fwp = fwp->next;
-      }
+    int n = prices.size();
+    int minv = 0, maxv = 0;
+    int profit = 0;
+    vector<int> minb(n), maxa(n);
+    for (int i = 0; i<n; i++) {
+      if (minv >(prices[i]))
+        minv = prices[i];
+      minb[i] = minv;
+      if (maxv<(prices[n - i - 1]))
+        maxv = prices[n - i - 1];
+      maxa[n - i-1] = maxv;
     }
-    if (fwp == nullptr) return head;
-    ListNode* swap = head;
-    while (fwp->next != nullptr) {
-      fwp = fwp->next;
-      swap = swap->next;
+    for (int i = 0; i<n; i++) {
+      if (maxa[i] - minb[i] > profit)
+        profit = maxa[i] - minb[i];
     }
-
-    fwp->next = head;
-    head = swap->next;
-    swap->next = nullptr;
-    return head;
+    return profit;
   }
 };
 
-void trav(ListNode* node)
-{
-  while (node != nullptr) {
-    cout << node->val << ' ';
-    node = node->next;
-  }
-  cout << endl;
-}
-
-ListNode* pushFront(ListNode* head, int val)
-{
-  ListNode *node = new ListNode(val);
-  node->next= head;
-
-  return node;
-}
-
 int main()
 {
-  ListNode* x = nullptr;
-  for (int i = 3; i > 0; i--) {
-    x = pushFront(x, i);
-  }
-
-  trav(x);
+  vector<int> list = {1,2,4};
   Solution s;
-  x = s.rotateRight(x, 5);
-  trav(x);
+  cout << s.maxProfit(list);
+
   return 0;
 }
