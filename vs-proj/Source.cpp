@@ -1,43 +1,44 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <fstream>
+#include <map>
 #include <vector>
-#include <set>
-#include <algorithm>
-#include "../playg/L33tC0d3/Anagrams.hpp"
+#include <string>
 
 
 using namespace std;
-class Solution
-{
- public:
-  int maxProfit(vector<int> &prices)
-  {
-    int n = prices.size();
-    int minv = 0, maxv = 0;
-    int profit = 0;
-    vector<int> minb(n), maxa(n);
-    for (int i = 0; i<n; i++) {
-      if (minv >(prices[i]))
-        minv = prices[i];
-      minb[i] = minv;
-      if (maxv<(prices[n - i - 1]))
-        maxv = prices[n - i - 1];
-      maxa[n - i-1] = maxv;
-    }
-    for (int i = 0; i<n; i++) {
-      if (maxa[i] - minb[i] > profit)
-        profit = maxa[i] - minb[i];
-    }
-    return profit;
-  }
+//* Definition for binary tree
+struct TreeNode {
+  int val;
+  TreeNode *left;
+  TreeNode *right;
+  TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
+class Solution
+{
+  void levelOrder(TreeNode *node, int level, vector<vector<int>>& v)
+  {
+    if (node == nullptr) return;
+    if (v.size()<=level) {
+      v.push_back(vector<int>());
+    }
+    v[level].push_back(node->val);
+    levelOrder(node->left, level + 1, v);
+    levelOrder(node->right, level + 1, v);
+  }
+ public:
+  vector<vector<int> > levelOrder(TreeNode *root)
+  {
+    vector<vector<int>> v;
+    levelOrder(root, 0, v);
+    return v;
+  }
+};
 int main()
 {
-  vector<int> list = {1,2,4};
   Solution s;
-  cout << s.maxProfit(list);
-
+  TreeNode tn(2);
+  s.levelOrder(&tn);
   return 0;
 }
