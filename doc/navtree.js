@@ -32,7 +32,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"df/dfb/classscire_1_1_queue_crate.html"
+"df/dcc/classscire_1_1_hash.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

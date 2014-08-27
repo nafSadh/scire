@@ -15,6 +15,7 @@ var hierarchy =
     [ "scire::BinaryTree< Type >", "d7/d0f/classscire_1_1_binary_tree.html", null ],
     [ "scire::CharStringUtil", "d4/de2/classscire_1_1_char_string_util.html", null ],
     [ "scire::ClassName", "d3/db7/classscire_1_1_class_name.html", null ],
+    [ "scire::CountingSort< InT, SzT >", "d9/d80/classscire_1_1_counting_sort.html", null ],
     [ "scire::FileType", "d9/dbc/classscire_1_1_file_type.html", null ],
     [ "scire::GaleShapley", "dc/d0a/classscire_1_1_gale_shapley.html", null ],
     [ "scire::Hash", "df/dcc/classscire_1_1_hash.html", null ],

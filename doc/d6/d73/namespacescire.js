@@ -7,6 +7,7 @@ var namespacescire =
     [ "BinaryTree", "d7/d0f/classscire_1_1_binary_tree.html", "d7/d0f/classscire_1_1_binary_tree" ],
     [ "CharStringUtil", "d4/de2/classscire_1_1_char_string_util.html", "d4/de2/classscire_1_1_char_string_util" ],
     [ "ClassName", "d3/db7/classscire_1_1_class_name.html", null ],
+    [ "CountingSort", "d9/d80/classscire_1_1_counting_sort.html", "d9/d80/classscire_1_1_counting_sort" ],
     [ "FileType", "d9/dbc/classscire_1_1_file_type.html", "d9/dbc/classscire_1_1_file_type" ],
     [ "GaleShapley", "dc/d0a/classscire_1_1_gale_shapley.html", null ],
     [ "Hash", "df/dcc/classscire_1_1_hash.html", "df/dcc/classscire_1_1_hash" ],
