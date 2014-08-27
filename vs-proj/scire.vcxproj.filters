@@ -43,6 +43,12 @@
     <Filter Include="ojL33tC0d3">
       <UniqueIdentifier>{1f903c15-d6b1-4800-84ce-33623e821863}</UniqueIdentifier>
     </Filter>
+    <Filter Include="OtherFun">
+      <UniqueIdentifier>{60156347-7b24-4ced-b630-602c523f6120}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scire\sort">
+      <UniqueIdentifier>{7660c6cf-a770-40f4-915b-f0bb11854ece}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\scire\string\cstr_util.hpp">
@@ -125,6 +131,42 @@
     </ClInclude>
     <ClInclude Include="..\playg\L33tC0d3\partition-list.hpp">
       <Filter>ojL33tC0d3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\playg\L33tC0d3\remove-duplicates-from-sorted-array-ii.hpp">
+      <Filter>ojL33tC0d3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\playg\L33tC0d3\remove-duplicates-from-sorted-array.hpp">
+      <Filter>ojL33tC0d3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\playg\fun\IsNumberSumOfSeriese.hpp">
+      <Filter>OtherFun</Filter>
+    </ClInclude>
+    <ClInclude Include="..\playg\L33tC0d3\Anagrams.hpp">
+      <Filter>ojL33tC0d3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\playg\L33tC0d3\best-time-to-buy-and-sell-stock.hpp">
+      <Filter>ojL33tC0d3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\playg\L33tC0d3\LRUCache.hpp">
+      <Filter>ojL33tC0d3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\playg\L33tC0d3\trapping-rain-water.hpp">
+      <Filter>ojL33tC0d3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\playg\L33tC0d3\reverse-words-in-a-string.hpp">
+      <Filter>ojL33tC0d3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\playg\L33tC0d3\binary-tree-level-order-traversal.hpp">
+      <Filter>ojL33tC0d3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\playg\L33tC0d3\longest-common-prefix.hpp">
+      <Filter>ojL33tC0d3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\playg\L33tC0d3\same-tree.hpp">
+      <Filter>ojL33tC0d3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scire\sort\counting_sort.hpp">
+      <Filter>scire\sort</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

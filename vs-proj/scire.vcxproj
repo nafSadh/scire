@@ -66,17 +66,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\playg\fun\IsNumberSumOfSeriese.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\3sum-closest.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\3sum.hpp" />
+    <ClInclude Include="..\playg\L33tC0d3\Anagrams.hpp" />
+    <ClInclude Include="..\playg\L33tC0d3\best-time-to-buy-and-sell-stock.hpp" />
+    <ClInclude Include="..\playg\L33tC0d3\binary-tree-level-order-traversal.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\binary-tree-postorder-traversal.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\binary-tree-preorder-traversal.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\evaluate-reverse-polish-notation.hpp" />
+    <ClInclude Include="..\playg\L33tC0d3\longest-common-prefix.hpp" />
+    <ClInclude Include="..\playg\L33tC0d3\LRUCache.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\palindrome-partitioning-ii.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\partition-list.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\path-sum.hpp" />
+    <ClInclude Include="..\playg\L33tC0d3\remove-duplicates-from-sorted-array-ii.hpp" />
+    <ClInclude Include="..\playg\L33tC0d3\remove-duplicates-from-sorted-array.hpp" />
+    <ClInclude Include="..\playg\L33tC0d3\reverse-words-in-a-string.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\rotate-linked-list.hpp" />
+    <ClInclude Include="..\playg\L33tC0d3\same-tree.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\search-a-2d-matrix.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\sorted-array-to-bst.hpp" />
+    <ClInclude Include="..\playg\L33tC0d3\trapping-rain-water.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\two-sum.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\validate-binary-search-tree.hpp" />
     <ClInclude Include="..\scire\graph\gale_shapley.hpp" />
@@ -84,6 +95,7 @@
     <ClInclude Include="..\scire\hash\hash_comn.hpp" />
     <ClInclude Include="..\scire\hash\md5.hpp" />
     <ClInclude Include="..\scire\search\union_find.hpp" />
+    <ClInclude Include="..\scire\sort\counting_sort.hpp" />
     <ClInclude Include="..\scire\string\cstr_util.hpp" />
     <ClInclude Include="..\scire\string\knuth_morris_pratt.hpp" />
     <ClInclude Include="..\scire\string\string_match.hpp" />

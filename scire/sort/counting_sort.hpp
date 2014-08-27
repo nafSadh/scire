@@ -94,7 +94,7 @@ namespace scire
         c[A[i] - lower]++;
       }
 
-      //prefix-sum
+      //prefix-smu
       for (i = 1; i < span; i++) {
         c[i] = c[i] + c[i - 1];
       }

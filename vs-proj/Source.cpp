@@ -4,41 +4,40 @@
 #include <map>
 #include <vector>
 #include <string>
+#include <random>
+#include "../scire/sort/counting_sort.hpp"
+
 
 
 using namespace std;
 //* Definition for binary tree
-struct TreeNode {
-  int val;
-  TreeNode *left;
-  TreeNode *right;
-  TreeNode(int x) : val(x), left(NULL), right(NULL) {}
-};
 
-class Solution
-{
-  void levelOrder(TreeNode *node, int level, vector<vector<int>>& v)
-  {
-    if (node == nullptr) return;
-    if (v.size()<=level) {
-      v.push_back(vector<int>());
-    }
-    v[level].push_back(node->val);
-    levelOrder(node->left, level + 1, v);
-    levelOrder(node->right, level + 1, v);
-  }
- public:
-  vector<vector<int> > levelOrder(TreeNode *root)
-  {
-    vector<vector<int>> v;
-    levelOrder(root, 0, v);
-    return v;
-  }
-};
 int main()
 {
-  Solution s;
-  TreeNode tn(2);
-  s.levelOrder(&tn);
+  unsigned seed = 75545;
+  std::mt19937 generator(seed);
+  //int A[1000];
+  vector<int> A=vector<int>(1000);
+  for (int i = 0; i < 1000; i++) {
+    A[i] = generator()%100;
+  }
+  for (int i = 0; i < 1000; i++) {
+    cout << A[i] << ' ';
+    if (i % 20 == 19)cout << endl;
+  }
+  cout << endl;
+  scire::CountingSort<int>::Vector(A, 1000, 0, 99);
+
+  for (int i = 0; i < 1000; i++) {
+    cout << A[i] << ' ';
+    if (i % 20 == 19)cout << endl;
+  }
+
+  int a = 1;
+  int *p = &a;
+  cout << p << endl;
+  p = p + 1;
+  cout << p << endl;
+
   return 0;
 }
