@@ -13,11 +13,30 @@ int gcd(int a, int b)
   else return gcd(a, b - a);
 }
 
+int power(int x, int y)
+{
+  if (y == 0) return 1;
+
+  int yy = y;
+  int i = 0;
+  int res = 1;
+  int p = x;
+  while (yy > 0) {
+    if (yy & 1 == 1) {
+      res *= p;
+    }
+    yy = yy >> 1;
+    p *= p;
+  }
+
+  return res;
+}
+
 int main()
 {
   while (true) {
     int a, b;
     cin >> a >> b;
-    cout << gcd(a, b) << endl;
+    cout << power(a, b) << " | "<<pow(a,b) << endl;
   }
 }
