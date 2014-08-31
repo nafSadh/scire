@@ -15,6 +15,8 @@ int gcd(int a, int b)
 
 double power(int x, int y)
 {
+  if (x == 1 || x == 0) return x;
+
   if (y < 0) return 1/power(x,-y);
 
   if (y == 0) return 1;
