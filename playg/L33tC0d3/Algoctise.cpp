@@ -13,14 +13,15 @@ int gcd(int a, int b)
   else return gcd(a, b - a);
 }
 
-int power(int x, int y)
+double power(int x, int y)
 {
+  if (y < 0) return 1/power(x,-y);
+
   if (y == 0) return 1;
 
   int yy = y;
-  int i = 0;
-  int res = 1;
-  int p = x;
+  double res = 1;
+  double p = x;
   while (yy > 0) {
     if (yy & 1 == 1) {
       res *= p;
