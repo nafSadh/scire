@@ -75,13 +75,16 @@
     <ClInclude Include="..\playg\L33tC0d3\binary-tree-postorder-traversal.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\binary-tree-preorder-traversal.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\evaluate-reverse-polish-notation.hpp" />
+    <ClInclude Include="..\playg\L33tC0d3\first-missing-positive.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\longest-common-prefix.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\LRUCache.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\palindrome-partitioning-ii.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\partition-list.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\path-sum.hpp" />
+    <ClInclude Include="..\playg\L33tC0d3\plus-one.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\remove-duplicates-from-sorted-array-ii.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\remove-duplicates-from-sorted-array.hpp" />
+    <ClInclude Include="..\playg\L33tC0d3\remove-duplicates-from-sorted-list.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\reverse-words-in-a-string.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\rotate-linked-list.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\same-tree.hpp" />
@@ -107,6 +110,7 @@
     <ClInclude Include="..\scire\~template.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\playg\L33tC0d3\Algoctise.cpp" />
     <ClCompile Include="..\test\hash\md5.cpp" />
     <ClCompile Include="..\test\search\union_find.cpp" />
     <ClCompile Include="..\test\string\cstr_util.cpp" />

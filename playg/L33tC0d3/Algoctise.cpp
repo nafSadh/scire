@@ -16,14 +16,13 @@ int gcd(int a, int b)
 double power(int x, int y)
 {
   if (x == 1 || x == 0) return x;
-
   if (y < 0) return 1/power(x,-y);
-
   if (y == 0) return 1;
 
   int yy = y;
-  double res = 1;
   double p = x;
+  double res = 1;
+
   while (yy > 0) {
     if (yy & 1 == 1) {
       res *= p;

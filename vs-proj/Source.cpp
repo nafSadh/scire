@@ -12,7 +12,7 @@
 using namespace std;
 //* Definition for binary tree
 
-int main()
+int enmain()
 {
   /*
    unsigned seed = 75545;

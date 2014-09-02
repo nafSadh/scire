@@ -168,6 +168,15 @@
     <ClInclude Include="..\scire\sort\counting_sort.hpp">
       <Filter>scire\sort</Filter>
     </ClInclude>
+    <ClInclude Include="..\playg\L33tC0d3\remove-duplicates-from-sorted-list.hpp">
+      <Filter>ojL33tC0d3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\playg\L33tC0d3\plus-one.hpp">
+      <Filter>ojL33tC0d3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\playg\L33tC0d3\first-missing-positive.hpp">
+      <Filter>ojL33tC0d3</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\test\string\cstr_util.cpp">
@@ -189,6 +198,9 @@
       <Filter>test\search</Filter>
     </ClCompile>
     <ClCompile Include="Source.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\playg\L33tC0d3\Algoctise.cpp">
       <Filter>test</Filter>
     </ClCompile>
   </ItemGroup>
