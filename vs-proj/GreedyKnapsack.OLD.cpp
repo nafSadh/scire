@@ -169,7 +169,7 @@ class KnapSack
 };
 
 
-int main()
+int GreedyKnapsackOLD_main()
 {
 
   double *p;//[]={1,9,3};

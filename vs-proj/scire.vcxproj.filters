@@ -200,7 +200,10 @@
     <ClCompile Include="Source.cpp">
       <Filter>test</Filter>
     </ClCompile>
-    <ClCompile Include="..\playg\L33tC0d3\Algoctise.cpp">
+    <ClCompile Include="GreedyKnapsack.OLD.cpp">
+      <Filter>OtherFun</Filter>
+    </ClCompile>
+    <ClCompile Include="..\playg\L33tC0d3\Algoctice.cpp">
       <Filter>test</Filter>
     </ClCompile>
   </ItemGroup>

@@ -24,7 +24,7 @@ double power(int x, int y)
   double res = 1;
 
   while (yy > 0) {
-    if (yy & 1 == 1) {
+    if (yy & 1) {
       res *= p;
     }
     yy = yy >> 1;
@@ -34,11 +34,40 @@ double power(int x, int y)
   return res;
 }
 
+bool isLittleEndian()
+{
+  int i = 1;
+  char *ptr = (char*) &i;
+  return (bool)(*ptr);
+}
+
+int countOnesInNumberBits1(int x)
+{
+  int c = 0;
+  while (x > 0) {
+    if (x & 1) c++;
+    x = x >> 1;
+  }
+  return c;
+}
+
+int countOnesInNumberBits(int x)
+{
+  int c=0;
+  while (x != 0) {
+    x = x & (x - 1);
+    c++;
+  }
+  return c;
+}
+
 int main()
 {
   while (true) {
     int a, b;
-    cin >> a >> b;
-    cout << power(a, b) << " | "<<pow(a,b) << endl;
+    cin >> a;
+    cout << countOnesInNumberBits(a) << endl;
   }
+
+  return 0;
 }

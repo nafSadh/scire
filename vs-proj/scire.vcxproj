@@ -110,13 +110,14 @@
     <ClInclude Include="..\scire\~template.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\playg\L33tC0d3\Algoctise.cpp" />
+    <ClCompile Include="..\playg\L33tC0d3\Algoctice.cpp" />
     <ClCompile Include="..\test\hash\md5.cpp" />
     <ClCompile Include="..\test\search\union_find.cpp" />
     <ClCompile Include="..\test\string\cstr_util.cpp" />
     <ClCompile Include="..\test\struct\linkedlist.cpp" />
     <ClCompile Include="..\test\struct\queue.cpp" />
     <ClCompile Include="..\test\struct\stack.cpp" />
+    <ClCompile Include="GreedyKnapsack.OLD.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
