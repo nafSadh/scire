@@ -481,6 +481,7 @@ font-weight: normal;
 	vertical-align: bottom;
 }
 .memproto, dl.reflist dt {
+	margin-top: 1.5em;
 	border: none;
 	border-radius: 0;
   padding: 6px;
@@ -565,7 +566,7 @@ td.mlabels-left {
 	padding: 0px;
 }
 td.mlabels-right {
-	vertical-align: bottom;
+	vertical-align: middle;
 	padding: 0px;
 	white-space: nowrap;
 }
