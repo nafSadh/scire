@@ -74,6 +74,7 @@
     <ClInclude Include="..\playg\L33tC0d3\binary-tree-level-order-traversal.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\binary-tree-postorder-traversal.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\binary-tree-preorder-traversal.hpp" />
+    <ClInclude Include="..\playg\L33tC0d3\climbing-stairs.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\evaluate-reverse-polish-notation.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\first-missing-positive.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\longest-common-prefix.hpp" />
@@ -92,7 +93,9 @@
     <ClInclude Include="..\playg\L33tC0d3\sorted-array-to-bst.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\trapping-rain-water.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\two-sum.hpp" />
+    <ClInclude Include="..\playg\L33tC0d3\valid-parentheses.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\validate-binary-search-tree.hpp" />
+    <ClInclude Include="..\playg\L33tC0d3\word-break.hpp" />
     <ClInclude Include="..\scire\graph\gale_shapley.hpp" />
     <ClInclude Include="..\scire\graph\stable_matching.hpp" />
     <ClInclude Include="..\scire\hash\hash_comn.hpp" />

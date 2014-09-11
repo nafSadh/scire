@@ -177,6 +177,15 @@
     <ClInclude Include="..\playg\L33tC0d3\first-missing-positive.hpp">
       <Filter>ojL33tC0d3</Filter>
     </ClInclude>
+    <ClInclude Include="..\playg\L33tC0d3\word-break.hpp">
+      <Filter>ojL33tC0d3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\playg\L33tC0d3\climbing-stairs.hpp">
+      <Filter>ojL33tC0d3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\playg\L33tC0d3\valid-parentheses.hpp">
+      <Filter>ojL33tC0d3</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\test\string\cstr_util.cpp">
