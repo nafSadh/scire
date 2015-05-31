@@ -61,7 +61,7 @@ int countOnesInNumberBits(int x)
   return c;
 }
 
-int main()
+int algoctice_main()
 {
   while (true) {
     int a, b;

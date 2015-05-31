@@ -5,7 +5,7 @@
 #include <vector>
 #include <string>
 #include <random>
-#include "../scire/sort/counting_sort.hpp"
+#include "../scire/stat/quickselect.hpp"
 
 
 
@@ -54,5 +54,48 @@ int enmain()
   }
 
 
+  return 0;
+}
+
+class Solution
+{
+  int inline sqr(int n)
+  {
+    return n*n;
+  }
+  int sumOfSquareOfDigits(int n)
+  {
+    int sum = 0;
+    while (n>0) {
+      sum += sqr(n % 10);
+      n /= 10;
+    }
+    return sum;
+  }
+  bool isHappy(int n, vector<int> &v)
+  {
+    int sum = sumOfSquareOfDigits(n);
+    if (sum == 1) return true;
+    for (int i = 0; i < v.size(); i++) {
+      if (v[i] == sum) return false;
+    }
+    v.push_back(sum);
+    return isHappy(sum, v);
+  }
+ public:
+  bool isHappy(int n)
+  {
+    vector<int> v;
+    v.push_back(n);
+    return isHappy(n, v);
+  }
+};
+
+int main()
+{
+  Solution s;
+  int n;
+  cin >> n;
+  cout<<endl<<s.isHappy(n)<<endl;
   return 0;
 }

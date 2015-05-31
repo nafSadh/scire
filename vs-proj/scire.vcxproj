@@ -75,6 +75,7 @@
     <ClInclude Include="..\playg\L33tC0d3\binary-tree-postorder-traversal.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\binary-tree-preorder-traversal.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\climbing-stairs.hpp" />
+    <ClInclude Include="..\playg\L33tC0d3\count-primes.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\evaluate-reverse-polish-notation.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\first-missing-positive.hpp" />
     <ClInclude Include="..\playg\L33tC0d3\longest-common-prefix.hpp" />
@@ -102,6 +103,7 @@
     <ClInclude Include="..\scire\hash\md5.hpp" />
     <ClInclude Include="..\scire\search\union_find.hpp" />
     <ClInclude Include="..\scire\sort\counting_sort.hpp" />
+    <ClInclude Include="..\scire\stat\quickselect.hpp" />
     <ClInclude Include="..\scire\string\cstr_util.hpp" />
     <ClInclude Include="..\scire\string\knuth_morris_pratt.hpp" />
     <ClInclude Include="..\scire\string\string_match.hpp" />

@@ -49,6 +49,9 @@
     <Filter Include="scire\sort">
       <UniqueIdentifier>{7660c6cf-a770-40f4-915b-f0bb11854ece}</UniqueIdentifier>
     </Filter>
+    <Filter Include="scire\stat">
+      <UniqueIdentifier>{77350124-e566-4835-b1c7-f2bc16672c5b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\scire\string\cstr_util.hpp">
@@ -184,6 +187,12 @@
       <Filter>ojL33tC0d3</Filter>
     </ClInclude>
     <ClInclude Include="..\playg\L33tC0d3\valid-parentheses.hpp">
+      <Filter>ojL33tC0d3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\scire\stat\quickselect.hpp">
+      <Filter>scire\stat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\playg\L33tC0d3\count-primes.hpp">
       <Filter>ojL33tC0d3</Filter>
     </ClInclude>
   </ItemGroup>
